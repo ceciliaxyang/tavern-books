@@ -1,0 +1,28 @@
+<h1>The Living Libary</h1>
+
+<%= @giraffe %>
+
+<table>
+ 
+
+<% @books.each do |book| %>
+	<div class="row">
+ 		<div class="span4">
+			<%= image_tag book.name+"-thumb.jpg"%>
+		</div>
+		<div class="span7 offset 1">
+		    <h2><%= link_to book.title, book %></h2>
+	    	<h3><%= book.author %></h3>
+	
+		    <% unless book.translator.empty? %>
+				<em>Translated from the <%= book.OriginalLanguage %> by <%= book.translator %></em>
+			<% end %>
+			
+		</div>
+	</div>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Book', new_book_path %>

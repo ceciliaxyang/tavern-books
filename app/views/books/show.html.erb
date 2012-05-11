@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<div class="row">
+	
+	<div class="span4">
+		<%= image_tag @book.name+"-01.png"%>
+	</div>
+
+	<div class="span7 offset1">
+		<h1><%= @book.title %></h1>
+		<h3><%= @book.author %></h3>
+		
+		
+		<% unless @book.translator.empty? %>
+			<p>Translated from the <%= @book.OriginalLanguage %> by <%= @book.translator %></p>
+		<% end %>
+		
+		
+		<h5>ISBN-13: <%= @book.isbn %></h5>
+		<h5>Price: <%= number_to_currency @book.price %></h5>
+
+
+		<p>
+		  <%= @book.description %>
+		</p>
+	</div>
+
+</div>
+
+
+<%= link_to 'Edit', edit_book_path(@book) %> |
+<%= link_to 'Back', books_path %>
