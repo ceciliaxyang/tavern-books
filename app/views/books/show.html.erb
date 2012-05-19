@@ -7,18 +7,18 @@
 	</div>
 
 	<div class="span7 offset1">
-		<h1><%= @book.title %></h1>
-		<h3><%= @book.author %></h3>
+		<h1><%= @book.title %>, by <%= @book.author %></h1>
 		
 		
 		<% unless @book.translator.empty? %>
-			<p>Translated from the <%= @book.OriginalLanguage %> by <%= @book.translator %></p>
+			<h3>Translated from the <%= @book.OriginalLanguage %> by <%= @book.translator %></h3>
 		<% end %>
 		
 		
-		<h5>ISBN-13: <%= @book.isbn %></h5>
-		<h5>Price: <%= number_to_currency @book.price %></h5>
-		<h5><%= @book.pages %></h5>
+		<p class="quote"><%= @book.pages %> / <%= number_to_currency @book.price %>
+			<br>
+		ISBN-13: <%= @book.isbn %></p>
+		
 		
 		<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr"\ method="post"> 
 			<input type="hidden" name="cmd" value="_s-xclick"> 
@@ -44,7 +44,9 @@
 			<p><%= @book.aboutTranslator %></p>
 		<% end %>
 		
-		<p>
+		<p align="center">&#10005;&nbsp;&nbsp;&nbsp;&#10005;&nbsp;&nbsp;&nbsp;&#10005;<br></p>
+
+		<p class="quote">
 		  "<%= @book.quote %>"
 		<br>&#8212; <%= @book.quoter %>
 		</p>
