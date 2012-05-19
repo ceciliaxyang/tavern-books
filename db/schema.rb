@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120508054847) do
+ActiveRecord::Schema.define(:version => 20120519175304) do
 
   create_table "books", :force => true do |t|
     t.string   "name"
@@ -24,6 +24,13 @@ ActiveRecord::Schema.define(:version => 20120508054847) do
     t.decimal  "price"
     t.string   "OriginalLanguage"
     t.string   "paypal"
+    t.string   "paypal2"
+    t.string   "pages"
+    t.string   "quote"
+    t.string   "quoter"
+    t.string   "aboutTranslator"
+    t.string   "string"
+    t.string   "aboutAuthor"
   end
 
 end
