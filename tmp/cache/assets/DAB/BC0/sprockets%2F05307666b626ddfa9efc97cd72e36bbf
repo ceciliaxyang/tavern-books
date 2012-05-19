@@ -1,4 +1,4 @@
-o: ActiveSupport::Cache::Entry	:@expires_in0:@value"O|{"source"ÿz/*!
+o: ActiveSupport::Cache::Entry	:@expires_in0:@value"ñv{"source"¡u/*!
  * Bootstrap v2.0.3
  *
  * Copyright 2012 Twitter, Inc
@@ -661,25 +661,6 @@ label {
   display: block;
   margin-bottom: 5px;
   color: #333333;
-}
-
-input,
-textarea,
-select,
-.uneditable-input {
-  display: inline-block;
-  width: 210px;
-  height: 18px;
-  padding: 4px;
-  margin-bottom: 9px;
-  font-size: 13px;
-  line-height: 18px;
-  color: #555555;
-  background-color: #ffffff;
-  border: 1px solid #cccccc;
-  -webkit-border-radius: 3px;
-     -moz-border-radius: 3px;
-          border-radius: 3px;
 }
 
 .uneditable-textarea {
@@ -3448,45 +3429,12 @@ input[type="submit"].btn.btn-mini {
   overflow: visible;
 }
 
-
-.navbar-inner {
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 15px;
-  padding-top: 15px;
-  background-color: rgba(241, 241, 241, 0.90);
-  border-bottom: 1px solid #EAEAEA;
-
-}
-
 .navbar .container {
   width: auto;
 }
 
 .nav-collapse.collapse {
   height: auto;
-}
-
-.navbar {
-  color: #999999;
-}
-
-.navbar .brand:hover {
-  text-decoration: none;
-}
-
-.navbar .brand {
-  display: block;
-  float: left;
-  padding: 8px 20px 12px;
-  margin-left: -20px;
-  font-size: 20px;
-  text-transform:uppercase;
-  letter-spacing: 2px;
-  font-family: 'Crimson Text', Georgia, serif;
-  font-weight: 400;
-  line-height: 1;
-  color: #999999;
 }
 
 .navbar .navbar-text {
@@ -3646,19 +3594,6 @@ input[type="submit"].btn.btn-mini {
   float: right;
 }
 
-.navbar .nav > li {
-  display: block;
-  float: left;
-}
-
-.navbar .nav > li > a {
-  float: none;
-  padding: 9px 10px 11px;
-  line-height: 19px;
-  color: #999999;
-  text-decoration: none;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-}
 
 .navbar .btn {
   display: inline-block;
@@ -3670,19 +3605,6 @@ input[type="submit"].btn.btn-mini {
 .navbar .btn-group {
   padding: 5px 5px 6px;
   margin: 0;
-}
-
-.navbar .nav > li > a:hover {
-  color: #ffffff;
-  text-decoration: none;
-  background-color: transparent;
-}
-
-.navbar .nav .active > a,
-.navbar .nav .active > a:hover {
-  color: #ffffff;
-  text-decoration: none;
-  background-color: #222222;
 }
 
 .navbar .divider-vertical {
@@ -4843,6 +4765,6 @@ a.badge:hover {
 .invisible {
   visibility: hidden;
 }
-"digest"%c3a00d621ef528a179a3a8e3505563ff"required_assets_digest"%dce494f2dbb6deb40d1e9267956275bf"_version"%9f3b95dd7ea3030dc35985c0a8020862"
-class"BundledAsset"lengthiÿz"pathname"/$root/app/assets/stylesheets/bootstrap.css"logical_path"bootstrap.css"content_type"text/css"
-mtime"2012-05-19T11:29:59-07:00:@compressedF:@created_atf1337452200.738445 B¯
+"digest"%46f9a662a0a3ebcc1aad5776f11ca084"required_assets_digest"%00425ceeeee089f3a50c8c49111fe337"_version"%9f3b95dd7ea3030dc35985c0a8020862"
+class"BundledAsset"lengthi¡u"pathname"/$root/app/assets/stylesheets/bootstrap.css"logical_path"bootstrap.css"content_type"text/css"
+mtime"2012-05-19T13:22:57-07:00:@compressedF:@created_atf1337458994.3541391 ª7

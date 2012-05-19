@@ -1,24 +1,25 @@
-<h1>The Living Libary</h1>
+<div align="center"><h1>The Living Libary</h1><br><br><br></div>
 
 <table>
  
 
 <% @books.each do |book| %>
 	<div class="row">
- 		<div class="span4">
+ 		<div class="span3">
 			<%= image_tag book.name+"-thumb.jpg"%>
 		</div>
-		<div class="span7 offset 1">
-		    <h2><%= link_to book.title, book %></h2>
-	    	<h3><%= book.author %></h3>
+		<div class="span8 offset 1">
+		    <h1><small><%= link_to book.title, book %></small></h1>
+	    	<h2><%= book.author %></h2>
 	
 		    <% unless book.translator.empty? %>
-				<em>Translated from the <%= book.OriginalLanguage %> by <%= book.translator %></em>
+				<h3>Translated from the <%= book.OriginalLanguage %> by <%= book.translator %></h3>
 			<% end %>
-			
+			<br>
 		</div>
 	</div>
 <% end %>
+
 </table>
 
 <br />

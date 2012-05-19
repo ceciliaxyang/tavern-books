@@ -1,4 +1,4 @@
-o: ActiveSupport::Cache::Entry	:@expires_in0:@value"‹Š{"source"7‰/*
+o: ActiveSupport::Cache::Entry	:@expires_in0:@value"Í‰{"source"yˆ/*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
  *
@@ -17,8 +17,8 @@ body {
   padding-top: 100px;
   padding-bottom: 40px;
   margin: 0;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 13px;
+  font-family: 'Crimson Text', Georgia, serif;
+  font-size: 16px;
   line-height: 18px;
   color: #333333;
   background-color: #ffffff;
@@ -96,12 +96,14 @@ h1 {
 }
 
 h1 small {
-  font-size: 18px;
+  font-size: 32px;
 }
 
 h2 {
   font-size: 24px;
-  line-height: 36px;
+  line-height: 1;
+  font-family: 'Crimson Text', Georgia, serif;
+  font-weight: 400;
 }
 
 h2 small {
@@ -158,6 +160,15 @@ h6 {
   color: #999999;
 }
 
+.navbar-inner {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  background-color: rgba(250, 250, 250, 0.90);
+  border-bottom: 1px solid #EAEAEA;
+
+}
 .navbar .brand:hover {
   text-decoration: none;
 }
@@ -174,6 +185,61 @@ h6 {
   letter-spacing: 2px;
   line-height: 1;
   color: #999999;
+}
+
+.navbar .nav > li {
+  display: block;
+  float: left;
+  font-style: italic;
+  font-size:20px;
+}
+
+.navbar .nav > li > a {
+  float: none;
+  padding: 9px 30px 11px;
+  line-height: 19px;
+  color: #999999;
+  text-decoration: none;
+}
+
+.navbar .nav > li > a:hover {
+  color: #222222;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.navbar .nav .active > a,
+.navbar .nav .active > a:hover {
+  color: #222222;
+  text-decoration: none;
+}
+
+input,
+textarea,
+select,
+.uneditable-input {
+  display: inline-block;
+  width: 600px;
+  height: 18px;
+  padding: 4px;
+  margin-bottom: 9px;
+  font-size: 13px;
+  line-height: 18px;
+  color: #555555;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+}
+
+.footer {
+	
+	    background-color: #FFFFFF;
+	    border-top: 1px solid #EAEAEA;
+	    padding-bottom: 20px;
+	    padding-top: 50px;
+		font-size: 16px;
 }
 /*!
  * Bootstrap v2.0.3
@@ -838,25 +904,6 @@ label {
   display: block;
   margin-bottom: 5px;
   color: #333333;
-}
-
-input,
-textarea,
-select,
-.uneditable-input {
-  display: inline-block;
-  width: 210px;
-  height: 18px;
-  padding: 4px;
-  margin-bottom: 9px;
-  font-size: 13px;
-  line-height: 18px;
-  color: #555555;
-  background-color: #ffffff;
-  border: 1px solid #cccccc;
-  -webkit-border-radius: 3px;
-     -moz-border-radius: 3px;
-          border-radius: 3px;
 }
 
 .uneditable-textarea {
@@ -3625,45 +3672,12 @@ input[type="submit"].btn.btn-mini {
   overflow: visible;
 }
 
-
-.navbar-inner {
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 15px;
-  padding-top: 15px;
-  background-color: rgba(241, 241, 241, 0.90);
-  border-bottom: 1px solid #EAEAEA;
-
-}
-
 .navbar .container {
   width: auto;
 }
 
 .nav-collapse.collapse {
   height: auto;
-}
-
-.navbar {
-  color: #999999;
-}
-
-.navbar .brand:hover {
-  text-decoration: none;
-}
-
-.navbar .brand {
-  display: block;
-  float: left;
-  padding: 8px 20px 12px;
-  margin-left: -20px;
-  font-size: 20px;
-  text-transform:uppercase;
-  letter-spacing: 2px;
-  font-family: 'Crimson Text', Georgia, serif;
-  font-weight: 400;
-  line-height: 1;
-  color: #999999;
 }
 
 .navbar .navbar-text {
@@ -3823,19 +3837,6 @@ input[type="submit"].btn.btn-mini {
   float: right;
 }
 
-.navbar .nav > li {
-  display: block;
-  float: left;
-}
-
-.navbar .nav > li > a {
-  float: none;
-  padding: 9px 10px 11px;
-  line-height: 19px;
-  color: #999999;
-  text-decoration: none;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-}
 
 .navbar .btn {
   display: inline-block;
@@ -3847,19 +3848,6 @@ input[type="submit"].btn.btn-mini {
 .navbar .btn-group {
   padding: 5px 5px 6px;
   margin: 0;
-}
-
-.navbar .nav > li > a:hover {
-  color: #ffffff;
-  text-decoration: none;
-  background-color: transparent;
-}
-
-.navbar .nav .active > a,
-.navbar .nav .active > a:hover {
-  color: #ffffff;
-  text-decoration: none;
-  background-color: #222222;
 }
 
 .navbar .divider-vertical {
@@ -5062,6 +5050,6 @@ div.field, div.actions {
   font-size: 12px;
   list-style: square;
 }
-"digest"%4a7058ec89da74526f1dc8f2cb1c1ae1"required_assets_digest"%571ae6226f80725748102fcc51609639"_version"%9f3b95dd7ea3030dc35985c0a8020862"
-class"BundledAsset"lengthi7‰"pathname"1$root/app/assets/stylesheets/application.css"logical_path"application.css"content_type"text/css"
-mtime"2012-05-19T11:43:04-07:00:@compressedF:@created_atf1337452985.5175941  C
+"digest"%76e184a4b6318bfecfa189c1f4859597"required_assets_digest"%e2692ee74cfc038c4bc38182d4d2507a"_version"%9f3b95dd7ea3030dc35985c0a8020862"
+class"BundledAsset"lengthiyˆ"pathname"1$root/app/assets/stylesheets/application.css"logical_path"application.css"content_type"text/css"
+mtime"2012-05-19T13:28:40-07:00:@compressedF:@created_atf1337459321.6398251 òå
