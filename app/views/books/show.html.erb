@@ -7,11 +7,12 @@
 	</div>
 
 	<div class="span7 offset1">
-		<h1><%= @book.title %>, by <%= @book.author %></h1>
+		<h1><%= @book.title %></h1>
+		<h3><%= @book.author %></h3>
 		
 		
 		<% unless @book.translator.empty? %>
-			<h3>Translated from the <%= @book.OriginalLanguage %> by <%= @book.translator %></h3>
+			<p>Translated from the <%= @book.OriginalLanguage %> by <%= @book.translator %></p>
 		<% end %>
 		
 		
@@ -44,7 +45,7 @@
 			<p><%= @book.aboutTranslator %></p>
 		<% end %>
 		
-		<p align="center"><br>&#10005;&nbsp;&nbsp;&nbsp;&#10005;&nbsp;&nbsp;&nbsp;&#10005;<br></p>
+		<p align="center"><br>&#10005;&nbsp;&nbsp;&nbsp;&#10005;&nbsp;&nbsp;&nbsp;&#10005;<br><br></p>
 
 		<p class="quote">
 		  "<%= @book.quote %>"

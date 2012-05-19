@@ -1,4 +1,4 @@
-o: ActiveSupport::Cache::Entry	:@expires_in0:@value"Í‰{"source"yˆ/*
+o: ActiveSupport::Cache::Entry	:@expires_in0:@value"jŠ{"source"‰/*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
  *
@@ -25,7 +25,7 @@ body {
 }
 
 a {
-  color: #0088cc;
+  color: #ee6004;
   text-decoration: none;
 }
 
@@ -96,11 +96,11 @@ h1 {
 }
 
 h1 small {
-  font-size: 32px;
+  font-size: 34px;
 }
 
 h2 {
-  font-size: 24px;
+  font-size: 28px;
   line-height: 1;
   font-family: 'Crimson Text', Georgia, serif;
   font-weight: 400;
@@ -121,7 +121,13 @@ h3 {
 }
 
 h3 small {
-  font-size: 14px;
+  font-family: 'Crimson Text', Georgia, serif;
+  font-weight: 400;
+  font-size: 16px;
+  text-transform:uppercase;
+  letter-spacing: 2px;
+  line-height: 27px;
+  color: #666666;
 }
 
 h4,
@@ -5050,6 +5056,6 @@ div.field, div.actions {
   font-size: 12px;
   list-style: square;
 }
-"digest"%76e184a4b6318bfecfa189c1f4859597"required_assets_digest"%e2692ee74cfc038c4bc38182d4d2507a"_version"%9f3b95dd7ea3030dc35985c0a8020862"
-class"BundledAsset"lengthiyˆ"pathname"1$root/app/assets/stylesheets/application.css"logical_path"application.css"content_type"text/css"
-mtime"2012-05-19T13:28:40-07:00:@compressedF:@created_atf1337459321.6398251 òå
+"digest"%052578f71be809f4d28266e9b3456851"required_assets_digest"%a334283f2bdbe7e2ee62b4549d3c25aa"_version"%9f3b95dd7ea3030dc35985c0a8020862"
+class"BundledAsset"lengthi‰"pathname"1$root/app/assets/stylesheets/application.css"logical_path"application.css"content_type"text/css"
+mtime"2012-05-19T14:12:19-07:00:@compressedF:@created_atf1337461940.3409209 Ñ¦
