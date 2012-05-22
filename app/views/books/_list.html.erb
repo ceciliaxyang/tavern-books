@@ -1,0 +1,38 @@
+<div class="row">
+	<div class="span8">
+		<h1>The Living Library</h1>
+	</div>
+
+	<div class="span4" align="right">
+		<br><h5>Sort by
+
+				<%@sort_attributes.each { |attribute| %>
+					<a class="<%= "selected" if attribute == @sorting %>" href="/?sort=<%= attribute %>"><%= attribute %></a> 
+					<%= "/" unless attribute == @sort_attributes.last %>
+				<% } %> 
+		</h5>
+	</div>
+</div>
+
+<br><br><br><br>
+
+<table>
+
+<% @books.each do |book| %>
+	<div class="row">
+ 		<div class="span2 offset2">
+			<%= image_tag book.name+"-thumb.jpg"%>
+		</div>
+		<div class="span7 offset 2">
+		    <h1><small><%= link_to book.title, book %></small></h1>
+	    	<h3><%= book.author %></h3>
+	
+		    <% unless book.translator.empty? %>
+				<p>Translated from the <%= book.OriginalLanguage %> by <%= book.translator %></p>
+			<% end %>
+		</div>
+	</div>
+<% end %>
+<%= link_to 'New Book', new_book_path %>
+
+</table>

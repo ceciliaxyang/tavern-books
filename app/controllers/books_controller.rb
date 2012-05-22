@@ -2,8 +2,19 @@ class BooksController < ApplicationController
   # GET /books
   # GET /books.json
   def index
-    @books = Book.all
+    @sort_attributes = ["author", "title"]
     
+    @sorting = request.GET['sort']
+    
+    @books = case @sorting 
+      when "title"
+        Book.all.sort { |a,b| a.title <=> b.title }
+      when "author"
+        Book.all.sort { |a,b| a.author <=> b.author }
+      else
+        Book.all
+      end
+        
     respond_to do |format|
       format.html # index.html.erb
       format.json { render :json => @books }

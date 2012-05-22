@@ -1,0 +1,45 @@
+<%= form_for(@broadside) do |f| %>
+  <% if @broadside.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@broadside.errors.count, "error") %> prohibited this broadside from being saved:</h2>
+
+      <ul>
+      <% @broadside.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :author %><br />
+    <%= f.text_field :author %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :translator %><br />
+    <%= f.text_field :translator %>
+  </div>
+  <div class="field">
+    <%= f.label :original_language %><br />
+    <%= f.text_field :original_language %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br />
+    <%= f.text_field :price %>
+  </div>
+  <div class="field">
+    <%= f.label :dimensions %><br />
+    <%= f.text_field :dimensions %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

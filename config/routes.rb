@@ -1,7 +1,11 @@
 Tavern::Application.routes.draw do
-  resources :books
-  root :to => 'books', :action => :index
+  resources :broadsides
 
+  resources :books
+  root :to => 'application', :action => :index
+
+  match ':action' => 'static#:action'
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

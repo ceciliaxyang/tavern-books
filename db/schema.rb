@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120519175304) do
+ActiveRecord::Schema.define(:version => 20120520014255) do
 
   create_table "books", :force => true do |t|
     t.string   "name"
@@ -31,6 +31,18 @@ ActiveRecord::Schema.define(:version => 20120519175304) do
     t.string   "aboutTranslator"
     t.string   "string"
     t.string   "aboutAuthor"
+  end
+
+  create_table "broadsides", :force => true do |t|
+    t.string   "title"
+    t.string   "author"
+    t.string   "name"
+    t.string   "translator"
+    t.string   "original_language"
+    t.decimal  "price"
+    t.string   "dimensions"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
   end
 
 end

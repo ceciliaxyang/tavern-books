@@ -1,0 +1,36 @@
+<div class="row">
+	<div class="span8">
+		<h1>Broadsides</h1>
+	</div>
+
+	<div class="span4" align="right">
+		<br><h5>Sort by
+
+				<%@sort_attributes.each { |attribute| %>
+					<a class="<%= "selected" if attribute == @sorting %>" href="/?sort=<%= attribute %>"><%= attribute %></a> 
+					<%= "/" unless attribute == @sort_attributes.last %>
+				<% } %> 
+		</h5>
+	</div>
+</div>
+
+<br><br><br><br>
+
+<table>
+
+<% @broadsides.each do |item| %>
+	<div class="row">
+ 		<div class="span2 offset2">
+			<%= image_tag item.name+"-broadside-thumb.jpg"%>
+		</div>
+		<div class="span7 offset 2">
+		    <h1><small><%= link_to item.title, item %></small></h1>
+	    	<h3><%= item.author %></h3>
+	
+		</div>
+	</div>
+<% end %>
+
+<%= link_to 'New Broadside', new_broadside_path %>
+
+</table>

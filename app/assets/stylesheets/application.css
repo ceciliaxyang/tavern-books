@@ -14,7 +14,7 @@
 
 body {
   padding-top: 100px;
-  padding-bottom: 40px;
+  padding-bottom: 100px;
   margin: 0;
   font-family: 'Crimson Text', Georgia, serif;
   font-size: 16px;
@@ -33,6 +33,10 @@ a:hover {
   text-decoration: underline;
 }
 
+a.selected {
+  background-color:#ee6004;
+  color: #ffffff;
+}
 
 p {
   margin: 0 0 9px;

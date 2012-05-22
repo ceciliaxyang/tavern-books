@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @broadside.title %>
+</p>
+
+<p>
+  <b>Author:</b>
+  <%= @broadside.author %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @broadside.name %>
+</p>
+
+<p>
+  <b>Translator:</b>
+  <%= @broadside.translator %>
+</p>
+
+<p>
+  <b>Original language:</b>
+  <%= @broadside.original_language %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%= @broadside.price %>
+</p>
+
+<p>
+  <b>Dimensions:</b>
+  <%= @broadside.dimensions %>
+</p>
+
+
+<%= link_to 'Edit', edit_broadside_path(@broadside) %> |
+<%= link_to 'Back', broadsides_path %>
