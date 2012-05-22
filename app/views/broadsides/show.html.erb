@@ -1,40 +1,47 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Title:</b>
-  <%= @broadside.title %>
-</p>
+<div class="row">
+	
+	<div class="span4">
+		<%= image_tag @broadside.name+"broadside-01.png"%>
+	</div>
 
-<p>
-  <b>Author:</b>
-  <%= @broadside.author %>
-</p>
+	<div class="span7 offset1">
+		<h1><%= @broadside.title %></h1>
+		<h3><%= @broadside.author %></h3>
+		
+		
+		<% unless @broadside.translator.empty? %>
+			<p>Translated from the <%= @broadside.original_language %> by <%= @broadside.translator %></p>
+		<% end %>
+		
+		
+		<p class="quote"><%= @broadside.dimensions %></p>
+		
+		<br>
 
-<p>
-  <b>Name:</b>
-  <%= @broadside.name %>
-</p>
+		<div class="row">
+			<div class="span2">
+				<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+					<input type="hidden" name="cmd" value="_s-xclick">
+					<input type="hidden" name="hosted_button_id" value="<%= @broadside.paypal_buy %>">
+					<input class="btn btn-primary btn-large" type="submit" border="0" value="Buy now" alt="PayPal - The safer, easier way to pay online!">
+					<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+				</form>
+			</div>
+			<div class="span1">			
+				<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+					<input type="hidden" name="cmd" value="_s-xclick">
+					<input type="hidden" name="hosted_button_id" value="<%= @broadside.paypal_cart %>">
+					<input class="btn btn-inverse btn-large" type="submit" border="0" value="Add to cart" alt="PayPal - The safer, easier way to pay online!">
+					<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+				</form>
+			</div>
+		</div>
+		
+	</div>
 
-<p>
-  <b>Translator:</b>
-  <%= @broadside.translator %>
-</p>
-
-<p>
-  <b>Original language:</b>
-  <%= @broadside.original_language %>
-</p>
-
-<p>
-  <b>Price:</b>
-  <%= @broadside.price %>
-</p>
-
-<p>
-  <b>Dimensions:</b>
-  <%= @broadside.dimensions %>
-</p>
-
+</div>
 
 <%= link_to 'Edit', edit_broadside_path(@broadside) %> |
 <%= link_to 'Back', broadsides_path %>
