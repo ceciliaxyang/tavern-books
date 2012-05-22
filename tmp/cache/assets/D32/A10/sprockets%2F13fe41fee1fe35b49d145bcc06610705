@@ -1,4 +1,4 @@
-o: ActiveSupport::Cache::Entry	:@expires_in0:@value"1ˆ{"source"Ý†/*
+o: ActiveSupport::Cache::Entry	:@expires_in0:@value"d‰{"source"ˆ/*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
  *
@@ -135,7 +135,7 @@ h3 small {
   text-transform: none;
   letter-spacing: 0px;
   font-style: italic;
-  color: #666666;
+  color: #66666;
 
 }
 
@@ -146,7 +146,13 @@ h6 {
 }
 
 h4 {
-  font-size: 14px;
+  font-family: 'Crimson Text', Georgia, serif;
+  font-weight: 400;
+  font-size: 20px;
+  text-transform:uppercase;
+  letter-spacing: 2px;
+  line-height: 1;
+  color: #999999;
 }
 
 h4 small {
@@ -263,6 +269,13 @@ select,
 	    padding-bottom: 20px;
 	    padding-top: 50px;
 		font-size: 16px;
+}
+
+
+.dot-separator {
+    background: url("/assets/pullbg.gif") repeat-x scroll center bottom transparent;
+    margin-bottom: 25px;
+    padding-top: 50px;
 }
 /*!
  * Bootstrap v2.0.3
@@ -5064,6 +5077,6 @@ div.field, div.actions {
   font-size: 12px;
   list-style: square;
 }
-"digest"%4ef8ee7e7d5828cb0f28d6455088d90a"required_assets_digest"%81769ca03b6cb26a9ce336fd332e293c"_version"%9f3b95dd7ea3030dc35985c0a8020862"
-class"BundledAsset"lengthiÝ†"pathname"1$root/app/assets/stylesheets/application.css"logical_path"application.css"content_type"text/css"
-mtime"2012-05-21T23:48:49-07:00:@compressedF:@created_atf1337669330.7108021 }È
+"digest"%e854dcef33adc1c755bcff1c6a3562e5"required_assets_digest"%e88b12c02d469be0ae6fb0e8506b8584"_version"%9f3b95dd7ea3030dc35985c0a8020862"
+class"BundledAsset"lengthiˆ"pathname"1$root/app/assets/stylesheets/application.css"logical_path"application.css"content_type"text/css"
+mtime"2012-05-22T01:20:21-07:00:@compressedF:@created_atf1337674854.9443879 pÚ
