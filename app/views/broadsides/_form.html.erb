@@ -12,16 +12,16 @@
   <% end %>
 
   <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
     <%= f.label :title %><br />
     <%= f.text_field :title %>
   </div>
   <div class="field">
     <%= f.label :author %><br />
     <%= f.text_field :author %>
-  </div>
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
   </div>
   <div class="field">
     <%= f.label :translator %><br />
@@ -38,6 +38,14 @@
   <div class="field">
     <%= f.label :dimensions %><br />
     <%= f.text_field :dimensions %>
+  </div>
+  <div class="field">
+    <%= f.label :paypal_cart %><br />
+    <%= f.text_field :paypal_cart %>
+  </div>
+  <div class="field">
+    <%= f.label :paypal_buy %><br />
+    <%= f.text_field :paypal_buy %>
   </div>
   <div class="actions">
     <%= f.submit %>
