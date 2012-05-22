@@ -21,35 +21,43 @@
 		ISBN-13: <%= @book.isbn %></p>
 		
 		<br>
-		
-		<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-			<input type="hidden" name="cmd" value="_s-xclick">
-			<input type="hidden" name="hosted_button_id" value="<%= @book.paypal %>">
-			<input type="image" src="/assets/addtocart.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-			<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-		</form>
 
-		<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-			<input type="hidden" name="cmd" value="_s-xclick">
-			<input type="hidden" name="hosted_button_id" value="<%= @book.paypal2 %>">
-			<input type="image" src="/assets/buynow.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-			<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-		</form>
+		<div class="row">
+			<div class="span2">
+				<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+					<input type="hidden" name="cmd" value="_s-xclick">
+					<input type="hidden" name="hosted_button_id" value="<%= @book.paypal2 %>">
+					<input class="btn btn-primary btn-large" type="submit" border="0" value="Buy now" alt="PayPal - The safer, easier way to pay online!">
+					<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+				</form>
+			</div>
+			<div class="span1">			
+				<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+					<input type="hidden" name="cmd" value="_s-xclick">
+					<input type="hidden" name="hosted_button_id" value="<%= @book.paypal %>">
+					<input class="btn btn-inverse btn-large" type="submit" border="0" value="Add to cart" alt="PayPal - The safer, easier way to pay online!">
+					<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+				</form>
+			</div>
+		</div>
+
 		<p class="lead">
 		  <%= @book.description %>
 		</p>
 		
-		<% unless @book.author.empty? %>
+		<p align="center" class="divider"><br>&#10539;<br><br></p>
+		
+		<% unless @book.aboutAuthor.empty? %>
 			<h3>About <%= @book.author %></h3>
 			<p><%= @book.aboutAuthor %></p>
 		<% end %>
 		
-		<% unless @book.translator.empty? %>
+		<% unless @book.aboutTranslator.empty? %>
 			<h3>About <%= @book.translator %></h3>
 			<p><%= @book.aboutTranslator %></p>
 		<% end %>
 		
-		<p align="center"><br>&#10005;&nbsp;&nbsp;&nbsp;&#10005;&nbsp;&nbsp;&nbsp;&#10005;<br><br></p>
+		<p align="center" class="divider"><br>&#10540;<br><br></p>
 
 		<p class="quote">
 		  "<%= @book.quote %>"

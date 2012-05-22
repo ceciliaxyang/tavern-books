@@ -57,6 +57,10 @@ p small {
   line-height: 27px;
 }
 
+.divider {
+  font-size: 24px;
+}
+
 p.quote {
   font-family: 'Crimson Text', Georgia, serif;
   font-style: italic;
@@ -223,6 +227,12 @@ h6 {
   text-decoration: none;
 }
 
+
+form {
+  margin: 0 0 10px;
+}
+
+
 input,
 textarea,
 select,
@@ -241,6 +251,8 @@ select,
      -moz-border-radius: 3px;
           border-radius: 3px;
 }
+
+
 
 .footer {
 	
