@@ -1,4 +1,4 @@
-o: ActiveSupport::Cache::Entry	:@expires_in0:@value"d‰{"source"ˆ/*
+o: ActiveSupport::Cache::Entry	:@expires_in0:@value"x‰{"source"$ˆ/*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
  *
@@ -46,9 +46,10 @@ p {
   line-height: 24px;
 }
 
-p small {
-  font-size: 11px;
-  color: #999999;
+.small {
+  line-height: 20px;
+  font-size: 15px;
+  color: #666666;
 }
 
 .lead {
@@ -58,6 +59,20 @@ p small {
   line-height: 27px;
 }
 
+.well {
+  min-height: 20px;
+  padding: 19px;
+  margin-bottom: 20px;
+  background-color: #fafafa;
+  border: 1px solid #eee;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.03);
+     -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.03);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.03);
+}
 .divider {
   font-size: 24px;
 }
@@ -2612,20 +2627,6 @@ table .span24 {
           border-radius: 4px;
 }
 
-.well {
-  min-height: 20px;
-  padding: 19px;
-  margin-bottom: 20px;
-  background-color: #f5f5f5;
-  border: 1px solid #eee;
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  -webkit-border-radius: 4px;
-     -moz-border-radius: 4px;
-          border-radius: 4px;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-     -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-}
 
 .well blockquote {
   border-color: #ddd;
@@ -5077,6 +5078,6 @@ div.field, div.actions {
   font-size: 12px;
   list-style: square;
 }
-"digest"%e854dcef33adc1c755bcff1c6a3562e5"required_assets_digest"%e88b12c02d469be0ae6fb0e8506b8584"_version"%9f3b95dd7ea3030dc35985c0a8020862"
-class"BundledAsset"lengthiˆ"pathname"1$root/app/assets/stylesheets/application.css"logical_path"application.css"content_type"text/css"
-mtime"2012-05-22T01:20:21-07:00:@compressedF:@created_atf1337674854.9443879 pÚ
+"digest"%7175acdb111a0a7b2513d7b15aedd107"required_assets_digest"%b0fc53025391c3d9a50585c596038009"_version"%9f3b95dd7ea3030dc35985c0a8020862"
+class"BundledAsset"lengthi$ˆ"pathname"1$root/app/assets/stylesheets/application.css"logical_path"application.css"content_type"text/css"
+mtime"2012-05-22T01:44:01-07:00:@compressedF:@created_atf1337676242.5012219 
