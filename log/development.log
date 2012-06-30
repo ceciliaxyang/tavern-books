@@ -1,0 +1,3471 @@
+  [1m[36m (0.6ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateBooks (20120506205305)
+Migrating to AddIsbNtoBooks (20120506230630)
+Migrating to AddPriceToBooks (20120506232403)
+Migrating to AddOriginalLanguageToBooks (20120508053553)
+Migrating to AddPaypalToBooks (20120508054847)
+Migrating to AddPaypal2ToBooks (20120519172926)
+Migrating to AddTypeToBooks (20120519173158)
+Migrating to AddQuoteToBooks (20120519173220)
+Migrating to AddQuoterToBooks (20120519173232)
+Migrating to FixColumnName (20120519174419)
+Migrating to AddTranslatorDescriptionToBooks (20120519174840)
+Migrating to AddAuthorDescriptionToBooks (20120519175304)
+Migrating to CreateBroadsides (20120520014255)
+Migrating to AddPaypalCartToBroadsides (20120522065314)
+Migrating to AddPaypalBuyToBroadsides (20120522065351)
+Migrating to DeviseCreateAdmins (20120630225607)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.6ms)[0m  CREATE TABLE "admins" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(255) DEFAULT '' NOT NULL, "reset_password_token" varchar(255), "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("admins")[0m
+  [1m[35m (2.0ms)[0m  CREATE UNIQUE INDEX "index_admins_on_email" ON "admins" ("email")
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("admins")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_admins_on_email')
+  [1m[36m (0.1ms)[0m  [1mCREATE UNIQUE INDEX "index_admins_on_reset_password_token" ON "admins" ("reset_password_token")[0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20120630225607')
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("admins")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_admins_on_reset_password_token')[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_admins_on_email')
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("books")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("broadsides")
+
+
+Started GET "/broadsides" for 127.0.0.1 at Sat Jun 30 15:59:18 -0700 2012
+Processing by BroadsidesController#index as HTML
+  [1m[36mBroadside Load (0.7ms)[0m  [1mSELECT "broadsides".* FROM "broadsides" [0m
+  Rendered broadsides/_list.html.erb (24.5ms)
+  Rendered broadsides/index.html.erb within layouts/application (38.7ms)
+Completed 200 OK in 395ms (Views: 198.3ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at Sat Jun 30 15:59:19 -0700 2012
+Served asset /bootstrap.css - 304 Not Modified (31ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sat Jun 30 15:59:19 -0700 2012
+Served asset /application.css - 304 Not Modified (195ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at Sat Jun 30 15:59:19 -0700 2012
+Served asset /books.css - 304 Not Modified (14ms)
+
+
+Started GET "/assets/broadsides.css?body=1" for 127.0.0.1 at Sat Jun 30 15:59:19 -0700 2012
+Served asset /broadsides.css - 304 Not Modified (17ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sat Jun 30 15:59:19 -0700 2012
+Served asset /scaffolds.css - 304 Not Modified (14ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sat Jun 30 15:59:19 -0700 2012
+Served asset /jquery.js - 304 Not Modified (46ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sat Jun 30 15:59:20 -0700 2012
+Served asset /jquery_ujs.js - 304 Not Modified (16ms)
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at Sat Jun 30 15:59:20 -0700 2012
+Served asset /books.js - 304 Not Modified (14ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Sat Jun 30 15:59:20 -0700 2012
+Served asset /bootstrap.js - 304 Not Modified (17ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at Sat Jun 30 15:59:20 -0700 2012
+Served asset /bootstrap.min.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/broadsides.js?body=1" for 127.0.0.1 at Sat Jun 30 15:59:20 -0700 2012
+Served asset /broadsides.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sat Jun 30 15:59:20 -0700 2012
+Served asset /application.js - 304 Not Modified (53ms)
+
+
+Started GET "/assets/transtromer-six-winters-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 15:59:23 -0700 2012
+Served asset /transtromer-six-winters-broadside-thumb.jpg - 304 Not Modified (12ms)
+
+
+Started GET "/assets/transtromer-land-of-lap-fever-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 15:59:23 -0700 2012
+Served asset /transtromer-land-of-lap-fever-broadside-thumb.jpg - 304 Not Modified (16ms)
+
+
+Started GET "/assets/louis-archaeology-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 15:59:23 -0700 2012
+Served asset /louis-archaeology-broadside-thumb.jpg - 304 Not Modified (13ms)
+
+
+Started GET "/assets/hitchcock-somber-music-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 15:59:23 -0700 2012
+Served asset /hitchcock-somber-music-broadside-thumb.jpg - 304 Not Modified (12ms)
+
+
+Started GET "/assets/zach-be-careful-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 15:59:23 -0700 2012
+Served asset /zach-be-careful-broadside-thumb.jpg - 304 Not Modified (13ms)
+
+
+Started GET "/assets/transtromer-prison-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 15:59:23 -0700 2012
+Served asset /transtromer-prison-broadside-thumb.jpg - 304 Not Modified (171ms)
+
+
+Started GET "/assets/buson-untitled-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 15:59:23 -0700 2012
+Served asset /buson-untitled-broadside-thumb.jpg - 304 Not Modified (10ms)
+
+
+Started GET "/assets/ahmed-shaving-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 15:59:23 -0700 2012
+Served asset /ahmed-shaving-broadside-thumb.jpg - 304 Not Modified (10ms)
+
+
+Started GET "/assets/broadside-set-1-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 15:59:23 -0700 2012
+Served asset /broadside-set-1-broadside-thumb.jpg - 304 Not Modified (10ms)
+
+
+Started GET "/assets/sinisgalli-protect-myself-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 15:59:23 -0700 2012
+Served asset /sinisgalli-protect-myself-broadside-thumb.jpg - 304 Not Modified (15ms)
+
+
+Started GET "/assets/mcdougall-niceties-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 15:59:23 -0700 2012
+Served asset /mcdougall-niceties-broadside-thumb.jpg - 304 Not Modified (8ms)
+
+
+Started GET "/assets/millar-ocean-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 15:59:23 -0700 2012
+Served asset /millar-ocean-broadside-thumb.jpg - 304 Not Modified (14ms)
+
+
+Started GET "/assets/ritsos-lamp-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 15:59:23 -0700 2012
+Served asset /ritsos-lamp-broadside-thumb.jpg - 304 Not Modified (13ms)
+
+
+Started GET "/assets/wevill-big-list-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 15:59:24 -0700 2012
+Served asset /wevill-big-list-broadside-thumb.jpg - 304 Not Modified (11ms)
+
+
+Started GET "/assets/wrolstad-sea-shore-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 15:59:24 -0700 2012
+Served asset /wrolstad-sea-shore-broadside-thumb.jpg - 304 Not Modified (11ms)
+
+
+Started GET "/assets/juhasz-gate-of-secrets-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 15:59:24 -0700 2012
+Served asset /juhasz-gate-of-secrets-broadside-thumb.jpg - 304 Not Modified (12ms)
+
+
+Started GET "/assets/lewis-eagle-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 15:59:24 -0700 2012
+Served asset /lewis-eagle-broadside-thumb.jpg - 304 Not Modified (7ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at Sat Jun 30 15:59:25 -0700 2012
+Served asset /logo.png - 304 Not Modified (9ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Jun 30 15:59:29 -0700 2012
+Processing by ApplicationController#index as HTML
+  [1m[35mBook Load (6.9ms)[0m  SELECT "books".* FROM "books" 
+  [1m[36mBroadside Load (0.7ms)[0m  [1mSELECT "broadsides".* FROM "broadsides" [0m
+  Rendered books/_list.html.erb (39.1ms)
+  Rendered application/index.html.erb within layouts/application (44.0ms)
+Completed 200 OK in 172ms (Views: 76.0ms | ActiveRecord: 10.1ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at Sat Jun 30 15:59:30 -0700 2012
+Served asset /bootstrap.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/broadsides.css?body=1" for 127.0.0.1 at Sat Jun 30 15:59:30 -0700 2012
+Served asset /broadsides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sat Jun 30 15:59:30 -0700 2012
+Served asset /application.css - 304 Not Modified (24ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sat Jun 30 15:59:30 -0700 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sat Jun 30 15:59:30 -0700 2012
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at Sat Jun 30 15:59:30 -0700 2012
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sat Jun 30 15:59:30 -0700 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at Sat Jun 30 15:59:31 -0700 2012
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Sat Jun 30 15:59:31 -0700 2012
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at Sat Jun 30 15:59:31 -0700 2012
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/broadsides.js?body=1" for 127.0.0.1 at Sat Jun 30 15:59:31 -0700 2012
+Served asset /broadsides.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sat Jun 30 15:59:31 -0700 2012
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at Sat Jun 30 15:59:33 -0700 2012
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/books/new" for 127.0.0.1 at Sat Jun 30 15:59:41 -0700 2012
+Processing by BooksController#new as HTML
+Completed 401 Unauthorized in 21ms
+
+
+Started GET "/admins/sign_in" for 127.0.0.1 at Sat Jun 30 15:59:41 -0700 2012
+Processing by Devise::SessionsController#new as HTML
+  Rendered /Library/Ruby/Gems/1.8/gems/devise-2.1.2/app/views/devise/shared/_links.erb (5.1ms)
+  Rendered /Library/Ruby/Gems/1.8/gems/devise-2.1.2/app/views/devise/sessions/new.html.erb within layouts/application (23.1ms)
+Completed 200 OK in 96ms (Views: 58.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at Sat Jun 30 15:59:42 -0700 2012
+Served asset /bootstrap.css - 304 Not Modified (154ms)
+
+
+Started GET "/assets/broadsides.css?body=1" for 127.0.0.1 at Sat Jun 30 15:59:42 -0700 2012
+Served asset /broadsides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sat Jun 30 15:59:42 -0700 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sat Jun 30 15:59:42 -0700 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at Sat Jun 30 15:59:42 -0700 2012
+Served asset /books.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sat Jun 30 15:59:42 -0700 2012
+Served asset /application.css - 304 Not Modified (30ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sat Jun 30 15:59:42 -0700 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at Sat Jun 30 15:59:42 -0700 2012
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Sat Jun 30 15:59:42 -0700 2012
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at Sat Jun 30 15:59:42 -0700 2012
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/broadsides.js?body=1" for 127.0.0.1 at Sat Jun 30 15:59:42 -0700 2012
+Served asset /broadsides.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sat Jun 30 15:59:42 -0700 2012
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at Sat Jun 30 15:59:45 -0700 2012
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/admins/sign_in" for 127.0.0.1 at Sat Jun 30 16:02:51 -0700 2012
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (7.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (24.1ms)
+Completed 200 OK in 72ms (Views: 67.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at Sat Jun 30 16:02:52 -0700 2012
+Served asset /bootstrap.css - 304 Not Modified (17ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sat Jun 30 16:02:52 -0700 2012
+Served asset /application.css - 304 Not Modified (20ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at Sat Jun 30 16:02:52 -0700 2012
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/broadsides.css?body=1" for 127.0.0.1 at Sat Jun 30 16:02:52 -0700 2012
+Served asset /broadsides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sat Jun 30 16:02:52 -0700 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sat Jun 30 16:02:52 -0700 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sat Jun 30 16:02:52 -0700 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at Sat Jun 30 16:02:52 -0700 2012
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Sat Jun 30 16:02:52 -0700 2012
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at Sat Jun 30 16:02:52 -0700 2012
+Served asset /bootstrap.min.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/broadsides.js?body=1" for 127.0.0.1 at Sat Jun 30 16:02:52 -0700 2012
+Served asset /broadsides.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sat Jun 30 16:02:52 -0700 2012
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at Sat Jun 30 16:02:55 -0700 2012
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/admins/sign_in" for 127.0.0.1 at Sat Jun 30 16:04:58 -0700 2012
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 59ms (Views: 56.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at Sat Jun 30 16:04:59 -0700 2012
+Served asset /bootstrap.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sat Jun 30 16:04:59 -0700 2012
+Served asset /application.css - 304 Not Modified (18ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at Sat Jun 30 16:04:59 -0700 2012
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/broadsides.css?body=1" for 127.0.0.1 at Sat Jun 30 16:04:59 -0700 2012
+Served asset /broadsides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sat Jun 30 16:04:59 -0700 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sat Jun 30 16:04:59 -0700 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sat Jun 30 16:04:59 -0700 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at Sat Jun 30 16:04:59 -0700 2012
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Sat Jun 30 16:04:59 -0700 2012
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at Sat Jun 30 16:04:59 -0700 2012
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/broadsides.js?body=1" for 127.0.0.1 at Sat Jun 30 16:04:59 -0700 2012
+Served asset /broadsides.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sat Jun 30 16:04:59 -0700 2012
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at Sat Jun 30 16:05:01 -0700 2012
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started POST "/admins/sign_in" for 127.0.0.1 at Sat Jun 30 16:05:25 -0700 2012
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"commit"=>"Sign in", "authenticity_token"=>"5E1DdqUyLd9B8+G2eqDvWRU4b86swjHQ8LV5TviH93U=", "utf8"=>"✓", "admin"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "email"=>"ceciliaxyang@gmail.com"}}
+  [1m[35mAdmin Load (0.3ms)[0m  SELECT "admins".* FROM "admins" WHERE "admins"."email" = 'ceciliaxyang@gmail.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "admins" SET "last_sign_in_ip" = '127.0.0.1', "last_sign_in_at" = '2012-06-30 23:05:25.142162', "updated_at" = '2012-06-30 23:05:25.143199', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "current_sign_in_at" = '2012-06-30 23:05:25.142162' WHERE "admins"."id" = 1
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/books/new
+Completed 302 Found in 136ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/books/new" for 127.0.0.1 at Sat Jun 30 16:05:25 -0700 2012
+Processing by BooksController#new as HTML
+  [1m[35mAdmin Load (0.2ms)[0m  SELECT "admins".* FROM "admins" WHERE "admins"."id" = 1 LIMIT 1
+  Rendered books/_form.html.erb (11.0ms)
+  Rendered books/new.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 26ms (Views: 24.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at Sat Jun 30 16:05:25 -0700 2012
+Served asset /bootstrap.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sat Jun 30 16:05:25 -0700 2012
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sat Jun 30 16:05:25 -0700 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sat Jun 30 16:05:25 -0700 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/broadsides.css?body=1" for 127.0.0.1 at Sat Jun 30 16:05:25 -0700 2012
+Served asset /broadsides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sat Jun 30 16:05:25 -0700 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at Sat Jun 30 16:05:25 -0700 2012
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at Sat Jun 30 16:05:25 -0700 2012
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Sat Jun 30 16:05:25 -0700 2012
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at Sat Jun 30 16:05:25 -0700 2012
+Served asset /bootstrap.min.js - 304 Not Modified (58ms)
+
+
+Started GET "/assets/broadsides.js?body=1" for 127.0.0.1 at Sat Jun 30 16:05:25 -0700 2012
+Served asset /broadsides.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sat Jun 30 16:05:25 -0700 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at Sat Jun 30 16:05:26 -0700 2012
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/books" for 127.0.0.1 at Sat Jun 30 16:07:31 -0700 2012
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (7.0ms)[0m  [1mSELECT "books".* FROM "books" [0m
+  Rendered books/_list.html.erb (6.7ms)
+  Rendered books/index.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 26ms (Views: 16.3ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at Sat Jun 30 16:07:31 -0700 2012
+Served asset /bootstrap.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sat Jun 30 16:07:31 -0700 2012
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at Sat Jun 30 16:07:31 -0700 2012
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/broadsides.css?body=1" for 127.0.0.1 at Sat Jun 30 16:07:31 -0700 2012
+Served asset /broadsides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sat Jun 30 16:07:31 -0700 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sat Jun 30 16:07:31 -0700 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sat Jun 30 16:07:31 -0700 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at Sat Jun 30 16:07:31 -0700 2012
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Sat Jun 30 16:07:31 -0700 2012
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at Sat Jun 30 16:07:31 -0700 2012
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/broadsides.js?body=1" for 127.0.0.1 at Sat Jun 30 16:07:31 -0700 2012
+Served asset /broadsides.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sat Jun 30 16:07:31 -0700 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at Sat Jun 30 16:07:32 -0700 2012
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/books" for 127.0.0.1 at Sat Jun 30 16:12:11 -0700 2012
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.3ms)[0m  SELECT "books".* FROM "books" 
+  Rendered books/_list.html.erb (8.0ms)
+  Rendered books/index.html.erb within layouts/application (8.9ms)
+  [1m[36mAdmin Load (0.3ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE "admins"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 21ms (Views: 18.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at Sat Jun 30 16:12:11 -0700 2012
+Served asset /bootstrap.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sat Jun 30 16:12:11 -0700 2012
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at Sat Jun 30 16:12:11 -0700 2012
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/broadsides.css?body=1" for 127.0.0.1 at Sat Jun 30 16:12:11 -0700 2012
+Served asset /broadsides.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sat Jun 30 16:12:11 -0700 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sat Jun 30 16:12:11 -0700 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sat Jun 30 16:12:11 -0700 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at Sat Jun 30 16:12:11 -0700 2012
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Sat Jun 30 16:12:11 -0700 2012
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at Sat Jun 30 16:12:11 -0700 2012
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/broadsides.js?body=1" for 127.0.0.1 at Sat Jun 30 16:12:11 -0700 2012
+Served asset /broadsides.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sat Jun 30 16:12:11 -0700 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/boy-changed-stag-juhasz-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:12:11 -0700 2012
+Served asset /boy-changed-stag-juhasz-thumb.jpg - 304 Not Modified (4ms)
+
+
+Started GET "/assets/archaeology-louis-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:12:11 -0700 2012
+Served asset /archaeology-louis-thumb.jpg - 304 Not Modified (5ms)
+
+
+Started GET "/assets/zubair-ashulia-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:12:11 -0700 2012
+Served asset /zubair-ashulia-thumb.jpg - 304 Not Modified (5ms)
+
+
+Started GET "/assets/buson-haiku-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:12:11 -0700 2012
+Served asset /buson-haiku-thumb.jpg - 304 Not Modified (4ms)
+
+
+Started GET "/assets/six-minute-poems-hitchcock-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:12:11 -0700 2012
+Served asset /six-minute-poems-hitchcock-thumb.jpg - 304 Not Modified (3ms)
+
+
+Started GET "/assets/notes-on-sea-wrolstad-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:12:11 -0700 2012
+Served asset /notes-on-sea-wrolstad-thumb.jpg - 304 Not Modified (3ms)
+
+
+Started GET "/assets/tomas-transtromer-first-poems-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:12:11 -0700 2012
+Served asset /tomas-transtromer-first-poems-thumb.jpg - 304 Not Modified (5ms)
+
+
+Started GET "/assets/transtromer-prison-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:12:11 -0700 2012
+Served asset /transtromer-prison-thumb.jpg - 304 Not Modified (4ms)
+
+
+Started GET "/assets/transtromer-baltics-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:12:11 -0700 2012
+Served asset /transtromer-baltics-thumb.jpg - 304 Not Modified (3ms)
+
+
+Started GET "/assets/transtromer-for-the-living-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:12:11 -0700 2012
+Served asset /transtromer-for-the-living-thumb.jpg - 304 Not Modified (4ms)
+
+
+Started GET "/assets/arkansas-sky-mcdougall-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:12:11 -0700 2012
+Served asset /arkansas-sky-mcdougall-thumb.jpg - 304 Not Modified (4ms)
+
+
+Started GET "/assets/casual-ties-wevill-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:12:12 -0700 2012
+Served asset /casual-ties-wevill-thumb.jpg - 304 Not Modified (3ms)
+
+
+Started GET "/assets/arthur-eagle-lewis-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:12:12 -0700 2012
+Served asset /arthur-eagle-lewis-thumb.jpg - 304 Not Modified (4ms)
+
+
+Started GET "/assets/ocean-millar-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:12:12 -0700 2012
+Served asset /ocean-millar-thumb.jpg - 304 Not Modified (3ms)
+
+
+Started GET "/assets/twelve-poems-ritsos-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:12:12 -0700 2012
+Served asset /twelve-poems-ritsos-thumb.jpg - 304 Not Modified (3ms)
+
+
+Started GET "/assets/prodigy-simic-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:12:12 -0700 2012
+Served asset /prodigy-simic-thumb.jpg - 304 Not Modified (2ms)
+
+
+Started GET "/assets/night-of-shooting-stars-sinisgalli-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:12:12 -0700 2012
+Served asset /night-of-shooting-stars-sinisgalli-thumb.jpg - 304 Not Modified (3ms)
+
+
+Started GET "/assets/the-countries-we-live-in-zach-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:12:12 -0700 2012
+Served asset /the-countries-we-live-in-zach-thumb.jpg - 304 Not Modified (2ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at Sat Jun 30 16:12:12 -0700 2012
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started DELETE "/admins/sign_out" for 127.0.0.1 at Sat Jun 30 16:12:15 -0700 2012
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"5E1DdqUyLd9B8+G2eqDvWRU4b86swjHQ8LV5TviH93U="}
+  [1m[35mAdmin Load (0.2ms)[0m  SELECT "admins".* FROM "admins" WHERE "admins"."id" = 1 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 67ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Jun 30 16:12:15 -0700 2012
+Processing by ApplicationController#index as HTML
+  [1m[36mBook Load (0.3ms)[0m  [1mSELECT "books".* FROM "books" [0m
+  [1m[35mBroadside Load (0.2ms)[0m  SELECT "broadsides".* FROM "broadsides" 
+  Rendered books/_list.html.erb (7.0ms)
+  Rendered application/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 20ms (Views: 16.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at Sat Jun 30 16:12:16 -0700 2012
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sat Jun 30 16:12:16 -0700 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at Sat Jun 30 16:12:16 -0700 2012
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/broadsides.css?body=1" for 127.0.0.1 at Sat Jun 30 16:12:16 -0700 2012
+Served asset /broadsides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sat Jun 30 16:12:16 -0700 2012
+Served asset /application.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sat Jun 30 16:12:16 -0700 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sat Jun 30 16:12:16 -0700 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at Sat Jun 30 16:12:16 -0700 2012
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Sat Jun 30 16:12:16 -0700 2012
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at Sat Jun 30 16:12:16 -0700 2012
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/broadsides.js?body=1" for 127.0.0.1 at Sat Jun 30 16:12:16 -0700 2012
+Served asset /broadsides.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sat Jun 30 16:12:16 -0700 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/boy-changed-stag-juhasz-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:12:16 -0700 2012
+Served asset /boy-changed-stag-juhasz-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes-on-sea-wrolstad-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:12:16 -0700 2012
+Served asset /notes-on-sea-wrolstad-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/buson-haiku-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:12:16 -0700 2012
+Served asset /buson-haiku-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/zubair-ashulia-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:12:16 -0700 2012
+Served asset /zubair-ashulia-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/archaeology-louis-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:12:16 -0700 2012
+Served asset /archaeology-louis-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/six-minute-poems-hitchcock-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:12:16 -0700 2012
+Served asset /six-minute-poems-hitchcock-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tomas-transtromer-first-poems-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:12:16 -0700 2012
+Served asset /tomas-transtromer-first-poems-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/transtromer-prison-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:12:16 -0700 2012
+Served asset /transtromer-prison-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/transtromer-baltics-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:12:16 -0700 2012
+Served asset /transtromer-baltics-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/transtromer-for-the-living-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:12:16 -0700 2012
+Served asset /transtromer-for-the-living-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/arkansas-sky-mcdougall-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:12:16 -0700 2012
+Served asset /arkansas-sky-mcdougall-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/casual-ties-wevill-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:12:16 -0700 2012
+Served asset /casual-ties-wevill-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/arthur-eagle-lewis-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:12:16 -0700 2012
+Served asset /arthur-eagle-lewis-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ocean-millar-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:12:16 -0700 2012
+Served asset /ocean-millar-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twelve-poems-ritsos-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:12:16 -0700 2012
+Served asset /twelve-poems-ritsos-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/prodigy-simic-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:12:16 -0700 2012
+Served asset /prodigy-simic-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/night-of-shooting-stars-sinisgalli-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:12:16 -0700 2012
+Served asset /night-of-shooting-stars-sinisgalli-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/the-countries-we-live-in-zach-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:12:16 -0700 2012
+Served asset /the-countries-we-live-in-zach-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at Sat Jun 30 16:12:16 -0700 2012
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Jun 30 16:12:18 -0700 2012
+Processing by ApplicationController#index as HTML
+  [1m[36mBook Load (0.5ms)[0m  [1mSELECT "books".* FROM "books" [0m
+  [1m[35mBroadside Load (0.2ms)[0m  SELECT "broadsides".* FROM "broadsides" 
+  Rendered books/_list.html.erb (10.0ms)
+  Rendered application/index.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 23ms (Views: 19.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sat Jun 30 16:12:18 -0700 2012
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at Sat Jun 30 16:12:18 -0700 2012
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at Sat Jun 30 16:12:18 -0700 2012
+Served asset /bootstrap.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sat Jun 30 16:12:18 -0700 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sat Jun 30 16:12:18 -0700 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/broadsides.css?body=1" for 127.0.0.1 at Sat Jun 30 16:12:18 -0700 2012
+Served asset /broadsides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sat Jun 30 16:12:18 -0700 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at Sat Jun 30 16:12:18 -0700 2012
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Sat Jun 30 16:12:18 -0700 2012
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at Sat Jun 30 16:12:18 -0700 2012
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/broadsides.js?body=1" for 127.0.0.1 at Sat Jun 30 16:12:18 -0700 2012
+Served asset /broadsides.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sat Jun 30 16:12:18 -0700 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/boy-changed-stag-juhasz-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:12:19 -0700 2012
+Served asset /boy-changed-stag-juhasz-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/zubair-ashulia-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:12:19 -0700 2012
+Served asset /zubair-ashulia-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes-on-sea-wrolstad-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:12:19 -0700 2012
+Served asset /notes-on-sea-wrolstad-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/buson-haiku-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:12:19 -0700 2012
+Served asset /buson-haiku-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/six-minute-poems-hitchcock-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:12:19 -0700 2012
+Served asset /six-minute-poems-hitchcock-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/archaeology-louis-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:12:19 -0700 2012
+Served asset /archaeology-louis-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tomas-transtromer-first-poems-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:12:19 -0700 2012
+Served asset /tomas-transtromer-first-poems-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/transtromer-prison-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:12:19 -0700 2012
+Served asset /transtromer-prison-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/transtromer-baltics-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:12:19 -0700 2012
+Served asset /transtromer-baltics-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/transtromer-for-the-living-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:12:19 -0700 2012
+Served asset /transtromer-for-the-living-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/arkansas-sky-mcdougall-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:12:19 -0700 2012
+Served asset /arkansas-sky-mcdougall-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/casual-ties-wevill-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:12:19 -0700 2012
+Served asset /casual-ties-wevill-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/arthur-eagle-lewis-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:12:19 -0700 2012
+Served asset /arthur-eagle-lewis-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ocean-millar-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:12:19 -0700 2012
+Served asset /ocean-millar-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twelve-poems-ritsos-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:12:19 -0700 2012
+Served asset /twelve-poems-ritsos-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/prodigy-simic-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:12:19 -0700 2012
+Served asset /prodigy-simic-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/night-of-shooting-stars-sinisgalli-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:12:19 -0700 2012
+Served asset /night-of-shooting-stars-sinisgalli-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/the-countries-we-live-in-zach-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:12:19 -0700 2012
+Served asset /the-countries-we-live-in-zach-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at Sat Jun 30 16:12:20 -0700 2012
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Jun 30 16:12:51 -0700 2012
+Processing by ApplicationController#index as HTML
+  [1m[36mBook Load (0.3ms)[0m  [1mSELECT "books".* FROM "books" [0m
+  [1m[35mBroadside Load (0.2ms)[0m  SELECT "broadsides".* FROM "broadsides" 
+  Rendered books/_list.html.erb (10.9ms)
+  Rendered application/index.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 27ms (Views: 22.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at Sat Jun 30 16:12:51 -0700 2012
+Served asset /bootstrap.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sat Jun 30 16:12:51 -0700 2012
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at Sat Jun 30 16:12:51 -0700 2012
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/broadsides.css?body=1" for 127.0.0.1 at Sat Jun 30 16:12:51 -0700 2012
+Served asset /broadsides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sat Jun 30 16:12:51 -0700 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sat Jun 30 16:12:51 -0700 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sat Jun 30 16:12:51 -0700 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at Sat Jun 30 16:12:51 -0700 2012
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Sat Jun 30 16:12:51 -0700 2012
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at Sat Jun 30 16:12:51 -0700 2012
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/broadsides.js?body=1" for 127.0.0.1 at Sat Jun 30 16:12:51 -0700 2012
+Served asset /broadsides.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sat Jun 30 16:12:51 -0700 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/boy-changed-stag-juhasz-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:12:51 -0700 2012
+Served asset /boy-changed-stag-juhasz-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/zubair-ashulia-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:12:51 -0700 2012
+Served asset /zubair-ashulia-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/buson-haiku-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:12:51 -0700 2012
+Served asset /buson-haiku-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes-on-sea-wrolstad-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:12:51 -0700 2012
+Served asset /notes-on-sea-wrolstad-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/six-minute-poems-hitchcock-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:12:51 -0700 2012
+Served asset /six-minute-poems-hitchcock-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/archaeology-louis-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:12:51 -0700 2012
+Served asset /archaeology-louis-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tomas-transtromer-first-poems-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:12:51 -0700 2012
+Served asset /tomas-transtromer-first-poems-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/transtromer-prison-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:12:51 -0700 2012
+Served asset /transtromer-prison-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/transtromer-baltics-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:12:51 -0700 2012
+Served asset /transtromer-baltics-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/transtromer-for-the-living-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:12:51 -0700 2012
+Served asset /transtromer-for-the-living-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/arkansas-sky-mcdougall-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:12:51 -0700 2012
+Served asset /arkansas-sky-mcdougall-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/casual-ties-wevill-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:12:51 -0700 2012
+Served asset /casual-ties-wevill-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/arthur-eagle-lewis-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:12:51 -0700 2012
+Served asset /arthur-eagle-lewis-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ocean-millar-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:12:51 -0700 2012
+Served asset /ocean-millar-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twelve-poems-ritsos-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:12:51 -0700 2012
+Served asset /twelve-poems-ritsos-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/prodigy-simic-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:12:51 -0700 2012
+Served asset /prodigy-simic-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/night-of-shooting-stars-sinisgalli-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:12:51 -0700 2012
+Served asset /night-of-shooting-stars-sinisgalli-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/the-countries-we-live-in-zach-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:12:51 -0700 2012
+Served asset /the-countries-we-live-in-zach-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at Sat Jun 30 16:12:52 -0700 2012
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Jun 30 16:14:21 -0700 2012
+Processing by ApplicationController#index as HTML
+  [1m[36mBook Load (0.5ms)[0m  [1mSELECT "books".* FROM "books" [0m
+  [1m[35mBroadside Load (0.2ms)[0m  SELECT "broadsides".* FROM "broadsides" 
+  Rendered books/_list.html.erb (8.4ms)
+  Rendered application/index.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 22ms (Views: 17.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at Sat Jun 30 16:14:21 -0700 2012
+Served asset /bootstrap.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sat Jun 30 16:14:21 -0700 2012
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at Sat Jun 30 16:14:21 -0700 2012
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/broadsides.css?body=1" for 127.0.0.1 at Sat Jun 30 16:14:21 -0700 2012
+Served asset /broadsides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sat Jun 30 16:14:21 -0700 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sat Jun 30 16:14:21 -0700 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sat Jun 30 16:14:21 -0700 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at Sat Jun 30 16:14:21 -0700 2012
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Sat Jun 30 16:14:21 -0700 2012
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at Sat Jun 30 16:14:21 -0700 2012
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/broadsides.js?body=1" for 127.0.0.1 at Sat Jun 30 16:14:21 -0700 2012
+Served asset /broadsides.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sat Jun 30 16:14:21 -0700 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/boy-changed-stag-juhasz-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:14:22 -0700 2012
+Served asset /boy-changed-stag-juhasz-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/archaeology-louis-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:14:22 -0700 2012
+Served asset /archaeology-louis-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/six-minute-poems-hitchcock-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:14:22 -0700 2012
+Served asset /six-minute-poems-hitchcock-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/zubair-ashulia-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:14:22 -0700 2012
+Served asset /zubair-ashulia-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes-on-sea-wrolstad-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:14:22 -0700 2012
+Served asset /notes-on-sea-wrolstad-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/buson-haiku-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:14:22 -0700 2012
+Served asset /buson-haiku-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tomas-transtromer-first-poems-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:14:22 -0700 2012
+Served asset /tomas-transtromer-first-poems-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/transtromer-prison-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:14:22 -0700 2012
+Served asset /transtromer-prison-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/transtromer-baltics-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:14:22 -0700 2012
+Served asset /transtromer-baltics-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/transtromer-for-the-living-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:14:22 -0700 2012
+Served asset /transtromer-for-the-living-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/arkansas-sky-mcdougall-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:14:22 -0700 2012
+Served asset /arkansas-sky-mcdougall-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/casual-ties-wevill-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:14:22 -0700 2012
+Served asset /casual-ties-wevill-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/arthur-eagle-lewis-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:14:22 -0700 2012
+Served asset /arthur-eagle-lewis-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ocean-millar-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:14:22 -0700 2012
+Served asset /ocean-millar-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twelve-poems-ritsos-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:14:22 -0700 2012
+Served asset /twelve-poems-ritsos-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/prodigy-simic-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:14:22 -0700 2012
+Served asset /prodigy-simic-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/night-of-shooting-stars-sinisgalli-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:14:22 -0700 2012
+Served asset /night-of-shooting-stars-sinisgalli-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/the-countries-we-live-in-zach-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:14:22 -0700 2012
+Served asset /the-countries-we-live-in-zach-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at Sat Jun 30 16:14:22 -0700 2012
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/broadsides" for 127.0.0.1 at Sat Jun 30 16:16:16 -0700 2012
+Processing by BroadsidesController#index as HTML
+  [1m[36mBroadside Load (0.3ms)[0m  [1mSELECT "broadsides".* FROM "broadsides" [0m
+  Rendered broadsides/_list.html.erb (9.2ms)
+  Rendered broadsides/index.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 26ms (Views: 23.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at Sat Jun 30 16:16:17 -0700 2012
+Served asset /bootstrap.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sat Jun 30 16:16:17 -0700 2012
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at Sat Jun 30 16:16:17 -0700 2012
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/broadsides.css?body=1" for 127.0.0.1 at Sat Jun 30 16:16:17 -0700 2012
+Served asset /broadsides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sat Jun 30 16:16:17 -0700 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sat Jun 30 16:16:17 -0700 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sat Jun 30 16:16:17 -0700 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at Sat Jun 30 16:16:17 -0700 2012
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Sat Jun 30 16:16:17 -0700 2012
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at Sat Jun 30 16:16:17 -0700 2012
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/broadsides.js?body=1" for 127.0.0.1 at Sat Jun 30 16:16:17 -0700 2012
+Served asset /broadsides.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sat Jun 30 16:16:17 -0700 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/transtromer-six-winters-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:16:17 -0700 2012
+Served asset /transtromer-six-winters-broadside-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/zach-be-careful-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:16:17 -0700 2012
+Served asset /zach-be-careful-broadside-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/louis-archaeology-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:16:17 -0700 2012
+Served asset /louis-archaeology-broadside-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hitchcock-somber-music-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:16:17 -0700 2012
+Served asset /hitchcock-somber-music-broadside-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/transtromer-prison-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:16:17 -0700 2012
+Served asset /transtromer-prison-broadside-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/transtromer-land-of-lap-fever-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:16:17 -0700 2012
+Served asset /transtromer-land-of-lap-fever-broadside-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/buson-untitled-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:16:17 -0700 2012
+Served asset /buson-untitled-broadside-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ahmed-shaving-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:16:17 -0700 2012
+Served asset /ahmed-shaving-broadside-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/broadside-set-1-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:16:17 -0700 2012
+Served asset /broadside-set-1-broadside-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sinisgalli-protect-myself-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:16:17 -0700 2012
+Served asset /sinisgalli-protect-myself-broadside-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mcdougall-niceties-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:16:17 -0700 2012
+Served asset /mcdougall-niceties-broadside-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/millar-ocean-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:16:17 -0700 2012
+Served asset /millar-ocean-broadside-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ritsos-lamp-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:16:17 -0700 2012
+Served asset /ritsos-lamp-broadside-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/wevill-big-list-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:16:17 -0700 2012
+Served asset /wevill-big-list-broadside-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/wrolstad-sea-shore-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:16:17 -0700 2012
+Served asset /wrolstad-sea-shore-broadside-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/juhasz-gate-of-secrets-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:16:17 -0700 2012
+Served asset /juhasz-gate-of-secrets-broadside-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lewis-eagle-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:16:17 -0700 2012
+Served asset /lewis-eagle-broadside-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at Sat Jun 30 16:16:18 -0700 2012
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/broadsides" for 127.0.0.1 at Sat Jun 30 16:17:26 -0700 2012
+Processing by BroadsidesController#index as HTML
+  [1m[35mBroadside Load (0.8ms)[0m  SELECT "broadsides".* FROM "broadsides" 
+  Rendered broadsides/_list.html.erb (8.9ms)
+  Rendered broadsides/index.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 33ms (Views: 28.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at Sat Jun 30 16:17:26 -0700 2012
+Served asset /bootstrap.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sat Jun 30 16:17:26 -0700 2012
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at Sat Jun 30 16:17:26 -0700 2012
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/broadsides.css?body=1" for 127.0.0.1 at Sat Jun 30 16:17:26 -0700 2012
+Served asset /broadsides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sat Jun 30 16:17:26 -0700 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sat Jun 30 16:17:26 -0700 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sat Jun 30 16:17:26 -0700 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at Sat Jun 30 16:17:26 -0700 2012
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Sat Jun 30 16:17:26 -0700 2012
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at Sat Jun 30 16:17:26 -0700 2012
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/broadsides.js?body=1" for 127.0.0.1 at Sat Jun 30 16:17:26 -0700 2012
+Served asset /broadsides.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sat Jun 30 16:17:26 -0700 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/transtromer-six-winters-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:17:26 -0700 2012
+Served asset /transtromer-six-winters-broadside-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/transtromer-prison-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:17:26 -0700 2012
+Served asset /transtromer-prison-broadside-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/zach-be-careful-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:17:26 -0700 2012
+Served asset /zach-be-careful-broadside-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hitchcock-somber-music-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:17:26 -0700 2012
+Served asset /hitchcock-somber-music-broadside-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/transtromer-land-of-lap-fever-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:17:26 -0700 2012
+Served asset /transtromer-land-of-lap-fever-broadside-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/louis-archaeology-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:17:26 -0700 2012
+Served asset /louis-archaeology-broadside-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/buson-untitled-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:17:26 -0700 2012
+Served asset /buson-untitled-broadside-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ahmed-shaving-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:17:26 -0700 2012
+Served asset /ahmed-shaving-broadside-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/broadside-set-1-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:17:27 -0700 2012
+Served asset /broadside-set-1-broadside-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sinisgalli-protect-myself-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:17:27 -0700 2012
+Served asset /sinisgalli-protect-myself-broadside-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mcdougall-niceties-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:17:27 -0700 2012
+Served asset /mcdougall-niceties-broadside-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/millar-ocean-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:17:27 -0700 2012
+Served asset /millar-ocean-broadside-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ritsos-lamp-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:17:27 -0700 2012
+Served asset /ritsos-lamp-broadside-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/wevill-big-list-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:17:27 -0700 2012
+Served asset /wevill-big-list-broadside-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/wrolstad-sea-shore-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:17:27 -0700 2012
+Served asset /wrolstad-sea-shore-broadside-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/juhasz-gate-of-secrets-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:17:27 -0700 2012
+Served asset /juhasz-gate-of-secrets-broadside-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lewis-eagle-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:17:27 -0700 2012
+Served asset /lewis-eagle-broadside-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at Sat Jun 30 16:17:27 -0700 2012
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Jun 30 16:17:31 -0700 2012
+Processing by ApplicationController#index as HTML
+  [1m[36mBook Load (0.4ms)[0m  [1mSELECT "books".* FROM "books" [0m
+  [1m[35mBroadside Load (0.2ms)[0m  SELECT "broadsides".* FROM "broadsides" 
+  Rendered books/_list.html.erb (8.2ms)
+  Rendered application/index.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 24ms (Views: 20.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at Sat Jun 30 16:17:31 -0700 2012
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at Sat Jun 30 16:17:31 -0700 2012
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/broadsides.css?body=1" for 127.0.0.1 at Sat Jun 30 16:17:31 -0700 2012
+Served asset /broadsides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sat Jun 30 16:17:31 -0700 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sat Jun 30 16:17:31 -0700 2012
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sat Jun 30 16:17:31 -0700 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sat Jun 30 16:17:31 -0700 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at Sat Jun 30 16:17:31 -0700 2012
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Sat Jun 30 16:17:31 -0700 2012
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at Sat Jun 30 16:17:31 -0700 2012
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/broadsides.js?body=1" for 127.0.0.1 at Sat Jun 30 16:17:31 -0700 2012
+Served asset /broadsides.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sat Jun 30 16:17:31 -0700 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/boy-changed-stag-juhasz-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:17:32 -0700 2012
+Served asset /boy-changed-stag-juhasz-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/archaeology-louis-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:17:32 -0700 2012
+Served asset /archaeology-louis-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/buson-haiku-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:17:32 -0700 2012
+Served asset /buson-haiku-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/six-minute-poems-hitchcock-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:17:32 -0700 2012
+Served asset /six-minute-poems-hitchcock-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes-on-sea-wrolstad-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:17:32 -0700 2012
+Served asset /notes-on-sea-wrolstad-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/zubair-ashulia-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:17:32 -0700 2012
+Served asset /zubair-ashulia-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tomas-transtromer-first-poems-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:17:32 -0700 2012
+Served asset /tomas-transtromer-first-poems-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/transtromer-prison-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:17:32 -0700 2012
+Served asset /transtromer-prison-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/transtromer-baltics-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:17:32 -0700 2012
+Served asset /transtromer-baltics-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/transtromer-for-the-living-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:17:32 -0700 2012
+Served asset /transtromer-for-the-living-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/arkansas-sky-mcdougall-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:17:32 -0700 2012
+Served asset /arkansas-sky-mcdougall-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/casual-ties-wevill-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:17:32 -0700 2012
+Served asset /casual-ties-wevill-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/arthur-eagle-lewis-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:17:32 -0700 2012
+Served asset /arthur-eagle-lewis-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ocean-millar-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:17:32 -0700 2012
+Served asset /ocean-millar-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twelve-poems-ritsos-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:17:32 -0700 2012
+Served asset /twelve-poems-ritsos-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/prodigy-simic-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:17:32 -0700 2012
+Served asset /prodigy-simic-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/night-of-shooting-stars-sinisgalli-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:17:32 -0700 2012
+Served asset /night-of-shooting-stars-sinisgalli-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/the-countries-we-live-in-zach-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:17:32 -0700 2012
+Served asset /the-countries-we-live-in-zach-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at Sat Jun 30 16:17:32 -0700 2012
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Jun 30 16:17:55 -0700 2012
+Processing by ApplicationController#index as HTML
+  [1m[36mBook Load (0.4ms)[0m  [1mSELECT "books".* FROM "books" [0m
+  [1m[35mBroadside Load (0.2ms)[0m  SELECT "broadsides".* FROM "broadsides" 
+  Rendered books/_list.html.erb (9.6ms)
+  Rendered application/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 25ms (Views: 21.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at Sat Jun 30 16:17:55 -0700 2012
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sat Jun 30 16:17:55 -0700 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sat Jun 30 16:17:55 -0700 2012
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at Sat Jun 30 16:17:55 -0700 2012
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sat Jun 30 16:17:55 -0700 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/broadsides.css?body=1" for 127.0.0.1 at Sat Jun 30 16:17:55 -0700 2012
+Served asset /broadsides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sat Jun 30 16:17:55 -0700 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at Sat Jun 30 16:17:55 -0700 2012
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Sat Jun 30 16:17:55 -0700 2012
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at Sat Jun 30 16:17:55 -0700 2012
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/broadsides.js?body=1" for 127.0.0.1 at Sat Jun 30 16:17:55 -0700 2012
+Served asset /broadsides.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sat Jun 30 16:17:55 -0700 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/boy-changed-stag-juhasz-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:17:55 -0700 2012
+Served asset /boy-changed-stag-juhasz-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes-on-sea-wrolstad-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:17:55 -0700 2012
+Served asset /notes-on-sea-wrolstad-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/buson-haiku-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:17:55 -0700 2012
+Served asset /buson-haiku-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/zubair-ashulia-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:17:55 -0700 2012
+Served asset /zubair-ashulia-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/six-minute-poems-hitchcock-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:17:55 -0700 2012
+Served asset /six-minute-poems-hitchcock-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/archaeology-louis-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:17:55 -0700 2012
+Served asset /archaeology-louis-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tomas-transtromer-first-poems-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:17:55 -0700 2012
+Served asset /tomas-transtromer-first-poems-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/transtromer-prison-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:17:55 -0700 2012
+Served asset /transtromer-prison-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/transtromer-baltics-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:17:55 -0700 2012
+Served asset /transtromer-baltics-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/transtromer-for-the-living-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:17:55 -0700 2012
+Served asset /transtromer-for-the-living-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/arkansas-sky-mcdougall-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:17:55 -0700 2012
+Served asset /arkansas-sky-mcdougall-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/casual-ties-wevill-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:17:55 -0700 2012
+Served asset /casual-ties-wevill-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/arthur-eagle-lewis-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:17:55 -0700 2012
+Served asset /arthur-eagle-lewis-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ocean-millar-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:17:55 -0700 2012
+Served asset /ocean-millar-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twelve-poems-ritsos-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:17:55 -0700 2012
+Served asset /twelve-poems-ritsos-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/prodigy-simic-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:17:55 -0700 2012
+Served asset /prodigy-simic-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/night-of-shooting-stars-sinisgalli-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:17:55 -0700 2012
+Served asset /night-of-shooting-stars-sinisgalli-thumb.jpg - 304 Not Modified (60ms)
+
+
+Started GET "/assets/the-countries-we-live-in-zach-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:17:56 -0700 2012
+Served asset /the-countries-we-live-in-zach-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at Sat Jun 30 16:17:56 -0700 2012
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/broadsides" for 127.0.0.1 at Sat Jun 30 16:17:57 -0700 2012
+Processing by BroadsidesController#index as HTML
+  [1m[36mBroadside Load (0.2ms)[0m  [1mSELECT "broadsides".* FROM "broadsides" [0m
+  Rendered broadsides/_list.html.erb (11.8ms)
+  Rendered broadsides/index.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 28ms (Views: 25.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at Sat Jun 30 16:17:58 -0700 2012
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sat Jun 30 16:17:58 -0700 2012
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at Sat Jun 30 16:17:58 -0700 2012
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/broadsides.css?body=1" for 127.0.0.1 at Sat Jun 30 16:17:58 -0700 2012
+Served asset /broadsides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sat Jun 30 16:17:58 -0700 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sat Jun 30 16:17:58 -0700 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sat Jun 30 16:17:58 -0700 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at Sat Jun 30 16:17:58 -0700 2012
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Sat Jun 30 16:17:58 -0700 2012
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at Sat Jun 30 16:17:58 -0700 2012
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/broadsides.js?body=1" for 127.0.0.1 at Sat Jun 30 16:17:58 -0700 2012
+Served asset /broadsides.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sat Jun 30 16:17:58 -0700 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/transtromer-six-winters-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:17:58 -0700 2012
+Served asset /transtromer-six-winters-broadside-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/transtromer-prison-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:17:58 -0700 2012
+Served asset /transtromer-prison-broadside-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/transtromer-land-of-lap-fever-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:17:58 -0700 2012
+Served asset /transtromer-land-of-lap-fever-broadside-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/louis-archaeology-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:17:58 -0700 2012
+Served asset /louis-archaeology-broadside-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/zach-be-careful-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:17:58 -0700 2012
+Served asset /zach-be-careful-broadside-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hitchcock-somber-music-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:17:58 -0700 2012
+Served asset /hitchcock-somber-music-broadside-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/buson-untitled-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:17:58 -0700 2012
+Served asset /buson-untitled-broadside-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ahmed-shaving-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:17:58 -0700 2012
+Served asset /ahmed-shaving-broadside-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/broadside-set-1-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:17:58 -0700 2012
+Served asset /broadside-set-1-broadside-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sinisgalli-protect-myself-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:17:58 -0700 2012
+Served asset /sinisgalli-protect-myself-broadside-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mcdougall-niceties-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:17:58 -0700 2012
+Served asset /mcdougall-niceties-broadside-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/millar-ocean-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:17:58 -0700 2012
+Served asset /millar-ocean-broadside-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ritsos-lamp-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:17:58 -0700 2012
+Served asset /ritsos-lamp-broadside-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/wevill-big-list-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:17:58 -0700 2012
+Served asset /wevill-big-list-broadside-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/wrolstad-sea-shore-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:17:58 -0700 2012
+Served asset /wrolstad-sea-shore-broadside-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/juhasz-gate-of-secrets-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:17:58 -0700 2012
+Served asset /juhasz-gate-of-secrets-broadside-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lewis-eagle-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:17:58 -0700 2012
+Served asset /lewis-eagle-broadside-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at Sat Jun 30 16:17:59 -0700 2012
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/about" for 127.0.0.1 at Sat Jun 30 16:18:06 -0700 2012
+Processing by StaticController#about as HTML
+  Rendered static/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 9ms (Views: 8.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at Sat Jun 30 16:18:06 -0700 2012
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at Sat Jun 30 16:18:06 -0700 2012
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/broadsides.css?body=1" for 127.0.0.1 at Sat Jun 30 16:18:06 -0700 2012
+Served asset /broadsides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sat Jun 30 16:18:06 -0700 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sat Jun 30 16:18:06 -0700 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sat Jun 30 16:18:06 -0700 2012
+Served asset /application.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sat Jun 30 16:18:06 -0700 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at Sat Jun 30 16:18:06 -0700 2012
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Sat Jun 30 16:18:06 -0700 2012
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at Sat Jun 30 16:18:06 -0700 2012
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/broadsides.js?body=1" for 127.0.0.1 at Sat Jun 30 16:18:06 -0700 2012
+Served asset /broadsides.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sat Jun 30 16:18:06 -0700 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at Sat Jun 30 16:18:07 -0700 2012
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/community-outreach" for 127.0.0.1 at Sat Jun 30 16:18:13 -0700 2012
+Processing by StaticController#community-outreach as HTML
+  Rendered static/community-outreach.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at Sat Jun 30 16:18:13 -0700 2012
+Served asset /bootstrap.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sat Jun 30 16:18:13 -0700 2012
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at Sat Jun 30 16:18:13 -0700 2012
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sat Jun 30 16:18:13 -0700 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/broadsides.css?body=1" for 127.0.0.1 at Sat Jun 30 16:18:13 -0700 2012
+Served asset /broadsides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sat Jun 30 16:18:13 -0700 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sat Jun 30 16:18:13 -0700 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at Sat Jun 30 16:18:13 -0700 2012
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Sat Jun 30 16:18:13 -0700 2012
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at Sat Jun 30 16:18:13 -0700 2012
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/broadsides.js?body=1" for 127.0.0.1 at Sat Jun 30 16:18:13 -0700 2012
+Served asset /broadsides.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sat Jun 30 16:18:13 -0700 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at Sat Jun 30 16:18:14 -0700 2012
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Jun 30 16:18:17 -0700 2012
+Processing by ApplicationController#index as HTML
+  [1m[35mBook Load (0.3ms)[0m  SELECT "books".* FROM "books" 
+  [1m[36mBroadside Load (0.3ms)[0m  [1mSELECT "broadsides".* FROM "broadsides" [0m
+  Rendered books/_list.html.erb (8.0ms)
+  Rendered application/index.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 83ms (Views: 19.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at Sat Jun 30 16:18:17 -0700 2012
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sat Jun 30 16:18:17 -0700 2012
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at Sat Jun 30 16:18:17 -0700 2012
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/broadsides.css?body=1" for 127.0.0.1 at Sat Jun 30 16:18:17 -0700 2012
+Served asset /broadsides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sat Jun 30 16:18:17 -0700 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sat Jun 30 16:18:17 -0700 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sat Jun 30 16:18:17 -0700 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at Sat Jun 30 16:18:17 -0700 2012
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Sat Jun 30 16:18:17 -0700 2012
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at Sat Jun 30 16:18:17 -0700 2012
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/broadsides.js?body=1" for 127.0.0.1 at Sat Jun 30 16:18:17 -0700 2012
+Served asset /broadsides.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sat Jun 30 16:18:17 -0700 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/boy-changed-stag-juhasz-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:18:18 -0700 2012
+Served asset /boy-changed-stag-juhasz-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/buson-haiku-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:18:18 -0700 2012
+Served asset /buson-haiku-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/zubair-ashulia-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:18:18 -0700 2012
+Served asset /zubair-ashulia-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/six-minute-poems-hitchcock-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:18:18 -0700 2012
+Served asset /six-minute-poems-hitchcock-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/archaeology-louis-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:18:18 -0700 2012
+Served asset /archaeology-louis-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes-on-sea-wrolstad-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:18:18 -0700 2012
+Served asset /notes-on-sea-wrolstad-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tomas-transtromer-first-poems-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:18:18 -0700 2012
+Served asset /tomas-transtromer-first-poems-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/transtromer-prison-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:18:18 -0700 2012
+Served asset /transtromer-prison-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/transtromer-baltics-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:18:18 -0700 2012
+Served asset /transtromer-baltics-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/transtromer-for-the-living-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:18:18 -0700 2012
+Served asset /transtromer-for-the-living-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/arkansas-sky-mcdougall-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:18:18 -0700 2012
+Served asset /arkansas-sky-mcdougall-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/casual-ties-wevill-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:18:18 -0700 2012
+Served asset /casual-ties-wevill-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/arthur-eagle-lewis-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:18:18 -0700 2012
+Served asset /arthur-eagle-lewis-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ocean-millar-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:18:18 -0700 2012
+Served asset /ocean-millar-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twelve-poems-ritsos-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:18:18 -0700 2012
+Served asset /twelve-poems-ritsos-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/prodigy-simic-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:18:18 -0700 2012
+Served asset /prodigy-simic-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/night-of-shooting-stars-sinisgalli-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:18:18 -0700 2012
+Served asset /night-of-shooting-stars-sinisgalli-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/the-countries-we-live-in-zach-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:18:18 -0700 2012
+Served asset /the-countries-we-live-in-zach-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at Sat Jun 30 16:18:18 -0700 2012
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/admins/sign_in" for 127.0.0.1 at Sat Jun 30 16:18:25 -0700 2012
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 73ms (Views: 71.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at Sat Jun 30 16:18:26 -0700 2012
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sat Jun 30 16:18:26 -0700 2012
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at Sat Jun 30 16:18:26 -0700 2012
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/broadsides.css?body=1" for 127.0.0.1 at Sat Jun 30 16:18:26 -0700 2012
+Served asset /broadsides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sat Jun 30 16:18:26 -0700 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sat Jun 30 16:18:26 -0700 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sat Jun 30 16:18:26 -0700 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at Sat Jun 30 16:18:26 -0700 2012
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Sat Jun 30 16:18:26 -0700 2012
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at Sat Jun 30 16:18:26 -0700 2012
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/broadsides.js?body=1" for 127.0.0.1 at Sat Jun 30 16:18:26 -0700 2012
+Served asset /broadsides.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sat Jun 30 16:18:26 -0700 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at Sat Jun 30 16:18:26 -0700 2012
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started POST "/admins/sign_in" for 127.0.0.1 at Sat Jun 30 16:18:38 -0700 2012
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"commit"=>"Sign in", "authenticity_token"=>"hcOZwoO3JKtyRi1oBfU9Iqz0txgKWuNuytw2Osxc1Hs=", "utf8"=>"✓", "admin"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "email"=>"ceciliaxyang@gmail.com"}}
+  [1m[35mAdmin Load (0.2ms)[0m  SELECT "admins".* FROM "admins" WHERE "admins"."email" = 'ceciliaxyang@gmail.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "admins" SET "updated_at" = '2012-06-30 23:18:38.782885', "sign_in_count" = 2, "current_sign_in_at" = '2012-06-30 23:18:38.782122' WHERE "admins"."id" = 1
+  [1m[36m (2.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 103ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Jun 30 16:18:38 -0700 2012
+Processing by ApplicationController#index as HTML
+  [1m[35mBook Load (0.3ms)[0m  SELECT "books".* FROM "books" 
+  [1m[36mBroadside Load (0.2ms)[0m  [1mSELECT "broadsides".* FROM "broadsides" [0m
+  [1m[35mAdmin Load (0.2ms)[0m  SELECT "admins".* FROM "admins" WHERE "admins"."id" = 1 LIMIT 1
+  Rendered books/_list.html.erb (14.1ms)
+  Rendered application/index.html.erb within layouts/application (15.4ms)
+Completed 200 OK in 27ms (Views: 23.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at Sat Jun 30 16:18:39 -0700 2012
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sat Jun 30 16:18:39 -0700 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at Sat Jun 30 16:18:39 -0700 2012
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/broadsides.css?body=1" for 127.0.0.1 at Sat Jun 30 16:18:39 -0700 2012
+Served asset /broadsides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sat Jun 30 16:18:39 -0700 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sat Jun 30 16:18:39 -0700 2012
+Served asset /application.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sat Jun 30 16:18:39 -0700 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at Sat Jun 30 16:18:39 -0700 2012
+Served asset /books.js - 304 Not Modified (63ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Sat Jun 30 16:18:39 -0700 2012
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at Sat Jun 30 16:18:39 -0700 2012
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/broadsides.js?body=1" for 127.0.0.1 at Sat Jun 30 16:18:39 -0700 2012
+Served asset /broadsides.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sat Jun 30 16:18:39 -0700 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/boy-changed-stag-juhasz-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:18:39 -0700 2012
+Served asset /boy-changed-stag-juhasz-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/archaeology-louis-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:18:39 -0700 2012
+Served asset /archaeology-louis-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/buson-haiku-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:18:39 -0700 2012
+Served asset /buson-haiku-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/zubair-ashulia-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:18:39 -0700 2012
+Served asset /zubair-ashulia-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/six-minute-poems-hitchcock-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:18:39 -0700 2012
+Served asset /six-minute-poems-hitchcock-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes-on-sea-wrolstad-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:18:39 -0700 2012
+Served asset /notes-on-sea-wrolstad-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tomas-transtromer-first-poems-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:18:39 -0700 2012
+Served asset /tomas-transtromer-first-poems-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/transtromer-prison-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:18:39 -0700 2012
+Served asset /transtromer-prison-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/transtromer-baltics-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:18:39 -0700 2012
+Served asset /transtromer-baltics-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/transtromer-for-the-living-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:18:39 -0700 2012
+Served asset /transtromer-for-the-living-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/arkansas-sky-mcdougall-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:18:39 -0700 2012
+Served asset /arkansas-sky-mcdougall-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/casual-ties-wevill-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:18:39 -0700 2012
+Served asset /casual-ties-wevill-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/arthur-eagle-lewis-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:18:39 -0700 2012
+Served asset /arthur-eagle-lewis-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ocean-millar-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:18:39 -0700 2012
+Served asset /ocean-millar-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twelve-poems-ritsos-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:18:39 -0700 2012
+Served asset /twelve-poems-ritsos-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/prodigy-simic-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:18:39 -0700 2012
+Served asset /prodigy-simic-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/night-of-shooting-stars-sinisgalli-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:18:39 -0700 2012
+Served asset /night-of-shooting-stars-sinisgalli-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/the-countries-we-live-in-zach-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:18:39 -0700 2012
+Served asset /the-countries-we-live-in-zach-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at Sat Jun 30 16:18:40 -0700 2012
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Jun 30 16:18:47 -0700 2012
+Processing by ApplicationController#index as HTML
+  [1m[36mBook Load (0.5ms)[0m  [1mSELECT "books".* FROM "books" [0m
+  [1m[35mBroadside Load (0.2ms)[0m  SELECT "broadsides".* FROM "broadsides" 
+  [1m[36mAdmin Load (0.2ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE "admins"."id" = 1 LIMIT 1[0m
+  Rendered books/_list.html.erb (8.5ms)
+  Rendered application/index.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 22ms (Views: 17.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at Sat Jun 30 16:18:47 -0700 2012
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sat Jun 30 16:18:47 -0700 2012
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at Sat Jun 30 16:18:47 -0700 2012
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sat Jun 30 16:18:47 -0700 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sat Jun 30 16:18:47 -0700 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/broadsides.css?body=1" for 127.0.0.1 at Sat Jun 30 16:18:47 -0700 2012
+Served asset /broadsides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sat Jun 30 16:18:47 -0700 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at Sat Jun 30 16:18:48 -0700 2012
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Sat Jun 30 16:18:48 -0700 2012
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at Sat Jun 30 16:18:48 -0700 2012
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/broadsides.js?body=1" for 127.0.0.1 at Sat Jun 30 16:18:48 -0700 2012
+Served asset /broadsides.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sat Jun 30 16:18:48 -0700 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/boy-changed-stag-juhasz-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:18:48 -0700 2012
+Served asset /boy-changed-stag-juhasz-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/six-minute-poems-hitchcock-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:18:48 -0700 2012
+Served asset /six-minute-poems-hitchcock-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes-on-sea-wrolstad-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:18:48 -0700 2012
+Served asset /notes-on-sea-wrolstad-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/buson-haiku-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:18:48 -0700 2012
+Served asset /buson-haiku-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/zubair-ashulia-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:18:48 -0700 2012
+Served asset /zubair-ashulia-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/archaeology-louis-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:18:48 -0700 2012
+Served asset /archaeology-louis-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tomas-transtromer-first-poems-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:18:48 -0700 2012
+Served asset /tomas-transtromer-first-poems-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/transtromer-prison-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:18:48 -0700 2012
+Served asset /transtromer-prison-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/transtromer-baltics-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:18:48 -0700 2012
+Served asset /transtromer-baltics-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/transtromer-for-the-living-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:18:48 -0700 2012
+Served asset /transtromer-for-the-living-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/arkansas-sky-mcdougall-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:18:48 -0700 2012
+Served asset /arkansas-sky-mcdougall-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/casual-ties-wevill-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:18:48 -0700 2012
+Served asset /casual-ties-wevill-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/arthur-eagle-lewis-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:18:48 -0700 2012
+Served asset /arthur-eagle-lewis-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ocean-millar-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:18:48 -0700 2012
+Served asset /ocean-millar-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twelve-poems-ritsos-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:18:48 -0700 2012
+Served asset /twelve-poems-ritsos-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/prodigy-simic-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:18:48 -0700 2012
+Served asset /prodigy-simic-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/night-of-shooting-stars-sinisgalli-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:18:48 -0700 2012
+Served asset /night-of-shooting-stars-sinisgalli-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/the-countries-we-live-in-zach-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:18:48 -0700 2012
+Served asset /the-countries-we-live-in-zach-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at Sat Jun 30 16:18:48 -0700 2012
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started DELETE "/admins/sign_out" for 127.0.0.1 at Sat Jun 30 16:18:56 -0700 2012
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"hcOZwoO3JKtyRi1oBfU9Iqz0txgKWuNuytw2Osxc1Hs="}
+  [1m[35mAdmin Load (0.3ms)[0m  SELECT "admins".* FROM "admins" WHERE "admins"."id" = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Jun 30 16:18:56 -0700 2012
+Processing by ApplicationController#index as HTML
+  [1m[36mBook Load (0.6ms)[0m  [1mSELECT "books".* FROM "books" [0m
+  [1m[35mBroadside Load (0.4ms)[0m  SELECT "broadsides".* FROM "broadsides" 
+  Rendered books/_list.html.erb (6.9ms)
+  Rendered application/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 21ms (Views: 15.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sat Jun 30 16:18:57 -0700 2012
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at Sat Jun 30 16:18:57 -0700 2012
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at Sat Jun 30 16:18:57 -0700 2012
+Served asset /bootstrap.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/broadsides.css?body=1" for 127.0.0.1 at Sat Jun 30 16:18:57 -0700 2012
+Served asset /broadsides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sat Jun 30 16:18:57 -0700 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sat Jun 30 16:18:57 -0700 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sat Jun 30 16:18:57 -0700 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at Sat Jun 30 16:18:57 -0700 2012
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Sat Jun 30 16:18:57 -0700 2012
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at Sat Jun 30 16:18:57 -0700 2012
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/broadsides.js?body=1" for 127.0.0.1 at Sat Jun 30 16:18:57 -0700 2012
+Served asset /broadsides.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sat Jun 30 16:18:57 -0700 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/boy-changed-stag-juhasz-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:18:57 -0700 2012
+Served asset /boy-changed-stag-juhasz-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes-on-sea-wrolstad-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:18:57 -0700 2012
+Served asset /notes-on-sea-wrolstad-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/zubair-ashulia-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:18:57 -0700 2012
+Served asset /zubair-ashulia-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/six-minute-poems-hitchcock-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:18:57 -0700 2012
+Served asset /six-minute-poems-hitchcock-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/archaeology-louis-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:18:57 -0700 2012
+Served asset /archaeology-louis-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/buson-haiku-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:18:57 -0700 2012
+Served asset /buson-haiku-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tomas-transtromer-first-poems-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:18:57 -0700 2012
+Served asset /tomas-transtromer-first-poems-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/transtromer-prison-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:18:57 -0700 2012
+Served asset /transtromer-prison-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/transtromer-baltics-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:18:57 -0700 2012
+Served asset /transtromer-baltics-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/transtromer-for-the-living-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:18:57 -0700 2012
+Served asset /transtromer-for-the-living-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/arkansas-sky-mcdougall-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:18:57 -0700 2012
+Served asset /arkansas-sky-mcdougall-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/casual-ties-wevill-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:18:57 -0700 2012
+Served asset /casual-ties-wevill-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/arthur-eagle-lewis-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:18:57 -0700 2012
+Served asset /arthur-eagle-lewis-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ocean-millar-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:18:57 -0700 2012
+Served asset /ocean-millar-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twelve-poems-ritsos-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:18:57 -0700 2012
+Served asset /twelve-poems-ritsos-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/prodigy-simic-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:18:57 -0700 2012
+Served asset /prodigy-simic-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/night-of-shooting-stars-sinisgalli-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:18:57 -0700 2012
+Served asset /night-of-shooting-stars-sinisgalli-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/the-countries-we-live-in-zach-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:18:57 -0700 2012
+Served asset /the-countries-we-live-in-zach-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at Sat Jun 30 16:18:58 -0700 2012
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Jun 30 16:19:10 -0700 2012
+Processing by ApplicationController#index as HTML
+  [1m[36mBook Load (0.4ms)[0m  [1mSELECT "books".* FROM "books" [0m
+  [1m[35mBroadside Load (0.2ms)[0m  SELECT "broadsides".* FROM "broadsides" 
+  Rendered books/_list.html.erb (9.4ms)
+  Rendered application/index.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 23ms (Views: 17.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at Sat Jun 30 16:19:11 -0700 2012
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sat Jun 30 16:19:11 -0700 2012
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sat Jun 30 16:19:11 -0700 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at Sat Jun 30 16:19:11 -0700 2012
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/broadsides.css?body=1" for 127.0.0.1 at Sat Jun 30 16:19:11 -0700 2012
+Served asset /broadsides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sat Jun 30 16:19:11 -0700 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sat Jun 30 16:19:11 -0700 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at Sat Jun 30 16:19:11 -0700 2012
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Sat Jun 30 16:19:11 -0700 2012
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at Sat Jun 30 16:19:11 -0700 2012
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/broadsides.js?body=1" for 127.0.0.1 at Sat Jun 30 16:19:11 -0700 2012
+Served asset /broadsides.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sat Jun 30 16:19:11 -0700 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/boy-changed-stag-juhasz-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:19:11 -0700 2012
+Served asset /boy-changed-stag-juhasz-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes-on-sea-wrolstad-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:19:11 -0700 2012
+Served asset /notes-on-sea-wrolstad-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/buson-haiku-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:19:11 -0700 2012
+Served asset /buson-haiku-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/zubair-ashulia-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:19:11 -0700 2012
+Served asset /zubair-ashulia-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/archaeology-louis-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:19:11 -0700 2012
+Served asset /archaeology-louis-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/six-minute-poems-hitchcock-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:19:11 -0700 2012
+Served asset /six-minute-poems-hitchcock-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tomas-transtromer-first-poems-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:19:11 -0700 2012
+Served asset /tomas-transtromer-first-poems-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/transtromer-prison-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:19:11 -0700 2012
+Served asset /transtromer-prison-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/transtromer-baltics-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:19:11 -0700 2012
+Served asset /transtromer-baltics-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/transtromer-for-the-living-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:19:11 -0700 2012
+Served asset /transtromer-for-the-living-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/arkansas-sky-mcdougall-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:19:11 -0700 2012
+Served asset /arkansas-sky-mcdougall-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/casual-ties-wevill-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:19:11 -0700 2012
+Served asset /casual-ties-wevill-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/arthur-eagle-lewis-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:19:11 -0700 2012
+Served asset /arthur-eagle-lewis-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ocean-millar-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:19:11 -0700 2012
+Served asset /ocean-millar-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twelve-poems-ritsos-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:19:11 -0700 2012
+Served asset /twelve-poems-ritsos-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/prodigy-simic-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:19:11 -0700 2012
+Served asset /prodigy-simic-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/night-of-shooting-stars-sinisgalli-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:19:11 -0700 2012
+Served asset /night-of-shooting-stars-sinisgalli-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/the-countries-we-live-in-zach-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:19:11 -0700 2012
+Served asset /the-countries-we-live-in-zach-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at Sat Jun 30 16:19:11 -0700 2012
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Jun 30 16:20:03 -0700 2012
+Processing by ApplicationController#index as HTML
+  [1m[36mBook Load (0.5ms)[0m  [1mSELECT "books".* FROM "books" [0m
+  [1m[35mBroadside Load (0.2ms)[0m  SELECT "broadsides".* FROM "broadsides" 
+  Rendered books/_list.html.erb (8.7ms)
+  Rendered application/index.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 24ms (Views: 19.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at Sat Jun 30 16:20:03 -0700 2012
+Served asset /bootstrap.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sat Jun 30 16:20:03 -0700 2012
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at Sat Jun 30 16:20:03 -0700 2012
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/broadsides.css?body=1" for 127.0.0.1 at Sat Jun 30 16:20:03 -0700 2012
+Served asset /broadsides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sat Jun 30 16:20:03 -0700 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sat Jun 30 16:20:03 -0700 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sat Jun 30 16:20:04 -0700 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at Sat Jun 30 16:20:04 -0700 2012
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Sat Jun 30 16:20:04 -0700 2012
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at Sat Jun 30 16:20:04 -0700 2012
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/broadsides.js?body=1" for 127.0.0.1 at Sat Jun 30 16:20:04 -0700 2012
+Served asset /broadsides.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sat Jun 30 16:20:04 -0700 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/boy-changed-stag-juhasz-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:20:04 -0700 2012
+Served asset /boy-changed-stag-juhasz-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/archaeology-louis-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:20:04 -0700 2012
+Served asset /archaeology-louis-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/zubair-ashulia-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:20:04 -0700 2012
+Served asset /zubair-ashulia-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/buson-haiku-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:20:04 -0700 2012
+Served asset /buson-haiku-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes-on-sea-wrolstad-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:20:04 -0700 2012
+Served asset /notes-on-sea-wrolstad-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/six-minute-poems-hitchcock-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:20:04 -0700 2012
+Served asset /six-minute-poems-hitchcock-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tomas-transtromer-first-poems-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:20:04 -0700 2012
+Served asset /tomas-transtromer-first-poems-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/transtromer-prison-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:20:04 -0700 2012
+Served asset /transtromer-prison-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/transtromer-baltics-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:20:04 -0700 2012
+Served asset /transtromer-baltics-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/transtromer-for-the-living-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:20:04 -0700 2012
+Served asset /transtromer-for-the-living-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/arkansas-sky-mcdougall-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:20:04 -0700 2012
+Served asset /arkansas-sky-mcdougall-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/casual-ties-wevill-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:20:04 -0700 2012
+Served asset /casual-ties-wevill-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/arthur-eagle-lewis-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:20:04 -0700 2012
+Served asset /arthur-eagle-lewis-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ocean-millar-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:20:04 -0700 2012
+Served asset /ocean-millar-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twelve-poems-ritsos-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:20:04 -0700 2012
+Served asset /twelve-poems-ritsos-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/prodigy-simic-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:20:04 -0700 2012
+Served asset /prodigy-simic-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/night-of-shooting-stars-sinisgalli-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:20:04 -0700 2012
+Served asset /night-of-shooting-stars-sinisgalli-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/the-countries-we-live-in-zach-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:20:04 -0700 2012
+Served asset /the-countries-we-live-in-zach-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at Sat Jun 30 16:20:05 -0700 2012
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/admins/sign_in" for 127.0.0.1 at Sat Jun 30 16:20:11 -0700 2012
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 23ms (Views: 21.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at Sat Jun 30 16:20:12 -0700 2012
+Served asset /bootstrap.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at Sat Jun 30 16:20:12 -0700 2012
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sat Jun 30 16:20:12 -0700 2012
+Served asset /application.css - 304 Not Modified (11ms)
+
+
+Started GET "/assets/broadsides.css?body=1" for 127.0.0.1 at Sat Jun 30 16:20:12 -0700 2012
+Served asset /broadsides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sat Jun 30 16:20:12 -0700 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sat Jun 30 16:20:12 -0700 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sat Jun 30 16:20:12 -0700 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at Sat Jun 30 16:20:12 -0700 2012
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Sat Jun 30 16:20:12 -0700 2012
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at Sat Jun 30 16:20:12 -0700 2012
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/broadsides.js?body=1" for 127.0.0.1 at Sat Jun 30 16:20:12 -0700 2012
+Served asset /broadsides.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sat Jun 30 16:20:12 -0700 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at Sat Jun 30 16:20:12 -0700 2012
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started POST "/admins/sign_in" for 127.0.0.1 at Sat Jun 30 16:20:29 -0700 2012
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"commit"=>"Sign in", "authenticity_token"=>"CoE+x+/CqyGY094bCDerIBEnVpgkInxrdN36NOpA2YA=", "utf8"=>"✓", "admin"=>{"remember_me"=>"1", "password"=>"[FILTERED]", "email"=>"ceciliaxyang@gmail.com"}}
+  [1m[36mAdmin Load (0.2ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE "admins"."email" = 'ceciliaxyang@gmail.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mUPDATE "admins" SET "remember_created_at" = '2012-06-30 23:20:29.344498', "updated_at" = '2012-06-30 23:20:29.345472' WHERE "admins"."id" = 1[0m
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "admins" SET "last_sign_in_at" = '2012-06-30 23:18:38.782122', "updated_at" = '2012-06-30 23:20:29.349706', "sign_in_count" = 3, "current_sign_in_at" = '2012-06-30 23:20:29.348545' WHERE "admins"."id" = 1
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 110ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Jun 30 16:20:29 -0700 2012
+Processing by ApplicationController#index as HTML
+  [1m[35mBook Load (0.4ms)[0m  SELECT "books".* FROM "books" 
+  [1m[36mBroadside Load (0.2ms)[0m  [1mSELECT "broadsides".* FROM "broadsides" [0m
+  [1m[35mAdmin Load (0.2ms)[0m  SELECT "admins".* FROM "admins" WHERE "admins"."id" = 1 LIMIT 1
+  Rendered books/_list.html.erb (8.4ms)
+  Rendered application/index.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 20ms (Views: 16.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at Sat Jun 30 16:20:29 -0700 2012
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sat Jun 30 16:20:29 -0700 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/broadsides.css?body=1" for 127.0.0.1 at Sat Jun 30 16:20:29 -0700 2012
+Served asset /broadsides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sat Jun 30 16:20:29 -0700 2012
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at Sat Jun 30 16:20:29 -0700 2012
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sat Jun 30 16:20:29 -0700 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sat Jun 30 16:20:29 -0700 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at Sat Jun 30 16:20:29 -0700 2012
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Sat Jun 30 16:20:29 -0700 2012
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at Sat Jun 30 16:20:29 -0700 2012
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/broadsides.js?body=1" for 127.0.0.1 at Sat Jun 30 16:20:29 -0700 2012
+Served asset /broadsides.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sat Jun 30 16:20:29 -0700 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/boy-changed-stag-juhasz-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:20:30 -0700 2012
+Served asset /boy-changed-stag-juhasz-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/archaeology-louis-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:20:30 -0700 2012
+Served asset /archaeology-louis-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/zubair-ashulia-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:20:30 -0700 2012
+Served asset /zubair-ashulia-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/six-minute-poems-hitchcock-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:20:30 -0700 2012
+Served asset /six-minute-poems-hitchcock-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/buson-haiku-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:20:30 -0700 2012
+Served asset /buson-haiku-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes-on-sea-wrolstad-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:20:30 -0700 2012
+Served asset /notes-on-sea-wrolstad-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tomas-transtromer-first-poems-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:20:30 -0700 2012
+Served asset /tomas-transtromer-first-poems-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/transtromer-prison-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:20:30 -0700 2012
+Served asset /transtromer-prison-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/transtromer-baltics-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:20:30 -0700 2012
+Served asset /transtromer-baltics-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/transtromer-for-the-living-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:20:30 -0700 2012
+Served asset /transtromer-for-the-living-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/arkansas-sky-mcdougall-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:20:30 -0700 2012
+Served asset /arkansas-sky-mcdougall-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/casual-ties-wevill-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:20:30 -0700 2012
+Served asset /casual-ties-wevill-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/arthur-eagle-lewis-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:20:30 -0700 2012
+Served asset /arthur-eagle-lewis-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ocean-millar-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:20:30 -0700 2012
+Served asset /ocean-millar-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twelve-poems-ritsos-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:20:30 -0700 2012
+Served asset /twelve-poems-ritsos-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/prodigy-simic-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:20:30 -0700 2012
+Served asset /prodigy-simic-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/night-of-shooting-stars-sinisgalli-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:20:30 -0700 2012
+Served asset /night-of-shooting-stars-sinisgalli-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/the-countries-we-live-in-zach-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:20:30 -0700 2012
+Served asset /the-countries-we-live-in-zach-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at Sat Jun 30 16:20:30 -0700 2012
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Jun 30 16:21:09 -0700 2012
+Processing by ApplicationController#index as HTML
+  [1m[36mBook Load (0.5ms)[0m  [1mSELECT "books".* FROM "books" [0m
+  [1m[35mBroadside Load (0.3ms)[0m  SELECT "broadsides".* FROM "broadsides" 
+  [1m[36mAdmin Load (0.3ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE "admins"."id" = 1 LIMIT 1[0m
+  Rendered books/_list.html.erb (10.0ms)
+  Rendered application/index.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 31ms (Views: 25.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at Sat Jun 30 16:21:09 -0700 2012
+Served asset /bootstrap.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sat Jun 30 16:21:09 -0700 2012
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at Sat Jun 30 16:21:09 -0700 2012
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/broadsides.css?body=1" for 127.0.0.1 at Sat Jun 30 16:21:09 -0700 2012
+Served asset /broadsides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sat Jun 30 16:21:09 -0700 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sat Jun 30 16:21:09 -0700 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sat Jun 30 16:21:09 -0700 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at Sat Jun 30 16:21:10 -0700 2012
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Sat Jun 30 16:21:10 -0700 2012
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at Sat Jun 30 16:21:10 -0700 2012
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/broadsides.js?body=1" for 127.0.0.1 at Sat Jun 30 16:21:10 -0700 2012
+Served asset /broadsides.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sat Jun 30 16:21:10 -0700 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/boy-changed-stag-juhasz-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:21:10 -0700 2012
+Served asset /boy-changed-stag-juhasz-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/archaeology-louis-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:21:10 -0700 2012
+Served asset /archaeology-louis-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/six-minute-poems-hitchcock-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:21:10 -0700 2012
+Served asset /six-minute-poems-hitchcock-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/zubair-ashulia-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:21:10 -0700 2012
+Served asset /zubair-ashulia-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/buson-haiku-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:21:10 -0700 2012
+Served asset /buson-haiku-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes-on-sea-wrolstad-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:21:10 -0700 2012
+Served asset /notes-on-sea-wrolstad-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tomas-transtromer-first-poems-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:21:10 -0700 2012
+Served asset /tomas-transtromer-first-poems-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/transtromer-prison-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:21:10 -0700 2012
+Served asset /transtromer-prison-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/transtromer-baltics-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:21:10 -0700 2012
+Served asset /transtromer-baltics-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/transtromer-for-the-living-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:21:10 -0700 2012
+Served asset /transtromer-for-the-living-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/arkansas-sky-mcdougall-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:21:10 -0700 2012
+Served asset /arkansas-sky-mcdougall-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/casual-ties-wevill-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:21:10 -0700 2012
+Served asset /casual-ties-wevill-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/arthur-eagle-lewis-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:21:10 -0700 2012
+Served asset /arthur-eagle-lewis-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ocean-millar-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:21:10 -0700 2012
+Served asset /ocean-millar-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twelve-poems-ritsos-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:21:10 -0700 2012
+Served asset /twelve-poems-ritsos-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/prodigy-simic-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:21:10 -0700 2012
+Served asset /prodigy-simic-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/night-of-shooting-stars-sinisgalli-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:21:10 -0700 2012
+Served asset /night-of-shooting-stars-sinisgalli-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/the-countries-we-live-in-zach-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:21:10 -0700 2012
+Served asset /the-countries-we-live-in-zach-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at Sat Jun 30 16:21:11 -0700 2012
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/broadsides" for 127.0.0.1 at Sat Jun 30 16:21:21 -0700 2012
+Processing by BroadsidesController#index as HTML
+  [1m[35mBroadside Load (0.3ms)[0m  SELECT "broadsides".* FROM "broadsides" 
+  [1m[36mAdmin Load (0.2ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE "admins"."id" = 1 LIMIT 1[0m
+  Rendered broadsides/_list.html.erb (11.3ms)
+  Rendered broadsides/index.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 27ms (Views: 24.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at Sat Jun 30 16:21:21 -0700 2012
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sat Jun 30 16:21:21 -0700 2012
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/broadsides.css?body=1" for 127.0.0.1 at Sat Jun 30 16:21:21 -0700 2012
+Served asset /broadsides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sat Jun 30 16:21:21 -0700 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sat Jun 30 16:21:21 -0700 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at Sat Jun 30 16:21:21 -0700 2012
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sat Jun 30 16:21:21 -0700 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at Sat Jun 30 16:21:21 -0700 2012
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Sat Jun 30 16:21:21 -0700 2012
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at Sat Jun 30 16:21:21 -0700 2012
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/broadsides.js?body=1" for 127.0.0.1 at Sat Jun 30 16:21:21 -0700 2012
+Served asset /broadsides.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sat Jun 30 16:21:21 -0700 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/transtromer-six-winters-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:21:21 -0700 2012
+Served asset /transtromer-six-winters-broadside-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/zach-be-careful-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:21:21 -0700 2012
+Served asset /zach-be-careful-broadside-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/transtromer-land-of-lap-fever-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:21:21 -0700 2012
+Served asset /transtromer-land-of-lap-fever-broadside-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/louis-archaeology-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:21:21 -0700 2012
+Served asset /louis-archaeology-broadside-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/transtromer-prison-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:21:21 -0700 2012
+Served asset /transtromer-prison-broadside-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hitchcock-somber-music-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:21:21 -0700 2012
+Served asset /hitchcock-somber-music-broadside-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/buson-untitled-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:21:22 -0700 2012
+Served asset /buson-untitled-broadside-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ahmed-shaving-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:21:22 -0700 2012
+Served asset /ahmed-shaving-broadside-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/broadside-set-1-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:21:22 -0700 2012
+Served asset /broadside-set-1-broadside-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sinisgalli-protect-myself-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:21:22 -0700 2012
+Served asset /sinisgalli-protect-myself-broadside-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mcdougall-niceties-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:21:22 -0700 2012
+Served asset /mcdougall-niceties-broadside-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/millar-ocean-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:21:22 -0700 2012
+Served asset /millar-ocean-broadside-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ritsos-lamp-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:21:22 -0700 2012
+Served asset /ritsos-lamp-broadside-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/wevill-big-list-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:21:22 -0700 2012
+Served asset /wevill-big-list-broadside-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/wrolstad-sea-shore-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:21:22 -0700 2012
+Served asset /wrolstad-sea-shore-broadside-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/juhasz-gate-of-secrets-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:21:22 -0700 2012
+Served asset /juhasz-gate-of-secrets-broadside-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lewis-eagle-broadside-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:21:22 -0700 2012
+Served asset /lewis-eagle-broadside-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at Sat Jun 30 16:21:22 -0700 2012
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started DELETE "/admins/sign_out" for 127.0.0.1 at Sat Jun 30 16:21:26 -0700 2012
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"CoE+x+/CqyGY094bCDerIBEnVpgkInxrdN36NOpA2YA="}
+  [1m[35mAdmin Load (0.2ms)[0m  SELECT "admins".* FROM "admins" WHERE "admins"."id" = 1 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  UPDATE "admins" SET "remember_created_at" = NULL, "updated_at" = '2012-06-30 23:21:26.063870' WHERE "admins"."id" = 1
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Jun 30 16:21:26 -0700 2012
+Processing by ApplicationController#index as HTML
+  [1m[35mBook Load (0.3ms)[0m  SELECT "books".* FROM "books" 
+  [1m[36mBroadside Load (0.2ms)[0m  [1mSELECT "broadsides".* FROM "broadsides" [0m
+  Rendered books/_list.html.erb (6.9ms)
+  Rendered application/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 19ms (Views: 14.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at Sat Jun 30 16:21:26 -0700 2012
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at Sat Jun 30 16:21:26 -0700 2012
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sat Jun 30 16:21:26 -0700 2012
+Served asset /application.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sat Jun 30 16:21:26 -0700 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sat Jun 30 16:21:26 -0700 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/broadsides.css?body=1" for 127.0.0.1 at Sat Jun 30 16:21:26 -0700 2012
+Served asset /broadsides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sat Jun 30 16:21:26 -0700 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at Sat Jun 30 16:21:26 -0700 2012
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Sat Jun 30 16:21:26 -0700 2012
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at Sat Jun 30 16:21:26 -0700 2012
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/broadsides.js?body=1" for 127.0.0.1 at Sat Jun 30 16:21:26 -0700 2012
+Served asset /broadsides.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sat Jun 30 16:21:26 -0700 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/boy-changed-stag-juhasz-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:21:26 -0700 2012
+Served asset /boy-changed-stag-juhasz-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/six-minute-poems-hitchcock-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:21:26 -0700 2012
+Served asset /six-minute-poems-hitchcock-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notes-on-sea-wrolstad-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:21:26 -0700 2012
+Served asset /notes-on-sea-wrolstad-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/archaeology-louis-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:21:26 -0700 2012
+Served asset /archaeology-louis-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/zubair-ashulia-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:21:26 -0700 2012
+Served asset /zubair-ashulia-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/buson-haiku-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:21:26 -0700 2012
+Served asset /buson-haiku-thumb.jpg - 304 Not Modified (67ms)
+
+
+Started GET "/assets/tomas-transtromer-first-poems-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:21:26 -0700 2012
+Served asset /tomas-transtromer-first-poems-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/transtromer-prison-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:21:26 -0700 2012
+Served asset /transtromer-prison-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/transtromer-baltics-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:21:26 -0700 2012
+Served asset /transtromer-baltics-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/transtromer-for-the-living-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:21:26 -0700 2012
+Served asset /transtromer-for-the-living-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/arkansas-sky-mcdougall-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:21:26 -0700 2012
+Served asset /arkansas-sky-mcdougall-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/casual-ties-wevill-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:21:26 -0700 2012
+Served asset /casual-ties-wevill-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/arthur-eagle-lewis-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:21:26 -0700 2012
+Served asset /arthur-eagle-lewis-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ocean-millar-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:21:26 -0700 2012
+Served asset /ocean-millar-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twelve-poems-ritsos-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:21:26 -0700 2012
+Served asset /twelve-poems-ritsos-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/prodigy-simic-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:21:26 -0700 2012
+Served asset /prodigy-simic-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/night-of-shooting-stars-sinisgalli-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:21:26 -0700 2012
+Served asset /night-of-shooting-stars-sinisgalli-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/the-countries-we-live-in-zach-thumb.jpg" for 127.0.0.1 at Sat Jun 30 16:21:26 -0700 2012
+Served asset /the-countries-we-live-in-zach-thumb.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at Sat Jun 30 16:21:27 -0700 2012
+Served asset /logo.png - 304 Not Modified (0ms)
