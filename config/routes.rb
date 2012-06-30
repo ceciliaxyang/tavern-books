@@ -1,4 +1,6 @@
 Tavern::Application.routes.draw do
+  devise_for :admins
+
   resources :broadsides
 
   resources :books

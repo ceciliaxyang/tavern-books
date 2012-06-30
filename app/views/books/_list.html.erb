@@ -35,6 +35,9 @@
 	</div>
 	<br>
 <% end %>
-<%= link_to 'New Book', new_book_path %><br><br>
+
+<% if admin_signed_in? %>
+	<%= link_to 'New Book', new_book_path %><br><br>
+<% end %>
 
 </table>

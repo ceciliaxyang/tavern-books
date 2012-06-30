@@ -33,6 +33,8 @@
 	<br>
 <% end %>
 
-<%= link_to 'New Broadside', new_broadside_path %><br><br>
+<% if admin_signed_in? %>
+	<%= link_to 'New Broadside', new_broadside_path %><br><br>
+<% end %>
 
 </table>
