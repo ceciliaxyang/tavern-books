@@ -2,8 +2,9 @@ class BroadsidesController < ApplicationController
   # GET /broadsides
   # GET /broadsides.json
   def index
-    @sort_broadsides_attributes = request.GET['sort_broadsides']
-
+    @myrequest = request.GET
+  
+    @sort_broadsides_attributes = request.GET['sort']
     @broadsides = case @sort_broadsides_attributes 
       when "title"
         Broadside.all.sort { |a,b| a.title <=> b.title }
