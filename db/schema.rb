@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120630225607) do
+ActiveRecord::Schema.define(:version => 20120701010329) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -32,35 +32,35 @@ ActiveRecord::Schema.define(:version => 20120630225607) do
 
   create_table "books", :force => true do |t|
     t.string   "name"
-    t.string   "title"
-    t.string   "description"
+    t.text     "title",            :limit => 255
+    t.text     "description",      :limit => 255
     t.string   "author"
     t.string   "translator"
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
+    t.datetime "created_at",                      :null => false
+    t.datetime "updated_at",                      :null => false
     t.string   "isbn"
     t.decimal  "price"
     t.string   "OriginalLanguage"
     t.string   "paypal"
     t.string   "paypal2"
     t.string   "pages"
-    t.string   "quote"
+    t.text     "quote",            :limit => 255
     t.string   "quoter"
-    t.string   "aboutTranslator"
+    t.text     "aboutTranslator",  :limit => 255
     t.string   "string"
-    t.string   "aboutAuthor"
+    t.text     "aboutAuthor",      :limit => 255
   end
 
   create_table "broadsides", :force => true do |t|
-    t.string   "title"
+    t.text     "title",             :limit => 255
     t.string   "author"
     t.string   "name"
     t.string   "translator"
     t.string   "original_language"
     t.decimal  "price"
     t.string   "dimensions"
-    t.datetime "created_at",        :null => false
-    t.datetime "updated_at",        :null => false
+    t.datetime "created_at",                       :null => false
+    t.datetime "updated_at",                       :null => false
     t.string   "paypal_cart"
     t.string   "paypal_buy"
   end
