@@ -43,5 +43,8 @@
 
 </div>
 
-<%= link_to 'Edit', edit_broadside_path(@broadside) %> |
-<%= link_to 'Back', broadsides_path %>
+<% if admin_signed_in? %>
+	<%= link_to 'Edit', edit_broadside_path(@broadside) %> |
+	<%= link_to 'Back', broadsides_path %>
+<% end %>
+

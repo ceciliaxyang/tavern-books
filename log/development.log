@@ -5237,3 +5237,939 @@ Charles Seluzicki is an antiquarian bookseller, a fine press publisher, and a te
   [1m[35m (0.0ms)[0m  PRAGMA index_info('index_admins_on_email')
   [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("books")[0m
   [1m[35m (0.0ms)[0m  PRAGMA index_list("broadsides")
+
+
+Started GET "/admins/sign_in" for 127.0.0.1 at Sat Jul 14 10:30:17 -0700 2012
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (18.7ms)
+Completed 200 OK in 159ms (Views: 89.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at Sat Jul 14 10:30:17 -0700 2012
+Served asset /bootstrap.css - 200 OK (63ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sat Jul 14 10:30:17 -0700 2012
+Served asset /application.css - 200 OK (21ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at Sat Jul 14 10:30:17 -0700 2012
+Served asset /books.css - 200 OK (6ms)
+
+
+Started GET "/assets/broadsides.css?body=1" for 127.0.0.1 at Sat Jul 14 10:30:18 -0700 2012
+Served asset /broadsides.css - 200 OK (5ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sat Jul 14 10:30:18 -0700 2012
+Served asset /scaffolds.css - 200 OK (6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sat Jul 14 10:30:18 -0700 2012
+Served asset /jquery.js - 200 OK (13ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sat Jul 14 10:30:18 -0700 2012
+Served asset /jquery_ujs.js - 200 OK (6ms)
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at Sat Jul 14 10:30:18 -0700 2012
+Served asset /books.js - 200 OK (3ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Sat Jul 14 10:30:18 -0700 2012
+Served asset /bootstrap.js - 200 OK (5ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at Sat Jul 14 10:30:18 -0700 2012
+Served asset /bootstrap.min.js - 200 OK (4ms)
+
+
+Started GET "/assets/broadsides.js?body=1" for 127.0.0.1 at Sat Jul 14 10:30:18 -0700 2012
+Served asset /broadsides.js - 200 OK (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sat Jul 14 10:30:18 -0700 2012
+Served asset /application.js - 200 OK (18ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at Sat Jul 14 10:30:18 -0700 2012
+Served asset /logo.png - 200 OK (4ms)
+
+
+Started POST "/admins/sign_in" for 127.0.0.1 at Sat Jul 14 10:30:35 -0700 2012
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"admin"=>{"email"=>"ceciliaxyang@gmail.com", "remember_me"=>"0", "password"=>"[FILTERED]"}, "utf8"=>"✓", "authenticity_token"=>"j7fkpcQ/VF0/3H8nxZHQAB5CDp/f/TXK0wutRJUEVJ0=", "commit"=>"Sign in"}
+  [1m[36mAdmin Load (0.9ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE "admins"."email" = 'ceciliaxyang@gmail.com' LIMIT 1[0m
+Completed 401 Unauthorized in 108ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"admin"=>{"email"=>"ceciliaxyang@gmail.com", "remember_me"=>"0", "password"=>"[FILTERED]"}, "utf8"=>"✓", "authenticity_token"=>"j7fkpcQ/VF0/3H8nxZHQAB5CDp/f/TXK0wutRJUEVJ0=", "commit"=>"Sign in"}
+  Rendered devise/shared/_links.erb (0.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 149ms (Views: 59.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at Sat Jul 14 10:30:35 -0700 2012
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sat Jul 14 10:30:35 -0700 2012
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/broadsides.css?body=1" for 127.0.0.1 at Sat Jul 14 10:30:35 -0700 2012
+Served asset /broadsides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at Sat Jul 14 10:30:35 -0700 2012
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sat Jul 14 10:30:35 -0700 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sat Jul 14 10:30:35 -0700 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sat Jul 14 10:30:35 -0700 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at Sat Jul 14 10:30:35 -0700 2012
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Sat Jul 14 10:30:35 -0700 2012
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at Sat Jul 14 10:30:35 -0700 2012
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/broadsides.js?body=1" for 127.0.0.1 at Sat Jul 14 10:30:35 -0700 2012
+Served asset /broadsides.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sat Jul 14 10:30:35 -0700 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/admins/sign_in" for 127.0.0.1 at Sat Jul 14 10:30:42 -0700 2012
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"admin"=>{"email"=>"ceciliaxyang@gmail.com", "remember_me"=>"0", "password"=>"[FILTERED]"}, "utf8"=>"✓", "authenticity_token"=>"j7fkpcQ/VF0/3H8nxZHQAB5CDp/f/TXK0wutRJUEVJ0=", "commit"=>"Sign in"}
+  [1m[35mAdmin Load (0.3ms)[0m  SELECT "admins".* FROM "admins" WHERE "admins"."email" = 'ceciliaxyang@gmail.com' LIMIT 1
+Completed 401 Unauthorized in 97ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"admin"=>{"email"=>"ceciliaxyang@gmail.com", "remember_me"=>"0", "password"=>"[FILTERED]"}, "utf8"=>"✓", "authenticity_token"=>"j7fkpcQ/VF0/3H8nxZHQAB5CDp/f/TXK0wutRJUEVJ0=", "commit"=>"Sign in"}
+  Rendered devise/shared/_links.erb (0.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 103ms (Views: 12.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at Sat Jul 14 10:30:42 -0700 2012
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sat Jul 14 10:30:42 -0700 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/broadsides.css?body=1" for 127.0.0.1 at Sat Jul 14 10:30:42 -0700 2012
+Served asset /broadsides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at Sat Jul 14 10:30:42 -0700 2012
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sat Jul 14 10:30:42 -0700 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sat Jul 14 10:30:42 -0700 2012
+Served asset /application.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sat Jul 14 10:30:42 -0700 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at Sat Jul 14 10:30:42 -0700 2012
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Sat Jul 14 10:30:42 -0700 2012
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at Sat Jul 14 10:30:42 -0700 2012
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/broadsides.js?body=1" for 127.0.0.1 at Sat Jul 14 10:30:42 -0700 2012
+Served asset /broadsides.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sat Jul 14 10:30:42 -0700 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/admins/sign_in" for 127.0.0.1 at Sat Jul 14 10:30:53 -0700 2012
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"admin"=>{"email"=>"ceciliaxyang@gmail.com", "remember_me"=>"0", "password"=>"[FILTERED]"}, "utf8"=>"✓", "authenticity_token"=>"j7fkpcQ/VF0/3H8nxZHQAB5CDp/f/TXK0wutRJUEVJ0=", "commit"=>"Sign in"}
+  [1m[36mAdmin Load (0.6ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE "admins"."email" = 'ceciliaxyang@gmail.com' LIMIT 1[0m
+Completed 401 Unauthorized in 98ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"admin"=>{"email"=>"ceciliaxyang@gmail.com", "remember_me"=>"0", "password"=>"[FILTERED]"}, "utf8"=>"✓", "authenticity_token"=>"j7fkpcQ/VF0/3H8nxZHQAB5CDp/f/TXK0wutRJUEVJ0=", "commit"=>"Sign in"}
+  Rendered devise/shared/_links.erb (0.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (53.3ms)
+Completed 200 OK in 154ms (Views: 61.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at Sat Jul 14 10:30:53 -0700 2012
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sat Jul 14 10:30:53 -0700 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/broadsides.css?body=1" for 127.0.0.1 at Sat Jul 14 10:30:53 -0700 2012
+Served asset /broadsides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at Sat Jul 14 10:30:53 -0700 2012
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sat Jul 14 10:30:53 -0700 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sat Jul 14 10:30:53 -0700 2012
+Served asset /application.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sat Jul 14 10:30:53 -0700 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at Sat Jul 14 10:30:53 -0700 2012
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Sat Jul 14 10:30:53 -0700 2012
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at Sat Jul 14 10:30:53 -0700 2012
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/broadsides.js?body=1" for 127.0.0.1 at Sat Jul 14 10:30:53 -0700 2012
+Served asset /broadsides.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sat Jul 14 10:30:53 -0700 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/admins/password/new" for 127.0.0.1 at Sat Jul 14 10:30:55 -0700 2012
+Processing by Devise::PasswordsController#new as HTML
+  Rendered devise/shared/_links.erb (1.2ms)
+  Rendered devise/passwords/new.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 20ms (Views: 19.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at Sat Jul 14 10:30:56 -0700 2012
+Served asset /bootstrap.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sat Jul 14 10:30:56 -0700 2012
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/broadsides.css?body=1" for 127.0.0.1 at Sat Jul 14 10:30:56 -0700 2012
+Served asset /broadsides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at Sat Jul 14 10:30:56 -0700 2012
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sat Jul 14 10:30:56 -0700 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sat Jul 14 10:30:56 -0700 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sat Jul 14 10:30:56 -0700 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at Sat Jul 14 10:30:56 -0700 2012
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Sat Jul 14 10:30:56 -0700 2012
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at Sat Jul 14 10:30:56 -0700 2012
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/broadsides.js?body=1" for 127.0.0.1 at Sat Jul 14 10:30:56 -0700 2012
+Served asset /broadsides.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sat Jul 14 10:30:56 -0700 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/admins/password" for 127.0.0.1 at Sat Jul 14 10:31:00 -0700 2012
+Processing by Devise::PasswordsController#create as HTML
+  Parameters: {"admin"=>{"email"=>"ceciliaxyang@gmail.com"}, "utf8"=>"✓", "authenticity_token"=>"j7fkpcQ/VF0/3H8nxZHQAB5CDp/f/TXK0wutRJUEVJ0=", "commit"=>"Send me reset password instructions"}
+  [1m[35mAdmin Load (0.2ms)[0m  SELECT "admins".* FROM "admins" WHERE "admins"."email" = 'ceciliaxyang@gmail.com' LIMIT 1
+  [1m[36mAdmin Load (0.6ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE "admins"."reset_password_token" = 'JAgZYpdJt2WzaTAT7CpY' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.8ms)[0m  [1mUPDATE "admins" SET "updated_at" = '2012-07-14 17:31:00.436194', "reset_password_sent_at" = '2012-07-14 17:31:00.434833', "reset_password_token" = 'JAgZYpdJt2WzaTAT7CpY' WHERE "admins"."id" = 1[0m
+  [1m[35m (0.7ms)[0m  commit transaction
+  Rendered devise/mailer/reset_password_instructions.html.erb (4.3ms)
+Completed 500 Internal Server Error in 618ms
+
+ActionView::Template::Error (Missing host to link to! Please provide the :host parameter, set default_url_options[:host], or set :only_path to true):
+    2: 
+    3: <p>Someone has requested a link to change your password, and you can do this through the link below.</p>
+    4: 
+    5: <p><%= link_to 'Change my password', edit_password_url(@resource, :reset_password_token => @resource.reset_password_token) %></p>
+    6: 
+    7: <p>If you didn't request this, please ignore this email.</p>
+    8: <p>Your password won't change until you access the link above and create a new one.</p>
+  app/views/devise/mailer/reset_password_instructions.html.erb:5:in `_app_views_devise_mailer_reset_password_instructions_html_erb___1127945984_2251442760'
+
+
+  Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.0ms)
+
+
+Started GET "/admins/sign_up" for 127.0.0.1 at Sat Jul 14 10:31:15 -0700 2012
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (0.6ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 16ms (Views: 14.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at Sat Jul 14 10:31:15 -0700 2012
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sat Jul 14 10:31:15 -0700 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at Sat Jul 14 10:31:15 -0700 2012
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sat Jul 14 10:31:15 -0700 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sat Jul 14 10:31:15 -0700 2012
+Served asset /application.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/broadsides.css?body=1" for 127.0.0.1 at Sat Jul 14 10:31:15 -0700 2012
+Served asset /broadsides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sat Jul 14 10:31:15 -0700 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at Sat Jul 14 10:31:15 -0700 2012
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Sat Jul 14 10:31:15 -0700 2012
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at Sat Jul 14 10:31:15 -0700 2012
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/broadsides.js?body=1" for 127.0.0.1 at Sat Jul 14 10:31:15 -0700 2012
+Served asset /broadsides.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sat Jul 14 10:31:15 -0700 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/admins" for 127.0.0.1 at Sat Jul 14 10:31:25 -0700 2012
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"admin"=>{"email"=>"ceciliaxyang@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "utf8"=>"✓", "authenticity_token"=>"j7fkpcQ/VF0/3H8nxZHQAB5CDp/f/TXK0wutRJUEVJ0=", "commit"=>"Sign up"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mAdmin Exists (0.2ms)[0m  SELECT 1 FROM "admins" WHERE "admins"."email" = 'ceciliaxyang@gmail.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered devise/shared/_links.erb (0.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 185ms (Views: 70.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at Sat Jul 14 10:31:25 -0700 2012
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/broadsides.css?body=1" for 127.0.0.1 at Sat Jul 14 10:31:25 -0700 2012
+Served asset /broadsides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sat Jul 14 10:31:25 -0700 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sat Jul 14 10:31:25 -0700 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at Sat Jul 14 10:31:25 -0700 2012
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sat Jul 14 10:31:25 -0700 2012
+Served asset /application.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sat Jul 14 10:31:25 -0700 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at Sat Jul 14 10:31:25 -0700 2012
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Sat Jul 14 10:31:25 -0700 2012
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at Sat Jul 14 10:31:25 -0700 2012
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/broadsides.js?body=1" for 127.0.0.1 at Sat Jul 14 10:31:25 -0700 2012
+Served asset /broadsides.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sat Jul 14 10:31:25 -0700 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/admins/sign_in" for 127.0.0.1 at Sat Jul 14 10:31:31 -0700 2012
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at Sat Jul 14 10:31:31 -0700 2012
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/broadsides.css?body=1" for 127.0.0.1 at Sat Jul 14 10:31:31 -0700 2012
+Served asset /broadsides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at Sat Jul 14 10:31:31 -0700 2012
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sat Jul 14 10:31:31 -0700 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sat Jul 14 10:31:31 -0700 2012
+Served asset /application.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sat Jul 14 10:31:31 -0700 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sat Jul 14 10:31:31 -0700 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at Sat Jul 14 10:31:31 -0700 2012
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Sat Jul 14 10:31:31 -0700 2012
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at Sat Jul 14 10:31:31 -0700 2012
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/broadsides.js?body=1" for 127.0.0.1 at Sat Jul 14 10:31:31 -0700 2012
+Served asset /broadsides.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sat Jul 14 10:31:31 -0700 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/admins/sign_in" for 127.0.0.1 at Sat Jul 14 10:32:11 -0700 2012
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"admin"=>{"email"=>"ceciliaxyang@gmail.com", "remember_me"=>"0", "password"=>"[FILTERED]"}, "utf8"=>"✓", "authenticity_token"=>"j7fkpcQ/VF0/3H8nxZHQAB5CDp/f/TXK0wutRJUEVJ0=", "commit"=>"Sign in"}
+  [1m[35mAdmin Load (0.2ms)[0m  SELECT "admins".* FROM "admins" WHERE "admins"."email" = 'ceciliaxyang@gmail.com' LIMIT 1
+Completed 401 Unauthorized in 91ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"admin"=>{"email"=>"ceciliaxyang@gmail.com", "remember_me"=>"0", "password"=>"[FILTERED]"}, "utf8"=>"✓", "authenticity_token"=>"j7fkpcQ/VF0/3H8nxZHQAB5CDp/f/TXK0wutRJUEVJ0=", "commit"=>"Sign in"}
+  Rendered devise/shared/_links.erb (0.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 108ms (Views: 17.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at Sat Jul 14 10:32:11 -0700 2012
+Served asset /bootstrap.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sat Jul 14 10:32:11 -0700 2012
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at Sat Jul 14 10:32:11 -0700 2012
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/broadsides.css?body=1" for 127.0.0.1 at Sat Jul 14 10:32:11 -0700 2012
+Served asset /broadsides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sat Jul 14 10:32:11 -0700 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sat Jul 14 10:32:11 -0700 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sat Jul 14 10:32:11 -0700 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at Sat Jul 14 10:32:11 -0700 2012
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Sat Jul 14 10:32:11 -0700 2012
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at Sat Jul 14 10:32:11 -0700 2012
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/broadsides.js?body=1" for 127.0.0.1 at Sat Jul 14 10:32:11 -0700 2012
+Served asset /broadsides.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sat Jul 14 10:32:11 -0700 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/admins/sign_in" for 127.0.0.1 at Sat Jul 14 10:32:15 -0700 2012
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"admin"=>{"email"=>"ceciliaxyang@gmail.com", "remember_me"=>"0", "password"=>"[FILTERED]"}, "utf8"=>"✓", "authenticity_token"=>"j7fkpcQ/VF0/3H8nxZHQAB5CDp/f/TXK0wutRJUEVJ0=", "commit"=>"Sign in"}
+  [1m[36mAdmin Load (0.2ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE "admins"."email" = 'ceciliaxyang@gmail.com' LIMIT 1[0m
+Completed 401 Unauthorized in 98ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"admin"=>{"email"=>"ceciliaxyang@gmail.com", "remember_me"=>"0", "password"=>"[FILTERED]"}, "utf8"=>"✓", "authenticity_token"=>"j7fkpcQ/VF0/3H8nxZHQAB5CDp/f/TXK0wutRJUEVJ0=", "commit"=>"Sign in"}
+  Rendered devise/shared/_links.erb (0.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 106ms (Views: 12.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at Sat Jul 14 10:32:16 -0700 2012
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sat Jul 14 10:32:16 -0700 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sat Jul 14 10:32:16 -0700 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at Sat Jul 14 10:32:16 -0700 2012
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sat Jul 14 10:32:16 -0700 2012
+Served asset /application.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/broadsides.css?body=1" for 127.0.0.1 at Sat Jul 14 10:32:16 -0700 2012
+Served asset /broadsides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sat Jul 14 10:32:16 -0700 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at Sat Jul 14 10:32:16 -0700 2012
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Sat Jul 14 10:32:16 -0700 2012
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at Sat Jul 14 10:32:16 -0700 2012
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/broadsides.js?body=1" for 127.0.0.1 at Sat Jul 14 10:32:16 -0700 2012
+Served asset /broadsides.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sat Jul 14 10:32:16 -0700 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/admins/sign_up" for 127.0.0.1 at Sat Jul 14 10:32:33 -0700 2012
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (0.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 15ms (Views: 13.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at Sat Jul 14 10:32:33 -0700 2012
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at Sat Jul 14 10:32:33 -0700 2012
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sat Jul 14 10:32:33 -0700 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/broadsides.css?body=1" for 127.0.0.1 at Sat Jul 14 10:32:33 -0700 2012
+Served asset /broadsides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sat Jul 14 10:32:33 -0700 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sat Jul 14 10:32:33 -0700 2012
+Served asset /application.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sat Jul 14 10:32:33 -0700 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at Sat Jul 14 10:32:33 -0700 2012
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Sat Jul 14 10:32:33 -0700 2012
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at Sat Jul 14 10:32:33 -0700 2012
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/broadsides.js?body=1" for 127.0.0.1 at Sat Jul 14 10:32:33 -0700 2012
+Served asset /broadsides.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sat Jul 14 10:32:33 -0700 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/admins" for 127.0.0.1 at Sat Jul 14 10:32:43 -0700 2012
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"admin"=>{"email"=>"e.oxypetalum@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "utf8"=>"✓", "authenticity_token"=>"j7fkpcQ/VF0/3H8nxZHQAB5CDp/f/TXK0wutRJUEVJ0=", "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mAdmin Exists (0.2ms)[0m  [1mSELECT 1 FROM "admins" WHERE "admins"."email" = 'e.oxypetalum@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "admins" ("created_at", "current_sign_in_at", "current_sign_in_ip", "email", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Sat, 14 Jul 2012 17:32:43 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "e.oxypetalum@gmail.com"], ["encrypted_password", "$2a$10$g20ze9eNdPKM0AeNM3W2wuVBF4G29wabGbxNGryhjOVO2QFZV0hZa"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["updated_at", Sat, 14 Jul 2012 17:32:43 UTC +00:00]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mUPDATE "admins" SET "last_sign_in_at" = '2012-07-14 17:32:43.230095', "current_sign_in_ip" = '127.0.0.1', "current_sign_in_at" = '2012-07-14 17:32:43.230095', "updated_at" = '2012-07-14 17:32:43.230727', "last_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1 WHERE "admins"."id" = 2[0m
+  [1m[35m (0.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 109ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Jul 14 10:32:43 -0700 2012
+Processing by ApplicationController#index as HTML
+  [1m[36mBook Load (3.0ms)[0m  [1mSELECT "books".* FROM "books" [0m
+  [1m[35mBroadside Load (0.7ms)[0m  SELECT "broadsides".* FROM "broadsides" 
+  [1m[36mAdmin Load (0.2ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE "admins"."id" = 2 LIMIT 1[0m
+  Rendered books/_list.html.erb (10.2ms)
+  Rendered application/index.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 111ms (Views: 73.1ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sat Jul 14 10:32:43 -0700 2012
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at Sat Jul 14 10:32:43 -0700 2012
+Served asset /bootstrap.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at Sat Jul 14 10:32:43 -0700 2012
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sat Jul 14 10:32:43 -0700 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/broadsides.css?body=1" for 127.0.0.1 at Sat Jul 14 10:32:43 -0700 2012
+Served asset /broadsides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sat Jul 14 10:32:43 -0700 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sat Jul 14 10:32:43 -0700 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at Sat Jul 14 10:32:43 -0700 2012
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Sat Jul 14 10:32:43 -0700 2012
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at Sat Jul 14 10:32:43 -0700 2012
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/broadsides.js?body=1" for 127.0.0.1 at Sat Jul 14 10:32:43 -0700 2012
+Served asset /broadsides.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sat Jul 14 10:32:43 -0700 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/boy-changed-stag-juhasz-thumb.jpg" for 127.0.0.1 at Sat Jul 14 10:32:43 -0700 2012
+Served asset /boy-changed-stag-juhasz-thumb.jpg - 200 OK (6ms)
+
+
+Started GET "/assets/notes-on-sea-wrolstad-thumb.jpg" for 127.0.0.1 at Sat Jul 14 10:32:43 -0700 2012
+Served asset /notes-on-sea-wrolstad-thumb.jpg - 200 OK (4ms)
+
+
+Started GET "/assets/buson-haiku-thumb.jpg" for 127.0.0.1 at Sat Jul 14 10:32:43 -0700 2012
+Served asset /buson-haiku-thumb.jpg - 200 OK (5ms)
+
+
+Started GET "/assets/zubair-ashulia-thumb.jpg" for 127.0.0.1 at Sat Jul 14 10:32:43 -0700 2012
+Served asset /zubair-ashulia-thumb.jpg - 200 OK (5ms)
+
+
+Started GET "/assets/six-minute-poems-hitchcock-thumb.jpg" for 127.0.0.1 at Sat Jul 14 10:32:43 -0700 2012
+Served asset /six-minute-poems-hitchcock-thumb.jpg - 200 OK (7ms)
+
+
+Started GET "/assets/archaeology-louis-thumb.jpg" for 127.0.0.1 at Sat Jul 14 10:32:43 -0700 2012
+Served asset /archaeology-louis-thumb.jpg - 200 OK (5ms)
+
+
+Started GET "/assets/tomas-transtromer-first-poems-thumb.jpg" for 127.0.0.1 at Sat Jul 14 10:32:43 -0700 2012
+Served asset /tomas-transtromer-first-poems-thumb.jpg - 200 OK (5ms)
+
+
+Started GET "/assets/transtromer-prison-thumb.jpg" for 127.0.0.1 at Sat Jul 14 10:32:43 -0700 2012
+Served asset /transtromer-prison-thumb.jpg - 200 OK (5ms)
+
+
+Started GET "/assets/transtromer-baltics-thumb.jpg" for 127.0.0.1 at Sat Jul 14 10:32:43 -0700 2012
+Served asset /transtromer-baltics-thumb.jpg - 200 OK (5ms)
+
+
+Started GET "/assets/transtromer-for-the-living-thumb.jpg" for 127.0.0.1 at Sat Jul 14 10:32:43 -0700 2012
+Served asset /transtromer-for-the-living-thumb.jpg - 200 OK (6ms)
+
+
+Started GET "/assets/arkansas-sky-mcdougall-thumb.jpg" for 127.0.0.1 at Sat Jul 14 10:32:43 -0700 2012
+Served asset /arkansas-sky-mcdougall-thumb.jpg - 200 OK (5ms)
+
+
+Started GET "/assets/casual-ties-wevill-thumb.jpg" for 127.0.0.1 at Sat Jul 14 10:32:43 -0700 2012
+Served asset /casual-ties-wevill-thumb.jpg - 200 OK (4ms)
+
+
+Started GET "/assets/arthur-eagle-lewis-thumb.jpg" for 127.0.0.1 at Sat Jul 14 10:32:43 -0700 2012
+Served asset /arthur-eagle-lewis-thumb.jpg - 200 OK (5ms)
+
+
+Started GET "/assets/ocean-millar-thumb.jpg" for 127.0.0.1 at Sat Jul 14 10:32:43 -0700 2012
+Served asset /ocean-millar-thumb.jpg - 200 OK (74ms)
+
+
+Started GET "/assets/twelve-poems-ritsos-thumb.jpg" for 127.0.0.1 at Sat Jul 14 10:32:44 -0700 2012
+Served asset /twelve-poems-ritsos-thumb.jpg - 200 OK (4ms)
+
+
+Started GET "/assets/prodigy-simic-thumb.jpg" for 127.0.0.1 at Sat Jul 14 10:32:44 -0700 2012
+Served asset /prodigy-simic-thumb.jpg - 200 OK (4ms)
+
+
+Started GET "/assets/night-of-shooting-stars-sinisgalli-thumb.jpg" for 127.0.0.1 at Sat Jul 14 10:32:44 -0700 2012
+Served asset /night-of-shooting-stars-sinisgalli-thumb.jpg - 200 OK (4ms)
+
+
+Started GET "/assets/the-countries-we-live-in-zach-thumb.jpg" for 127.0.0.1 at Sat Jul 14 10:32:44 -0700 2012
+Served asset /the-countries-we-live-in-zach-thumb.jpg - 200 OK (2ms)
+
+
+Started DELETE "/admins/sign_out" for 127.0.0.1 at Sat Jul 14 10:33:35 -0700 2012
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"j7fkpcQ/VF0/3H8nxZHQAB5CDp/f/TXK0wutRJUEVJ0="}
+  [1m[35mAdmin Load (0.2ms)[0m  SELECT "admins".* FROM "admins" WHERE "admins"."id" = 2 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Jul 14 10:33:35 -0700 2012
+Processing by ApplicationController#index as HTML
+  [1m[36mBook Load (0.3ms)[0m  [1mSELECT "books".* FROM "books" [0m
+  [1m[35mBroadside Load (0.2ms)[0m  SELECT "broadsides".* FROM "broadsides" 
+  Rendered books/_list.html.erb (9.7ms)
+  Rendered application/index.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 21ms (Views: 17.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at Sat Jul 14 10:33:36 -0700 2012
+Served asset /bootstrap.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sat Jul 14 10:33:36 -0700 2012
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at Sat Jul 14 10:33:36 -0700 2012
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/broadsides.css?body=1" for 127.0.0.1 at Sat Jul 14 10:33:36 -0700 2012
+Served asset /broadsides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sat Jul 14 10:33:36 -0700 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sat Jul 14 10:33:36 -0700 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sat Jul 14 10:33:36 -0700 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at Sat Jul 14 10:33:36 -0700 2012
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Sat Jul 14 10:33:36 -0700 2012
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at Sat Jul 14 10:33:36 -0700 2012
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/broadsides.js?body=1" for 127.0.0.1 at Sat Jul 14 10:33:36 -0700 2012
+Served asset /broadsides.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sat Jul 14 10:33:36 -0700 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/books/4" for 127.0.0.1 at Sat Jul 14 10:34:24 -0700 2012
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "4"]]
+  Rendered books/show.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 17ms (Views: 15.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at Sat Jul 14 10:34:24 -0700 2012
+Served asset /bootstrap.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sat Jul 14 10:34:24 -0700 2012
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at Sat Jul 14 10:34:24 -0700 2012
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/broadsides.css?body=1" for 127.0.0.1 at Sat Jul 14 10:34:24 -0700 2012
+Served asset /broadsides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sat Jul 14 10:34:24 -0700 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sat Jul 14 10:34:24 -0700 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sat Jul 14 10:34:24 -0700 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at Sat Jul 14 10:34:24 -0700 2012
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at Sat Jul 14 10:34:24 -0700 2012
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at Sat Jul 14 10:34:24 -0700 2012
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/broadsides.js?body=1" for 127.0.0.1 at Sat Jul 14 10:34:24 -0700 2012
+Served asset /broadsides.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sat Jul 14 10:34:24 -0700 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/boy-changed-stag-juhasz-01.png" for 127.0.0.1 at Sat Jul 14 10:34:24 -0700 2012
+Served asset /boy-changed-stag-juhasz-01.png - 200 OK (5ms)
