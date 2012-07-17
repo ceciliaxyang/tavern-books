@@ -1,7 +1,5 @@
 class AddLastNametoBooks < ActiveRecord::Migration
-  def up
-  end
+  def change
     add_column :books, :lastname, :string
-  def down
   end
 end
