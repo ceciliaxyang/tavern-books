@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120701010329) do
+ActiveRecord::Schema.define(:version => 20120717043041) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -49,6 +49,8 @@ ActiveRecord::Schema.define(:version => 20120701010329) do
     t.text     "aboutTranslator",  :limit => 255
     t.string   "string"
     t.text     "aboutAuthor",      :limit => 255
+    t.string   "lastname"
+    t.string   "first"
   end
 
   create_table "broadsides", :force => true do |t|

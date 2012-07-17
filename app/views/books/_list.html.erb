@@ -26,7 +26,7 @@
 		</div>
 		<div class="span7 offset 2">
 		    <h1><small><%= link_to book.title, book %></small></h1>
-	    	<h3><%= book.author %>
+	    	<h3><%= book.first %> <%= book.author %>
 	
 		    <% unless book.translator.empty? %>
 				<small><br>Translated from the <%= book.OriginalLanguage %> by <%= book.translator %></small></h3>
