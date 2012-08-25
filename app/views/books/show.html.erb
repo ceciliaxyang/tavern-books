@@ -47,12 +47,12 @@
 		
 		<p align="left" class="divider"><br>&#10539;<br><br></p>
 		
-		<% unless @book.aboutAuthor.empty? %>
+		<% unless @book.aboutAuthor.nil? or @book.aboutAuthor.empty? %>
 			<h3>About <%= @book.author %></h3>
 			<p><%= @book.aboutAuthor %></p>
 		<% end %>
 		
-		<% unless @book.aboutTranslator.empty? %>
+		<% unless @book.aboutTranslator.nil? or @book.aboutTranslator.empty? %>
 			<h3>About <%= @book.translator %></h3>
 			<p><%= @book.aboutTranslator %></p>
 		<% end %>
