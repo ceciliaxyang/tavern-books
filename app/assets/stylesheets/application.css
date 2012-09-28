@@ -223,9 +223,10 @@ h6 {
 
 .navbar .brand {
   display: block;
+  background: url("/assets/pressmark-top.jpg") no-repeat;
   float: left;
-  padding: 8px 20px 12px;
-  margin-left: -20px;
+  padding: 8px 60px 12px;
+  margin-left: -40px;
   font-family: 'Crimson Text', Georgia, serif;
   font-weight: 400;
   font-size: 20px;
