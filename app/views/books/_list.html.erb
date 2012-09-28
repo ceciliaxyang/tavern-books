@@ -8,7 +8,7 @@
 		<br><h5>Sort by
 
 				<%@sort_attributes.each { |attribute| %>
-					<a class="<%= "selected" if attribute == @sorting %>" href="/?sort=<%= attribute %>"><%= attribute %></a> 
+					<a class="<%= "selected" if attribute == @sorting %>" href="/books/?sort=<%= attribute %>"><%= attribute %></a> 
 					<%= "/" unless attribute == @sort_attributes.last %>
 				<% } %> 
 		</h5>
