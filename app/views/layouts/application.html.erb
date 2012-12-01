@@ -6,6 +6,8 @@
   <%= stylesheet_link_tag    "bootstrap" %> 
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
+	  <%= javascript_include_tag "bootstrap" %>
+	  <%= javascript_include_tag "twitter-bootstrap-hover-dropdown.min" %>
   <%= csrf_meta_tags %>
   <link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,600,600italic,700' rel='stylesheet' type='text/css'>
 </head>
@@ -20,9 +22,16 @@
 	            <ul class="nav pull-right" style="padding-top:10px;">
 	              <li><a href="/books">The Living Library</a></li>
 			   	  <li><a href="/broadsides">Broadsides</a></li>
-	              <li><a href="/poetry-state">Poetry State</a></li>
-				  <li><a href="/honest-pint">The Honest Pint</a></li>
-		          <li><a href="/about">About</a></li>
+		          <li><a href="/about">About</a></li>				
+				  <li class="dropdown">
+				    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Programs &#9662;</a>
+				    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+						<li><a href="/poetry-state">Poetry State</a></li>
+						<li><a href="/honest-pint">The Honest Pint</a></li>
+						<li><a href="/pylon-reading-society">Pylon Reading Society</a></li>
+				    </ul>
+			        </li>
+				  </li>
 	            </ul>
 	          </div><!--/.nav-collapse -->
 	        </div>
@@ -70,6 +79,9 @@
 	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
 	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 	  })();
+	
+console.log($('.dropdown-toggle'));	
+	  $('.dropdown-toggle').dropdownHover();
 
 	</script>
 	

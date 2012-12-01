@@ -16,7 +16,7 @@ body {
   padding-top: 100px;
   padding-bottom: 100px;
   margin: 0;
-  font-family: 'Crimson Text', Georgia, serif;
+  font-family: 'Crimson Text', 'Times New Roman', Georgia, serif;
   font-size: 16px;
   line-height: 18px;
   color: #333333;
@@ -40,7 +40,7 @@ a.selected {
 
 p {
   margin: 0 0 9px;
-  font-family: 'Crimson Text', Georgia, serif;
+  font-family: 'Crimson Text', 'Times New Roman', Georgia, serif;
   font-size: 16px;
   line-height: 24px;
 }
@@ -60,7 +60,7 @@ p {
 
 .title {
   display: block;
-  font-family: 'Crimson Text', Georgia, serif;
+  font-family: 'Crimson Text', 'Times New Roman', Georgia, serif;
   font-size: 50px;
   text-transform:uppercase;
   letter-spacing: 5px;
@@ -86,7 +86,7 @@ p {
 }
 
 p.quote {
-  font-family: 'Crimson Text', Georgia, serif;
+  font-family: 'Crimson Text', 'Times New Roman', Georgia, serif;
   font-style: italic;
   font-weight: 400;
   font-size: 18px;
@@ -121,7 +121,7 @@ h6 small {
 h1 {
   font-size: 36px;
   line-height: 36px;
-  font-family: 'Crimson Text', Georgia, serif;
+  font-family: 'Crimson Text', 'Times New Roman', Georgia, serif;
   font-style: italic;
   font-weight: 400;
 }
@@ -133,7 +133,7 @@ h1 small {
 h2 {
   font-size: 28px;
   line-height: 1;
-  font-family: 'Crimson Text', Georgia, serif;
+  font-family: 'Crimson Text', 'Times New Roman', Georgia, serif;
   font-weight: 400;
 }
 
@@ -142,7 +142,7 @@ h2 small {
 }
 
 h3 {
-  font-family: 'Crimson Text', Georgia, serif;
+  font-family: 'Crimson Text', 'Times New Roman', Georgia, serif;
   font-weight: 400;
   font-size: 16px;
   text-transform:uppercase;
@@ -152,7 +152,7 @@ h3 {
 }
 
 h3 small {
-  font-family: 'Crimson Text', Georgia, serif;
+  font-family: 'Crimson Text', 'Times New Roman', Georgia, serif;
   font-size: 16px;
   line-height: 24px;
   text-transform: none;
@@ -169,7 +169,7 @@ h6 {
 }
 
 h4 {
-  font-family: 'Crimson Text', Georgia, serif;
+  font-family: 'Crimson Text', 'Times New Roman', Georgia, serif;
   font-weight: 400;
   font-size: 20px;
   text-transform:uppercase;
@@ -183,7 +183,7 @@ h4 small {
 }
 
 h5 {
-  font-family: 'Crimson Text', Georgia, serif;
+  font-family: 'Crimson Text', 'Times New Roman', Georgia, serif;
   font-weight: 400;
   font-size: 14px;
   text-transform:uppercase;
@@ -227,7 +227,7 @@ h6 {
   float: left;
   padding: 8px 60px 12px;
   margin-left: -40px;
-  font-family: 'Crimson Text', Georgia, serif;
+  font-family: 'Crimson Text', 'Times New Roman', Georgia, serif;
   font-weight: 400;
   font-size: 20px;
   text-transform:uppercase;
@@ -323,4 +323,20 @@ select,
     background: url("/assets/pullbg.gif") repeat-x scroll center bottom transparent;
     margin-bottom: 25px;
     padding-top: 50px;
+}
+
+.dropdown-toggle {
+	display: block;
+    float: left;
+    font-size: 20px;
+    font-style: italic;
+}
+
+.dropdown-toggle a {
+	
+	    color: #999999;
+	    float: none;
+	    line-height: 19px;
+	    padding: 9px 30px 11px;
+	    text-decoration: none;	
 }
