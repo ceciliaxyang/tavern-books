@@ -4553,15 +4553,12 @@ a.badge:hover {
 }
 
 .accordion {
-  margin-bottom: 18px;
+  margin-bottom: 5px;
 }
 
 .accordion-group {
   margin-bottom: 2px;
-  border: 1px solid #e5e5e5;
-  -webkit-border-radius: 4px;
-     -moz-border-radius: 4px;
-          border-radius: 4px;
+  border: 0px solid;
 }
 
 .accordion-heading {
@@ -4570,7 +4567,7 @@ a.badge:hover {
 
 .accordion-heading .accordion-toggle {
   display: block;
-  padding: 8px 15px;
+  padding: 2px 0px;
 }
 
 .accordion-toggle {
@@ -4578,8 +4575,8 @@ a.badge:hover {
 }
 
 .accordion-inner {
-  padding: 9px 15px;
-  border-top: 1px solid #e5e5e5;
+  padding: 2px 15px;
+  /*border-top: 1px solid #e5e5e5;*/
 }
 
 .carousel {
