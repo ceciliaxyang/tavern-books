@@ -20,11 +20,11 @@
 <table>
 
 <% @broadsides.each do |item| %>
-	<div class="row">
+	<div class="row" style="padding-bottom:30px;">
  		<div class="span2 offset2">
 			<%= image_tag item.name+"-broadside-thumb.jpg"%>
 		</div>
-		<div class="span7 offset 2" style="margin-left:30px;">
+		<div class="span7 offset 2" style="margin-left:30px; padding-top:20px;">
 		    <h1><small><%= link_to item.title, item %></small></h1>
 	    	<h3><%= item.author %></h3>
 	
