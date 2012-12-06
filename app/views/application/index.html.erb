@@ -9,36 +9,61 @@
 
 <div class="row" style="padding-top:20px;">
 	<div class="span3" style="text-align:center; background-color:white; padding:10px; padding-top:170px;">
-		<h2><a href="/books">The Living Library</a></h2>
-		<p class="lead"><i>Our Publishing Program</i></p>
-			<div id="cf">
-			  <a href="/books"><img class="bottom" src="/assets/homepage-books-2.png" /></a>
-			  <a href="/books"><img class="top" src="/assets/homepage-books.png" /></a>
-			</div>
+		<div class="triangle">
+			<h2><a href="/books">The Living Library</a></h2>
+			<p class="lead"><i>Our Publishing Program</i></p>
+				<div class="cf">
+				  <a href="/books"><img class="bottom" src="/assets/homepage-books-2.png" /></a>
+				  <a href="/books"><img class="top" src="/assets/homepage-books.png" /></a>
+				</div>
+		</div>
 	</div>
 			
 	<div class="span3 offset1" style="text-align:center; background-color:white; padding:10px;">
-		<h2><a href="/poetry-state">Poetry State</a></h2>
-		<p class="lead"><i>Our Books for Libraries Campaign</i></p>
-			<div id="cf">
-			  <a href="/poetry-state"><img class="bottom" src="/assets/homepage-broadsides-2.png" /></a>
-			  <a href="/poetry-state"><img class="top" src="/assets/homepage-broadsides.png" /></a>
-			</div>
-		<br>
-		<h2><a href="/pylon-reading-society">Pylon Reading Society</a></h2>
-		<p class="lead"><i>Our Reading Series</i></p>
-			<div id="cf">
-			  <a href="/pylon-reading-society"><img class="bottom" src="/assets/homepage-pylon.png" /></a>
-			  <a href="/pylon-reading-society"><img class="top" src="/assets/homepage-pylon-2.png" /></a>
-			</div>
+		<div class="triangle">
+			<h2><a href="/poetry-state">Poetry State</a></h2>
+			<p class="lead"><i>Our Books for Libraries Campaign</i></p>
+				<div class="cf">
+				  <a href="/poetry-state"><img class="bottom" src="/assets/homepage-broadsides-2.png" /></a>
+				  <a href="/poetry-state"><img class="top" src="/assets/homepage-broadsides.png" /></a>
+				</div>
+		</div>
+		<div class="triangle" style="padding-top:30px;">
+			<h2><a href="/pylon-reading-society">Pylon Reading Society</a></h2>
+			<p class="lead"><i>Our Reading Series</i></p>
+				<div class="cf">
+				  <a href="/pylon-reading-society"><img class="bottom" src="/assets/homepage-pylon.png" /></a>
+				  <a href="/pylon-reading-society"><img class="top" src="/assets/homepage-pylon-2.png" /></a>
+				</div>
+		</div>
 	</div>
 
 	<div class="span3 offset1" style="text-align:center; background-color:white; padding:10px; padding-top:170px;">
+			<div class="triangle">
 				<h2><a href="/honest-pint">The Honest Pint</a></h2>
 			<p class="lead"><i>Our Poetics Subscription Series</i></p>
-				<div id="cf">
+				<div class="cf">
 				  <a href="/honest-pint"><img class="bottom" src="/assets/homepage-pint-2.png" /></a>
 				  <a href="/honest-pint"><img class="top" src="/assets/homepage-pint.png" /></a>
 				</div>
+			</div>
 	</div>
 </div>
+
+<script>
+
+
+$(".triangle").hover(
+	function () {
+		$(this).find(".top").toggleClass("hidden");
+		$(this).find("h2 a").addClass("hover");
+	},
+	
+	function () {
+		$(this).find(".top").toggleClass("hidden");
+		$(this).find("h2 a").removeClass("hover");
+	}
+	
+	);
+
+</script>

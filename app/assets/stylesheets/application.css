@@ -33,6 +33,11 @@ a:hover {
   text-decoration: underline;
 }
 
+a.hover {
+  color: #005580;
+  text-decoration: none;
+}
+
 a.selected {
   background-color:#ee6004;
   color: #ffffff;
@@ -288,14 +293,14 @@ select,
           border-radius: 3px;
 }
 
-#cf {
+.cf {
   position:relative;
   height:270px;
   width:230px;
   margin:0 auto;
 }
 
-#cf img {
+.cf img {
   position:absolute;
   left:0;
   -webkit-transition: opacity 1s ease-in-out;
@@ -304,7 +309,11 @@ select,
   transition: opacity 1s ease-in-out;
 }
 
-#cf img.top:hover {
+/*.cf img.top:hover {
+  opacity:0;
+}*/
+
+.cf img.top.hidden {
   opacity:0;
 }
 

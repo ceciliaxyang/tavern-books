@@ -13,3 +13,9 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+function changeOneTriangle () {
+		$(".top:eq(" + Math.round(Math.random()*3) + ")").toggleClass("hidden");
+}
+
+window.setInterval (changeOneTriangle, 3000, true);
