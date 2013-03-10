@@ -1,9 +1,9 @@
-<p id="notice"><%= notice %></p>
-
 <div class="row">
 	
 	<div class="span4">
-		<%= image_tag @book.name+"-01.png"%>
+		<img class="paperback" src="/assets/<%= @book.name+"-01.png" %>">
+		<img class="hardcover" src="/assets/<%= @book.name+"-hc-01.png" %>">
+		
 	</div>
 
 	<div class="span7 offset1">
@@ -15,18 +15,32 @@
 			<p>Translated from the <%= @book.OriginalLanguage %> by <%= @book.translator %></p>
 		<% end %>
 		
+		<% if @book.price_hardcover and not @book.price_hardcover.empty? %>
+			<div class="row booktype-toggle">
+				<div class="span7">
+					<span class="btn-booktype-paperback btn-booktype">Paperback</span>
+					<span class="btn-booktype-hardcover btn-booktype">Hardcover</span>
+				</div>
+			</div>
+		<% end %>
 		
-		<p class="quote"><%= @book.pages %> / <%= number_to_currency @book.price %>
-			<br>
-		ISBN-13: <%= @book.isbn %></p>
+		<p class="quote paperback"><%= @book.pages %> / <%= number_to_currency @book.price %>
+				<br>
+			ISBN-13: <%= @book.isbn %>
+		</p>
+		<p class="quote hardcover"><%= @book.pages_hardcover %> / <%= number_to_currency @book.price_hardcover %>
+				<br>
+			ISBN-13: <%= @book.isbn_hardcover %>
+		</p>
+
 		
 		<br>
 
-		<div class="row">
+		<div class="row paperback">
 			<div class="span2">
 				<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
 					<input type="hidden" name="cmd" value="_s-xclick">
-					<input type="hidden" name="hosted_button_id" value="<%= @book.paypal2 %>">
+					<input type="hidden" name="hosted_button_id" value="<%= @book.paypalBuy %>">
 					<input class="btn btn-primary btn-large" type="submit" border="0" value="Buy now" alt="PayPal - The safer, easier way to pay online!">
 					<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
 				</form>
@@ -34,7 +48,26 @@
 			<div class="span1">			
 				<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
 					<input type="hidden" name="cmd" value="_s-xclick">
-					<input type="hidden" name="hosted_button_id" value="<%= @book.paypal %>">
+					<input type="hidden" name="hosted_button_id" value="<%= @book.paypalCart %>">
+					<input class="btn btn-inverse btn-large" type="submit" border="0" value="Add to cart" alt="PayPal - The safer, easier way to pay online!">
+					<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+				</form>
+			</div>
+		</div>
+
+		<div class="row hardcover">
+			<div class="span2">
+				<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+					<input type="hidden" name="cmd" value="_s-xclick">
+					<input type="hidden" name="hosted_button_id" value="<%= @book.paypalBuy_hardcover %>">
+					<input class="btn btn-primary btn-large" type="submit" border="0" value="Buy now" alt="PayPal - The safer, easier way to pay online!">
+					<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+				</form>
+			</div>
+			<div class="span1">			
+				<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+					<input type="hidden" name="cmd" value="_s-xclick">
+					<input type="hidden" name="hosted_button_id" value="<%= @book.paypalCart_hardcover %>">
 					<input class="btn btn-inverse btn-large" type="submit" border="0" value="Add to cart" alt="PayPal - The safer, easier way to pay online!">
 					<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
 				</form>
@@ -75,3 +108,12 @@
 	<%= link_to 'Back', books_path %>
 <% end %>
 
+<script>
+	$(".btn-booktype-hardcover").click(function() {
+		$(".container").addClass("display-hardcover");
+	});
+	
+	$(".btn-booktype-paperback").click(function() {
+		$(".container").removeClass("display-hardcover");
+	});
+</script>

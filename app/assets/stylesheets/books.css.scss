@@ -1,3 +1,65 @@
 // Place all the styles related to the Books controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@mixin deselected {
+	border: 1px solid #ededed;
+	cursor:pointer;	
+	&:hover {background-color: #666666;}
+	color: blue;
+	
+}
+
+@mixin selected {
+	border:4px solid red;
+	cursor:default;	
+	&:hover {background-color: inherit;}
+	
+}
+
+
+.hardcover {
+	display:none;
+}
+
+.paperback {
+	display:block;
+}
+
+.btn-booktype-hardcover {
+	@include deselected;
+}
+.btn-booktype-paperback {
+	@include selected;
+}
+
+.container.display-hardcover {
+
+	.paperback {
+		display:none;
+	}
+		
+	.hardcover {
+		display:block;
+	}
+	.btn-booktype-hardcover {
+		@include selected;
+	}
+	.btn-booktype-paperback {
+		@include deselected;
+	}	
+}
+
+
+
+.btn-booktype {
+	width:100px;
+	padding:5px;
+}
+
+.booktype-toggle {
+
+	padding-top:15px;
+	padding-bottom:25px;
+
+}

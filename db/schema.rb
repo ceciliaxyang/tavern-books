@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120717043041) do
+ActiveRecord::Schema.define(:version => 20130310013552) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -32,25 +32,30 @@ ActiveRecord::Schema.define(:version => 20120717043041) do
 
   create_table "books", :force => true do |t|
     t.string   "name"
-    t.text     "title",            :limit => 255
-    t.text     "description",      :limit => 255
+    t.text     "title",                :limit => 255
+    t.text     "description",          :limit => 255
     t.string   "author"
     t.string   "translator"
-    t.datetime "created_at",                      :null => false
-    t.datetime "updated_at",                      :null => false
+    t.datetime "created_at",                          :null => false
+    t.datetime "updated_at",                          :null => false
     t.string   "isbn"
     t.decimal  "price"
     t.string   "OriginalLanguage"
-    t.string   "paypal"
-    t.string   "paypal2"
+    t.string   "paypalCart"
+    t.string   "paypalBuy"
     t.string   "pages"
-    t.text     "quote",            :limit => 255
+    t.text     "quote",                :limit => 255
     t.string   "quoter"
-    t.text     "aboutTranslator",  :limit => 255
+    t.text     "aboutTranslator",      :limit => 255
     t.string   "string"
-    t.text     "aboutAuthor",      :limit => 255
+    t.text     "aboutAuthor",          :limit => 255
     t.string   "lastname"
     t.string   "first"
+    t.string   "isbn_hardcover"
+    t.string   "price_hardcover"
+    t.string   "pages_hardcover"
+    t.string   "paypalBuy_hardcover"
+    t.string   "paypalCart_hardcover"
   end
 
   create_table "broadsides", :force => true do |t|
