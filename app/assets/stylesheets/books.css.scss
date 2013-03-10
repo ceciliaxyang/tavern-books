@@ -3,17 +3,20 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 @mixin deselected {
-	border: 1px solid #ededed;
+	border: 1px solid #CCCCCC;
 	cursor:pointer;	
-	&:hover {background-color: #666666;}
-	color: blue;
+	&:hover {background-color: #222222; color: #ffffff;}
+	color: #999999;
+	background-color: inherit;
 	
 }
 
 @mixin selected {
-	border:4px solid red;
+	border:1px solid #222222;
 	cursor:default;	
-	&:hover {background-color: inherit;}
+	&:hover {background-color: #222222; color: #ffffff;}
+	color: #ffffff;
+	background-color: #222222;
 	
 }
 
@@ -54,7 +57,13 @@
 
 .btn-booktype {
 	width:100px;
-	padding:5px;
+	padding: 7px 15px 6px 15px;
+	font-family: 'Helvetica', Arial, sans-serif;
+    font-size: 11.5px;
+    font-weight: 100;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+	margin-right:2px;
 }
 
 .booktype-toggle {
