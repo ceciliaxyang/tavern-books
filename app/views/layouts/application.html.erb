@@ -9,6 +9,8 @@
 	  <%= javascript_include_tag "bootstrap" %>
 	  <%= javascript_include_tag "twitter-bootstrap-hover-dropdown.min" %>
   <%= csrf_meta_tags %>
+  <%= javascript_include_tag "mediaelement-and-player.min" %>
+  <%= stylesheet_link_tag  "mediaelementplayer.min" %>
   <link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,600,600italic,700' rel='stylesheet' type='text/css'>
 </head>
 <body>
@@ -82,6 +84,9 @@
 	
 console.log($('.dropdown-toggle'));	
 	  $('.dropdown-toggle').dropdownHover();
+	
+	// using jQuery
+	$('video,audio').mediaelementplayer(/* Options */);
 
 	</script>
 	
