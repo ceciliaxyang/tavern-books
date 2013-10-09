@@ -30,6 +30,7 @@ end
 
 gem 'jquery-rails'
 gem 'htmlentities'
+gem 'friendly_id'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

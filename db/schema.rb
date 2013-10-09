@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130310013552) do
+ActiveRecord::Schema.define(:version => 20131009053029) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -56,7 +56,10 @@ ActiveRecord::Schema.define(:version => 20130310013552) do
     t.string   "pages_hardcover"
     t.string   "paypalBuy_hardcover"
     t.string   "paypalCart_hardcover"
+    t.string   "slug"
   end
+
+  add_index "books", ["slug"], :name => "index_books_on_slug"
 
   create_table "broadsides", :force => true do |t|
     t.text     "title",             :limit => 255
