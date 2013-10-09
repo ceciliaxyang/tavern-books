@@ -15,7 +15,7 @@ class BooksController < ApplicationController
       when "author"
         Book.all.sort { |a,b| a.author <=> b.author }
       else
-        Book.all
+        Book.all.sort_by(&:created_at).reverse
       end
         
     respond_to do |format|
