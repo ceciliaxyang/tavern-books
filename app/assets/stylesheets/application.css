@@ -56,6 +56,12 @@ p {
   color: #666666;
 }
 
+.smalltitle {
+  line-height: 13px;
+  font-size: 15px;
+  color: #666666;
+}
+
 .lead {
   margin-bottom: 18px;
   font-size: 20px;
