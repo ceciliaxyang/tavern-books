@@ -275,6 +275,7 @@ h6 {
 }
 
 
+
 form {
   margin: 0 0 10px;
 }
@@ -355,4 +356,28 @@ select,
 	    padding: 9px 30px 11px;
 	    text-decoration: none;	
 }
+
+ul.submissions-title {
+  font-size: 21px;
+  font-style: italic;
+}
+
+ul.submissions-list {
+  padding-top: 14px;
+  padding-bottom: 14px;
+  padding-left:30px;
+}
+
+.submissions-list li {
+  line-height: 24px;
+}
+
+.nav-tabs > li > a {
+  padding: 10px 20px !important;
+  line-height: 24px !important;
+  border: 1px solid transparent;
+  -webkit-border-radius: 0px !important;
+     -moz-border-radius: 0px !important;
+          border-radius: 0px !important;
+  }
 

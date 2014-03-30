@@ -19,3 +19,4 @@ function changeOneTriangle () {
 }
 
 window.setInterval (changeOneTriangle, 3000, true);
+
