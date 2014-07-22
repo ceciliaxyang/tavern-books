@@ -23,6 +23,7 @@
 				</div>
 			</div>
 		<% end %>
+
 		
 		<p class="quote paperback"><%= @book.pages %> / <%= number_to_currency @book.price %>
 				<br>
@@ -92,10 +93,12 @@
 		
 		<p align="left" class="divider"><br>&#10540;<br><br></p>
 
+		<% if @book.quote.empty? %>
 		<p class="quote">
 		  "<%= @book.quote %>"
 		<br>&#8212; <%= @book.quoter %>
 		</p>
+		<% end %>
 		
 		
 	</div>
