@@ -93,7 +93,7 @@
 		
 		<p align="left" class="divider"><br>&#10540;<br><br></p>
 
-		<% if @book.quote.empty? %>
+		<% unless @book.quote.nil? or @book.quote.empty? %>
 		<p class="quote">
 		  "<%= @book.quote %>"
 		<br>&#8212; <%= @book.quoter %>
