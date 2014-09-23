@@ -82,7 +82,7 @@
 		<p align="left" class="divider"><br>&#10539;<br><br></p>
 		
 		<% unless @book.aboutAuthor.nil? or @book.aboutAuthor.empty? %>
-			<h3>About <%= @book.author %></h3>
+			<h3>About <%= @book.first %> <%= @book.author %></h3>
 			<p><%= @book.aboutAuthor %></p>
 		<% end %>
 		
@@ -92,7 +92,7 @@
 		<% end %>
 		
 		<% unless @book.quote.nil? or @book.quote.empty? %>
-		<p align="left" class="divider"><br>&#10540;<br><br></p>
+		<p align="left" class="divider"><br>&#10540;<br><br></p>gi
 		<p class="quote">
 		  "<%= @book.quote %>"
 		<br>&#8212; <%= @book.quoter %>
