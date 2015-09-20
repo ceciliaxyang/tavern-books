@@ -76,25 +76,25 @@
 		</div>
 
 		<p class="lead">
-		  <%= @book.description %>
+		  <%= @book.description.html_safe %>
 		</p>
 		
 		<p align="left" class="divider"><br>&#10539;<br><br></p>
 		
 		<% unless @book.aboutAuthor.nil? or @book.aboutAuthor.empty? %>
 			<h3>About <%= @book.first %> <%= @book.author %></h3>
-			<p><%= @book.aboutAuthor %></p>
+			<p><%= @book.aboutAuthor.html_safe %></p>
 		<% end %>
 		
 		<% unless @book.aboutTranslator.nil? or @book.aboutTranslator.empty? %>
-			<h3>About <%= @book.translator %></h3>
+			<h3>About <%= @book.translator.html_safe %></h3>
 			<p><%= @book.aboutTranslator %></p>
 		<% end %>
 		
 		<% unless @book.quote.nil? or @book.quote.empty? %>
 		<p align="left" class="divider"><br>&#10540;<br><br></p>
 		<p class="quote">
-		  "<%= @book.quote %>"
+		  "<%= @book.quote.html_safe %>"
 		<br>&#8212; <%= @book.quoter %>
 		</p>
 		<% end %>
