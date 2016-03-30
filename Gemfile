@@ -3,6 +3,7 @@ ruby '2.0.0'
 
 gem 'rails', '3.2.11'
 gem 'devise'
+gem 'pg'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -11,7 +12,6 @@ group :development, :test do
 	gem 'sqlite3'
 end
 group :production do
-	gem 'pg'
 end
 
 gem 'json'
