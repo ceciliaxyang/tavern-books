@@ -70,8 +70,6 @@
 
 
 <script>
-
-
 $(".triangle").hover(
 	function () {
 		$(this).find(".top").toggleClass("hidden");
@@ -84,5 +82,14 @@ $(".triangle").hover(
 	}
 	
 	);
-
+</script>
+<script>
+	var dialog = document.getElementById("window")
+	document.addEventListener('DOMContentLoaded', function(event) {
+		console.log("DOM content loaded and parsed");
+		dialog.show();
+	});
+		document.getElementById("exit").onclick = function() {
+			dialog.close();
+		}
 </script>
