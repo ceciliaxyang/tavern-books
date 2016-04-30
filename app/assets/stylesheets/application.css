@@ -381,3 +381,6 @@ ul.submissions-list {
           border-radius: 0px !important;
   }
 
+.thumbnail img {
+  border-radius: 50%;
+}
