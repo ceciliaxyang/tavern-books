@@ -381,8 +381,16 @@ ul.submissions-list {
           border-radius: 0px !important;
   }
 
-.thumbnail img {
+.thumbnail-app {
+  display: block;
+  padding: 4px;
+  line-height: 1;
+  border: none;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+}
+
+.thumbnail-app img {
   border-radius: 50%;
-  border-color: #ffffff;
-  box-shadow: none;
 }
