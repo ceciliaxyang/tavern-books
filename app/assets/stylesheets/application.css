@@ -383,4 +383,6 @@ ul.submissions-list {
 
 .thumbnail img {
   border-radius: 50%;
+  border-color: #ffffff;
+  box-shadow: none;
 }
