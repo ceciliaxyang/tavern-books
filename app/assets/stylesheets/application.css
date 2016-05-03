@@ -92,6 +92,7 @@ p {
      -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.03);
           box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.03);
 }
+
 .divider {
   font-size: 24px;
 }
