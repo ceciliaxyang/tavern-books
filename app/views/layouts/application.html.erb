@@ -3,7 +3,7 @@
 <head>
   <link rel="icon"  type="image/png" href="assets/favicon.ico">
   <title>Tavern Books</title>
-  <%= stylesheet_link_tag    "bootstrap" %> 
+  <%= stylesheet_link_tag    "bootstrap" %>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
 	  <%= javascript_include_tag "bootstrap" %>
@@ -15,7 +15,7 @@
   <link href='http://fonts.googleapis.com/css?family=Raleway:400,500' rel='stylesheet' type='text/css'>
 </head>
 <body>
-	
+
 	<div class="navbar navbar-fixed-top">
 	      <div class="navbar-inner">
 	        <div class="container">
@@ -26,8 +26,8 @@
 			      <li><a href="/subscriptions">Subscriptions</a></li>
 			      <li><a href="/wrolstad-series">Wrolstad Series</a></li>
 				  <li><a href="/submissions">Submissions</a></li>
-				  <li><a href="/support">Support</a></li>				
-			      <li><a href="/about">About</a></li>				
+				  <li><a href="/support">Support</a></li>
+			      <li><a href="/about">About</a></li>
 				  </li>
 	            </ul>
 	          </div><!--/.nav-collapse -->
@@ -35,21 +35,21 @@
 	      </div>
 	    </div>
 
-<div class="container" style="padding-bottom:100px; padding-top:40px;">
+<div style="padding-bottom:100px; padding-top:40px;">
 
 	<% if notice %>
 		<p class="notice"><%= notice %></p>
 	<% end %>
-	
+
 	<% if alert %>
 		<p class="alert"><%= alert %></p>
 	<% end %>
-	
+
 	<% if admin_signed_in? %>
 		<%= link_to('Log out', destroy_admin_session_path, :method => :delete) %>
 	<% end %>
-	
-	
+
+
 	<%= yield %>
 </div>
 
@@ -63,7 +63,7 @@
 			</div>
 		</div>
 	</div>
-	
+
 	<script type="text/javascript">
 
 	  var _gaq = _gaq || [];
@@ -76,15 +76,15 @@
 	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
 	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 	  })();
-	
-console.log($('.dropdown-toggle'));	
+
+console.log($('.dropdown-toggle'));
 	  $('.dropdown-toggle').dropdownHover();
-	
+
 	// using jQuery
 	$('video,audio').mediaelementplayer(/* Options */);
 
 	</script>
-	
+
 </footer>
 
 </body>
