@@ -10,9 +10,15 @@
 	<div class="row" style="padding-top:5px;">
 		<h1 align="center" style="padding-bottom:5px;">Giving Levels for Individuals</h1>
 		<div class="row-fluid">
-			<div class="span4 offset2">
+			<form target="paypal" class="span4 offset1" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+				<input type="hidden" name="cmd" value="_s-xclick">
+				<input type="hidden" name="hosted_button_id" value="PD53WMM2FEGYJ">
+				<input type="image" name="submit" border="0" value="Donate" alt="PayPal - The safer, easier way to pay online!"src="/assets/supporter-button.jpg">
+				<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+			</form>
+			<!-- <div class="span4 offset2">
 				<img src="/assets/supporter-button.jpg" alt="Supporter Button"/>
-			</div>
+			</div> -->
 			<div class="span4 offset1">
 				<img src="/assets/friend-button.jpg" alt="Friend Button"/>
 			</div>
