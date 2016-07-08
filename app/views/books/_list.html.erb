@@ -1,43 +1,43 @@
+<div class="container">
+	<div class="row">
+		<div class="span8">
+			<h1>The Living Library</h1>
+		</div>
 
-<div class="row">
-	<div class="span8">
-		<h1>The Living Library</h1>
-	</div>
-
-	<div class="span4" align="right">
-		<br><h5>Sort by
+		<div class="span4" align="right">
+			<br><h5>Sort by
 
 				<%@sort_attributes.each { |attribute| %>
-					<a class="<%= "selected" if attribute == @sorting %>" href="/books/?sort=<%= attribute %>"><%= attribute %></a> 
+					<a class="<%= "selected" if attribute == @sorting %>" href="/books/?sort=<%= attribute %>"><%= attribute %></a>
 					<%= "/" unless attribute == @sort_attributes.last %>
-				<% } %> 
-		</h5>
-	</div>
-</div>
-
-<br><br><br><br>
-
-<table>
-
-<% @books.each do |book| %>
-	<div class="row" style="padding-bottom:30px;">
- 		<div class="span2 offset2 thumbnail-app">
-			<%= image_tag book.name+"-thumb.jpg"%>
+					<% } %>
+				</h5>
 		</div>
-		<div class="span7 offset2" style="margin-left:30px; padding-top:20px;">
-		    <h1><small><%= link_to book.title, book %></small></h1>
-	    	<h3><%= book.first %> <%= book.author %>
-	
-		    <% unless book.translator.empty? %>
-				<small><br>Translated from the <%= book.OriginalLanguage %> by <%= book.translator %></small></h3>
+	</div>
+
+		<br><br><br><br>
+
+	<table>
+		<% @books.each do |book| %>
+		<div class="row" style="padding-bottom:30px;">
+			<div class="span2 offset2 thumbnail-app">
+				<%= image_tag book.name+"-thumb.jpg"%>
+			</div>
+			<div class="span7 offset2" style="margin-left:30px; padding-top:20px;">
+				<h1><small><%= link_to book.title, book %></small></h1>
+				<h3><%= book.first %> <%= book.author %>
+
+					<% unless book.translator.empty? %>
+					<small><br>Translated from the <%= book.OriginalLanguage %> by <%= book.translator %></small></h3>
+					<% end %>
+				</div>
+			</div>
+			<br>
 			<% end %>
-		</div>
-	</div>
-	<br>
-<% end %>
 
-<% if admin_signed_in? %>
-	<%= link_to 'New Book', new_book_path %><br><br>
-<% end %>
+			<% if admin_signed_in? %>
+			<%= link_to 'New Book', new_book_path %><br><br>
+			<% end %>
 
-</table>
+	</table>
+</div>
