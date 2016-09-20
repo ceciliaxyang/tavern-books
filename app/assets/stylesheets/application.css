@@ -399,15 +399,16 @@ ul.submissions-list {
 /******* Acknowledgements Page - Logo Flex Containers, and Logo Items *******/
 
 .logo-container {
+  align-items: center;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: center;
+  justify-content: center;
 }
 
 .logo-item {
   flex-shrink: 2;
+  max-height: 120px;
   max-width: 120px;
   padding: 10px;
 }
