@@ -404,6 +404,7 @@ ul.submissions-list {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
+  padding: 15px;
 }
 
 .logo-item {
