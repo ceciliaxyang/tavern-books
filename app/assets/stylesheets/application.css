@@ -415,6 +415,10 @@ ul.submissions-list {
 }
 
 /******* DROP DOWN MENU FROM NAVIGATION *******/
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
 
 .dropdown-content {
   display: none;
@@ -424,6 +428,6 @@ ul.submissions-list {
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
-.dropdown:hover .downdown-content {
+.dropdown:hover .dropdown-content {
   display: block;
 }
