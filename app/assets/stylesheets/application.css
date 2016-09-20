@@ -327,7 +327,7 @@ select,
 
 
 .footer {
-	
+
 	    background-color: #FFFFFF;
 	    border-top: 1px solid #EAEAEA;
 	    padding-bottom: 20px;
@@ -350,12 +350,12 @@ select,
 }
 
 .dropdown-toggle a {
-	
+
 	    color: #999999;
 	    float: none;
 	    line-height: 19px;
 	    padding: 9px 30px 11px;
-	    text-decoration: none;	
+	    text-decoration: none;
 }
 
 ul.submissions-title {
@@ -394,4 +394,16 @@ ul.submissions-list {
 
 .thumbnail-app img {
   border-radius: 50%;
+}
+
+/******* Acknowledgements Page - Logo Flex Containers, and Logo Items *******/
+
+.logo-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.logo-item {
+  width: 320px;
 }
