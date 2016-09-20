@@ -406,4 +406,5 @@ ul.submissions-list {
 
 .logo-item {
   width: 320px;
+  flex-shrink: 2;
 }
