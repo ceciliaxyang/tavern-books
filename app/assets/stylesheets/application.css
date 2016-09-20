@@ -416,8 +416,9 @@ ul.submissions-list {
 
 /******* DROP DOWN MENU FROM NAVIGATION *******/
 .dropdown {
-  position: relative;
   display: inline-block;
+  padding: 9px 30px 11px 30px;
+  position: relative;
 }
 
 .dropdown-content {
@@ -426,6 +427,13 @@ ul.submissions-list {
   background-color: #f9f9f9;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
 }
 
 .dropdown:hover .dropdown-content {
