@@ -3,7 +3,9 @@
 
 		<div class="span4">
 			<img class="paperback" src="/assets/<%= @book.name+"-01.png" %>">
+			<% if @book.price_hardcover and not @book.price_hardcover.empty? %>
 			<img class="hardcover" src="/assets/<%= @book.name+"-hc-01.png" %>">
+			<% end %>
 
 		</div>
 
