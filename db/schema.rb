@@ -1,3 +1,4 @@
+# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -32,23 +33,23 @@ ActiveRecord::Schema.define(:version => 20131009053029) do
 
   create_table "books", :force => true do |t|
     t.string   "name"
-    t.text     "title",                :limit => 255
-    t.text     "description",          :limit => 255
+    t.text     "title"
+    t.text     "description"
     t.string   "author"
     t.string   "translator"
-    t.datetime "created_at",                          :null => false
-    t.datetime "updated_at",                          :null => false
+    t.datetime "created_at",           :null => false
+    t.datetime "updated_at",           :null => false
     t.string   "isbn"
     t.decimal  "price"
     t.string   "OriginalLanguage"
     t.string   "paypalCart"
     t.string   "paypalBuy"
     t.string   "pages"
-    t.text     "quote",                :limit => 255
+    t.text     "quote"
     t.string   "quoter"
-    t.text     "aboutTranslator",      :limit => 255
+    t.text     "aboutTranslator"
     t.string   "string"
-    t.text     "aboutAuthor",          :limit => 255
+    t.text     "aboutAuthor"
     t.string   "lastname"
     t.string   "first"
     t.string   "isbn_hardcover"
@@ -62,15 +63,15 @@ ActiveRecord::Schema.define(:version => 20131009053029) do
   add_index "books", ["slug"], :name => "index_books_on_slug"
 
   create_table "broadsides", :force => true do |t|
-    t.text     "title",             :limit => 255
+    t.text     "title"
     t.string   "author"
     t.string   "name"
     t.string   "translator"
     t.string   "original_language"
     t.decimal  "price"
     t.string   "dimensions"
-    t.datetime "created_at",                       :null => false
-    t.datetime "updated_at",                       :null => false
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
     t.string   "paypal_cart"
     t.string   "paypal_buy"
   end
