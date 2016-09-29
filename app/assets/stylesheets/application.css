@@ -419,6 +419,7 @@ ul.submissions-list {
   display: inline-block;
   padding: 9px 30px 11px 30px;
   position: relative;
+  cursor: pointer;
 }
 
 .dropdown-content {
