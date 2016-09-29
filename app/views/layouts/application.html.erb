@@ -26,8 +26,8 @@
     			      <li><a href="/subscriptions">Subscriptions</a></li>
     			      <li><a href="/wrolstad-series">Wrolstad Series</a></li>
     				    <li><a href="/submissions">Submissions</a></li>
-                <li class="dropdown">Support
-                  <div class="dropdown-content">
+                <li id="support" class="dropdown">Support
+                  <div id="support-dropdown" class="dropdown-content">
                     <a href="/support">Support</a>
                     <a href="/acknowledgements">Acknowledgements</a>
                   </div>
@@ -81,11 +81,12 @@
 	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 	  })();
 
-console.log($('.dropdown-toggle'));
-	  $('.dropdown-toggle').dropdownHover();
-
-	// using jQuery
-	$('video,audio').mediaelementplayer(/* Options */);
+    $('#support').click(function () {
+      $('#support-dropdown').css('display', 'inline-block');
+      setTimeout(function() {
+        $('#support-dropdown').css('display', 'none')
+      }, 5000);
+    });
 
 	</script>
 
