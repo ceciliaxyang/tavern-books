@@ -81,7 +81,7 @@
 	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 	  })();
 
-    $('#support').click(function () {
+    $('#support').on('click touchstart', function () {
       $('#support-dropdown').css('display', 'inline-block');
       setTimeout(function() {
         $('#support-dropdown').css('display', 'none')
