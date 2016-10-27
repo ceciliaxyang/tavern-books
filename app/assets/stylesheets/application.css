@@ -275,7 +275,9 @@ h6 {
   text-decoration: none;
 }
 
-
+#navbar-container {
+  width: 1200px;
+}
 
 form {
   margin: 0 0 10px;
