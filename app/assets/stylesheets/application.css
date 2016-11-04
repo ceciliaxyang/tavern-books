@@ -442,3 +442,19 @@ ul.submissions-list {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
+.pop-up-container {
+  height: 400px;
+  margin:auto;
+  overflow-y:auto;
+  position:fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+.pop-up-content {
+  background-color: blue;
+  height: 400px;
+  margin: auto;
+  width: 60%;
+}
