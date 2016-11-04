@@ -61,6 +61,11 @@
 		});
 		$('.pop-up-button').on('click', function() {
 			$('.pop-up-container').css('display', 'none');
+			document.cookie = "pop-up-cookie=1";
 		})
+		if (/pop-up-cookie/.test(document.cookie)) {
+			el = document.getElementsByClassName('pop-up-container')[0]
+			el.style.display = 'none';
+		}
 	</script>
 </div>
