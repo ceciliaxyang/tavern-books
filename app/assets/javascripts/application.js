@@ -18,4 +18,13 @@ function changeOneTriangle () {
 		$(".top:eq(" + Math.round(Math.random()*3) + ")").toggleClass("hidden");
 }
 
+function createCookie (name, value) {
+	var date, expires
+	date = new Date();
+	date.setTime(date.getTime() + (1000*1800));
+	expires = "; expires="+date.toGMTString();
+
+	document.cookie = name + "=" + value + expires + "; path=/"
+}
+
 window.setInterval (changeOneTriangle, 3000, true);
