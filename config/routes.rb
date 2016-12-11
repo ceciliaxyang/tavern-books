@@ -7,7 +7,7 @@ Tavern::Application.routes.draw do
   root :to => 'application', :action => :index
 
   match ':action' => 'static#:action'
-  
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
