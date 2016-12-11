@@ -14,7 +14,6 @@
 
 body {
   padding-top: 100px;
-  padding-bottom: 100px;
   margin: 0;
   font-family: 'Crimson Text', 'Times New Roman', Georgia, serif;
   font-size: 18px;
@@ -479,3 +478,57 @@ ul.submissions-list {
   float: right;
   z-index: 2;
 }
+
+/******* APPLICATION FOOTER *******/
+#footer {
+  border-top-style: groove;
+  border-top-width: thin;
+  display: flex;
+  width: 100%;
+}
+
+.tavern-foot {
+  margin-top: 10px;
+}
+.tavern-foot a {
+  color: #000;
+}
+.tavern-foot p {
+  font-size: 15px;
+}
+
+.footer-left {
+  margin-left: 30px;
+  text-align: left;
+}
+.footer-center {
+  text-align: center;
+}
+.footer-right {
+  float: right;
+  margin-right: 30px;
+  text-align: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/******* *******/

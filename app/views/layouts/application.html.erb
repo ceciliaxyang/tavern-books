@@ -40,34 +40,43 @@
 	      </div>
 	    </div>
 
-<div style="padding-bottom:100px; padding-top:40px;">
+<div class="application-container" style="padding-bottom:100px; padding-top:40px;">
+  <div class="application-container-content">
+    <% if notice %>
+    <p class="notice"><%= notice %></p>
+    <% end %>
 
-	<% if notice %>
-		<p class="notice"><%= notice %></p>
-	<% end %>
+    <% if alert %>
+    <p class="alert"><%= alert %></p>
+    <% end %>
 
-	<% if alert %>
-		<p class="alert"><%= alert %></p>
-	<% end %>
-
-	<% if admin_signed_in? %>
-		<%= link_to('Log out', destroy_admin_session_path, :method => :delete) %>
-	<% end %>
+    <% if admin_signed_in? %>
+    <%= link_to('Log out', destroy_admin_session_path, :method => :delete) %>
+    <% end %>
 
 
-	<%= yield %>
+    <%= yield %>
+  </div>
 </div>
 
-<footer class="footer">
-	<div class="container">
-		<div class="row">
-			<div class="span8">
-				<h5>&copy; Tavern Books <%= Time.now.year %><br><br></h5>
-				<div id="fb-root"></div>
-				<script src="http://connect.facebook.net/en_US/all.js#appId=200482016666706&amp;xfbml=1"></script><fb:like href="http://www.facebook.com/pages/Tavern-Books/163093477074431" send="false" width="450" show_faces="false" font="arial"></fb:like>
-			</div>
-		</div>
+<footer class="container" id="footer">
+	<div class="tavern-foot footer-left span6">
+    <h5>&copy; Tavern Books <%= Time.now.year %><br><br></h5>
+    <p>Union Station 800 NW 6th Ave #255<br>
+    Portland, Oregon | 97209<br>
+    503.890.5043</p>
 	</div>
+	<div class="tavern-foot footer-center span6">
+		<h5>Our Mission<br><br></h5>
+		<div id="mission-statement">
+      <p>Tavern Books is a 501(c)(3) not-for-profit poetry publisher that exists to print, promote, and preserve works of literary vision, to foster a climate of cultural preservation, and to disseminate books in a way that benefits the reading public.</p>
+    </div>
+	</div>
+	<div class="tavern-foot footer-right span6">
+    <h5 style="padding-bottom:5px;"><a href="/books">Books</a> | <a href="/support">Support</a> | <a href="/about">About</a></h5>
+    <h5 style="padding-bottom:5px;"><a href="https://www.facebook.com/TavernBooks/?fref=ts">Find Us On Facebook</a></h5>
+	</div>
+</footer>
 
 	<script type="text/javascript">
 
@@ -91,7 +100,6 @@
 
 	</script>
 
-</footer>
 
 </body>
 </html>
