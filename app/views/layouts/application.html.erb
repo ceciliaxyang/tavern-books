@@ -8,7 +8,6 @@
     <%= stylesheet_link_tag    "application", :media => "all" %>
     <%= javascript_include_tag "application" %>
     <%= javascript_include_tag "bootstrap" %>
-    <%= javascript_include_tag "twitter-bootstrap-hover-dropdown.min" %>
     <%= csrf_meta_tags %>
     <%= javascript_include_tag "mediaelement-and-player.min" %>
     <%= stylesheet_link_tag  "mediaelementplayer.min" %>
@@ -16,12 +15,16 @@
   <link href='http://fonts.googleapis.com/css?family=Raleway:400,500' rel='stylesheet' type='text/css'>
 </head>
 <body>
-
 	<div class="navbar navbar-fixed-top">
 	      <div class="navbar-inner">
 	        <div class="container" id="navbar-container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" aria-expanded="false">
+                <span class="glyphicon glyphicon-menu-hamburger"></span>
+              </button>
+              <a class="brand" href="/">Tavern<br>Books</a>
+            </div>
 	          <div class="nav-collapse">
-	          	<a class="brand" href="/">Tavern<br>Books</a>
 	            <ul class="nav pull-right" style="padding-top:10px;">
     			      <li><a href="/books">The Living Library</a></li>
     			      <li><a href="/subscriptions">Subscriptions</a></li>
@@ -39,26 +42,20 @@
 	        </div>
 	      </div>
 	    </div>
-
 <div class="application-container" style="padding-bottom:100px; padding-top:40px;">
   <div class="application-container-content">
     <% if notice %>
     <p class="notice"><%= notice %></p>
     <% end %>
-
     <% if alert %>
     <p class="alert"><%= alert %></p>
     <% end %>
-
     <% if admin_signed_in? %>
     <%= link_to('Log out', destroy_admin_session_path, :method => :delete) %>
     <% end %>
-
-
     <%= yield %>
   </div>
 </div>
-
 <footer class="container" id="footer">
 	<div class="tavern-foot footer-left span9">
     <h5>&copy; Tavern Books <%= Time.now.year %><br><br></h5>
@@ -77,29 +74,22 @@
     <h5 style="padding-bottom:5px;"><a href="https://www.facebook.com/TavernBooks/?fref=ts">Find Us On Facebook</a></h5>
 	</div>
 </footer>
-
 	<script type="text/javascript">
-
 	  var _gaq = _gaq || [];
 	  _gaq.push(['_setAccount', 'UA-34347314-1']);
 	  _gaq.push(['_setDomainName', 'tavernbooks.com']);
 	  _gaq.push(['_trackPageview']);
-
 	  (function() {
 	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
 	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
 	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 	  })();
-
     $('#support').on('click touchstart', function () {
       $('#support-dropdown').css('display', 'inline-block');
       setTimeout(function() {
         $('#support-dropdown').css('display', 'none')
       }, 5000);
     });
-
 	</script>
-
-
 </body>
 </html>
