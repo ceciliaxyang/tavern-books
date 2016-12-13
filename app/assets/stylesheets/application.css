@@ -442,6 +442,8 @@ ul.submissions-list {
   display: block;
 }
 
+/******* POP UP WINDOW ON HOME PAGE *******/
+
 .pop-up-container {
   margin:auto;
   overflow-y:auto;
@@ -478,6 +480,32 @@ ul.submissions-list {
   float: right;
   z-index: 2;
 }
+
+/******* APPLICATION CONTAINER - HOMEPAGE *******/
+#homepage-container {
+  width: 100%;
+}
+.triangle-container {
+  background-color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+.triangles-div {
+  display: flex;
+  justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 /******* APPLICATION FOOTER *******/
 #footer {

@@ -1,0 +1,80 @@
+@media screen and (max-width:500px) {
+/********** ELEMENTS *************/
+
+
+
+
+
+
+
+
+/********** FOOTER *************/
+
+
+  #footer {
+    border-top-style: groove;
+    border-top-width: thin;
+    display: inline;
+    width: 100%;
+  }
+  .tavern-foot {
+    margin: 0px;
+    width: 100%;
+  }
+  .tavern-foot h5 {
+    margin-bottom: 8px;
+  }
+  .footer-left {
+    display: none;
+  }
+  .footer-center {
+    display: none;
+  }
+  .footer-right {
+    text-align: center;
+  }
+
+
+
+
+
+
+
+
+
+/********** APPLICATION CONTAINER *************/
+/*For these to play right, you need to flex the #homepage-container in a vertical alignment*/
+#homepage-container {
+  display: flex;
+  flex-direction: column;
+}
+.brand-container.row {
+  display: inline;
+  margin-left: 0px;
+  width: 100%;
+}
+.triangle-container {
+  background-color: #fff;
+  margin-left: 0px;
+  padding: 0px;
+  width: 100%;
+
+}
+.triangles-div {
+  display: inline;
+}
+.triangle {
+  text-align: center;
+}
+.triangle h2 {
+  margin-bottom: 5px;
+}
+.cf {
+  display: none;
+}
+
+
+
+
+
+}
