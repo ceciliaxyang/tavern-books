@@ -15,33 +15,35 @@
   <link href='http://fonts.googleapis.com/css?family=Raleway:400,500' rel='stylesheet' type='text/css'>
 </head>
 <body>
-	<div class="navbar navbar-fixed-top">
-	      <div class="navbar-inner">
-	        <div class="container" id="navbar-container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" aria-expanded="false">
-                <span class="glyphicon glyphicon-menu-hamburger"></span>
-              </button>
-              <a class="brand" href="/">Tavern<br>Books</a>
-            </div>
-	          <div class="nav-collapse">
-	            <ul class="nav pull-right" style="padding-top:10px;">
-    			      <li><a href="/books">The Living Library</a></li>
-    			      <li><a href="/subscriptions">Subscriptions</a></li>
-    			      <li><a href="/wrolstad-series">Wrolstad Series</a></li>
-    				    <li><a href="/submissions">Submissions</a></li>
-                <li id="support" class="dropdown">Support
-                  <div id="support-dropdown" class="dropdown-content">
-                    <a href="/support">Support</a>
-                    <a href="/acknowledgments">Acknowledgments</a>
-                  </div>
-                </li>
-    			      <li><a href="/about">About</a></li>
-	            </ul>
-	          </div><!--/.nav-collapse -->
-	        </div>
-	      </div>
-	    </div>
+  <nav class="navbar navbar-default navbar-fixed-top" id="navbar-container">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#tavern-nav-collapse" aria-expanded="false">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="brand" href="/">Tavern<br>Books</a>
+      </div>
+      <div class="collapse navbar-collapse" id="tavern-nav-collapse">
+        <ul class="nav navbar-nav" style="padding-top:30px;">
+          <li><a href="/books">The Living Library</a></li>
+          <li><a href="/subscriptions">Subscriptions</a></li>
+          <li><a href="/wrolstad-series">Wrolstad Series</a></li>
+          <li><a href="/submissions">Submissions</a></li>
+          <li>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Support <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="/support">Support</a></li>
+              <li><a href="/acknowledgments">Acknowledgments</a></li>
+            </ul>
+          </li>
+          <li><a href="/about">About</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
 <div class="application-container" style="padding-bottom:100px; padding-top:40px;">
   <div class="application-container-content">
     <% if notice %>
@@ -57,19 +59,19 @@
   </div>
 </div>
 <footer class="container" id="footer">
-	<div class="tavern-foot footer-left span9">
+	<div class="tavern-foot footer-left col-md-4">
     <h5>&copy; Tavern Books <%= Time.now.year %><br><br></h5>
     <p>Union Station 800 NW 6th Ave #255<br>
     Portland, Oregon | 97209<br>
     503.890.5043</p>
 	</div>
-	<div class="tavern-foot footer-center span9">
+	<div class="tavern-foot footer-center col-md-4">
 		<h5>Our Mission<br><br></h5>
 		<div id="mission-statement">
       <p>Tavern Books is a 501(c)(3) not-for-profit poetry publisher that exists to print, promote, and preserve works of literary vision, to foster a climate of cultural preservation, and to disseminate books in a way that benefits the reading public.</p>
     </div>
 	</div>
-	<div class="tavern-foot footer-right span9">
+	<div class="tavern-foot footer-right col-md-4">
     <h5 style="padding-bottom:5px;"><a href="/books">Books</a> | <a href="/support">Support</a> | <a href="/about">About</a></h5>
     <h5 style="padding-bottom:5px;"><a href="https://www.facebook.com/TavernBooks/?fref=ts">Find Us On Facebook</a></h5>
 	</div>

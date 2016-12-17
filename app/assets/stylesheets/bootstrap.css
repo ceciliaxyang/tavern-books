@@ -1183,7 +1183,6 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: inherit;
   font-weight: 500;
   line-height: 1.1;
   color: inherit;
@@ -3112,11 +3111,6 @@ fieldset[disabled] .btn-default.focus {
 .btn-default .badge {
   color: #fff;
   background-color: #333;
-}
-.btn-primary {
-  color: #fff;
-  background-color: #337ab7;
-  border-color: #2e6da4;
 }
 .btn-primary:focus,
 .btn-primary.focus {

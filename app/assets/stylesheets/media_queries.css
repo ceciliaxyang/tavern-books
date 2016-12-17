@@ -1,13 +1,6 @@
 @media screen and (max-width:500px) {
 /********** ELEMENTS *************/
 
-
-
-
-
-
-
-
 /********** FOOTER *************/
 
 
@@ -33,14 +26,6 @@
   .footer-right {
     text-align: center;
   }
-
-
-
-
-
-
-
-
 
 /********** APPLICATION CONTAINER *************/
 /*For these to play right, you need to flex the #homepage-container in a vertical alignment*/
