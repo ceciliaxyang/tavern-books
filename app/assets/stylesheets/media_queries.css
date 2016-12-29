@@ -93,6 +93,20 @@
   display: flex;
 }
 
+/********** LIVING LIBRARY PAGE ********/
+.book-list-item {
+  flex-direction: column;
+  text-align: center;
+}
+.book-list-details {
+  margin-left: 0px;
+}
+.living-library-header {
+  text-align: center;
+}
+.living-library-sorter {
+  text-align: center;
+}
 
 
 

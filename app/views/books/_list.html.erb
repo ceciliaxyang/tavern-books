@@ -1,10 +1,10 @@
 <div class="container">
 	<div class="row">
-		<div class="span8">
+		<div class="col-md-8 living-library-header">
 			<h1>The Living Library</h1>
 		</div>
 
-		<div class="span4" align="right">
+		<div class="col-md-4 living-library-sorter" align="right">
 			<br><h5>Sort by
 
 				<%@sort_attributes.each { |attribute| %>
@@ -17,13 +17,13 @@
 
 		<br><br><br><br>
 
-	<table>
+	<div style="display:flex;flex-direction:column;">
 		<% @books.each do |book| %>
-		<div class="row" style="padding-bottom:30px;">
-			<div class="span2 offset2 thumbnail-app">
+		<div class="row book-list-item">
+			<div class="col-md-2 thumbnail-app thumbnail-image">
 				<%= image_tag book.name+"-thumb.jpg"%>
 			</div>
-			<div class="span7 offset2" style="margin-left:30px; padding-top:20px;">
+			<div class="col-md-7 book-list-details">
 				<h1><small><%= link_to book.title, book %></small></h1>
 				<h3><%= book.first %> <%= book.author %>
 
@@ -39,5 +39,5 @@
 			<%= link_to 'New Book', new_book_path %><br><br>
 			<% end %>
 
-	</table>
+	</div style="display:flex;flex-direction:column;">
 </div>

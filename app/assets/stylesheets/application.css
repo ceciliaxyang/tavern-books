@@ -563,6 +563,18 @@ ul.submissions-list {
   width: 400px;
 }
 
+/******* LIVING LIBRARY PAGE *******/
+.book-list-item {
+  display: flex;
+  padding-bottom: 30px;
+}
+.book-list-details {
+  margin-left: 30px;
+}
+.thumbnail-image img {
+  width: 140px;
+  height: 140px;
+}
 
 
 
