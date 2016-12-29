@@ -1,6 +1,19 @@
 @media screen and (max-width:500px) {
 /********** ELEMENTS *************/
 
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5px;
+}
+/*Book images, as found on Subscriptions page*/
+.paperback {
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+
+
 /********** FOOTER *************/
 
 
@@ -70,7 +83,15 @@
 }
 
 
+/********** SUBSCRIPTIONS PAGE *******/
+.paypal-buttons {
+  text-align: center;
+}
 
+/********** SUBMISSIONS PAGE ********/
+#nav-submissions-lists ul {
+  display: flex;
+}
 
 
 
