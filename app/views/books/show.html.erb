@@ -1,7 +1,7 @@
 <div class="container">
 	<div class="row">
 
-		<div class="span4">
+		<div class="col-md-4">
 			<img class="paperback" src="/assets/<%= @book.name+"-01.png" %>">
 			<% if @book.price_hardcover and not @book.price_hardcover.empty? %>
 			<img class="hardcover" src="/assets/<%= @book.name+"-hc-01.png" %>">
@@ -9,7 +9,7 @@
 
 		</div>
 
-		<div class="span7 offset1">
+		<div class="col-md-8">
 			<h1><%= @book.title %></h1>
 			<h3><%= @book.first %> <%= @book.author %></h3>
 
