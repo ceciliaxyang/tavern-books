@@ -45,6 +45,7 @@
 				<div style="display:none;" class="span2">
 					<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
 						<input type="hidden" name="cmd" value="_s-xclick">
+						<input type="hidden" name="sku" value="<%= @book.isbn %>"
 						<input type="hidden" name="hosted_button_id" value="<%= @book.paypalBuy %>">
 						<input class="btn btn-primary btn-large" type="submit" border="0" value="Buy now" alt="PayPal - The safer, easier way to pay online!">
 						<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
@@ -64,6 +65,7 @@
 				<div class="span2" style="display:none;">
 					<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
 						<input type="hidden" name="cmd" value="_s-xclick">
+						<input type="hidden" name="sku" value="<%= @book.isbn_hard %>"
 						<input type="hidden" name="hosted_button_id" value="<%= @book.paypalBuy_hardcover %>">
 						<input class="btn btn-primary btn-large" type="submit" border="0" value="Buy now" alt="PayPal - The safer, easier way to pay online!">
 						<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
