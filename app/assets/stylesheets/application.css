@@ -578,10 +578,22 @@ ul.submissions-list {
 
 
 
+/******* WROLSTAD SERIES SUPPORT PAGE *******/
+#wrolstad-banner {
+    height: 500px;
+}
 
+.rice-house-image {
+    height: 300px;
+}
 
+.wrolstad-poets {
+    height: 250px;
+}
 
-
+.wrolstad-poet-row {
+    margin-bottom: 30px;
+}
 
 
 
