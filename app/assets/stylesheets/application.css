@@ -591,8 +591,15 @@ ul.submissions-list {
     height: 250px;
 }
 
+.wrolstad-poets-bio {
+    margin: 0 20px 0 20px;
+    text-align: justify;
+}
+
 .wrolstad-poet-row {
+    border-bottom-style: inset;
     margin-bottom: 30px;
+    padding-bottom: 15px;
 }
 
 
